@@ -1,5 +1,63 @@
 .topNav
 {
-    background-color: #e61818;
-    overflow: hidden;
+    display: flex;
+    .navWrap
+    {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        // background-color: #e61818;
+        padding: 20px;
+        height: clamp(125px, 30vw, 200px);
+        
+        .carreNom{
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            
+            .carreCouleur{
+                background-color: #b48484;
+                height: 30px;
+                width: 30px;
+            }
+            .nom{
+                font-size: 2em;
+                font-weight: bold;
+            }
+        }
+        
+        .titre {
+            margin-top: 10px;
+            text-transform: uppercase;
+        }
+        
+        .hamburger {
+            --height: 6px;
+            --width: 60px;
+            --gapFactor: 0.5;
+            background-color: white;
+            position: relative;
+            top: calc(var(--height) * 2);
+            height: var(--height);
+            width: var(--width);
+        }
+        
+        .hamburger::before {
+            content: " ";
+            background-color: white;
+            display: block;
+            transform: translateY(calc(var(--height) * (-2 - var(--gapFactor))));
+            height: var(--height);
+            width: calc(var(--width) * 0.5);
+        }
+        
+        .hamburger::after {
+            content: " ";
+            background-color: white;
+            display: block;
+            transform: translateY(calc(var(--height) * (1 + var(--gapFactor)))) translateX(calc(var(--width) * 0.5));
+            height: var(--height);
+            width: calc(var(--width) * 0.5);
+        }
+    }
 }
