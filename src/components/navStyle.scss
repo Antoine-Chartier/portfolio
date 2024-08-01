@@ -35,8 +35,36 @@
             // display: none;
         }
 
-        
+        .buttonHamburger{
+            position: relative;
+            width: 60px;
+            height: 60px;
+            border-radius: 100%;
+            background-color: rgba(255, 255, 255, 0);
+            transition: background-color 0.2s;
+            &:hover{
+                background-color: rgba(255, 255, 255, 0.11);
+            }
 
+            .barre1{
+                position: absolute;
+                height: 4px;
+                width: 20px;
+                background-color: blue;
+            }
+            .barre2{
+                position: absolute;
+                height: 4px;
+                width: 40px;
+                background-color: blue;
+            }
+            .barre3{
+                position: absolute;
+                height: 4px;
+                width: 20px;
+                background-color: blue;
+            }
+        }
           
     }
 
