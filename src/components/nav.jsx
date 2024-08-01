@@ -2,13 +2,6 @@ import "./navStyle.scss";
 
 function Nav() {
 
-const toggleHamburger = () => {
-  // const mobileMenu = document.querySelector('.mobileMenu');
-  const hamburger = document.querySelector('.hamburger');
-  // mobileMenu.classList.toggle('hidden');
-  hamburger.classList.toggle('active');
-  
-}
 
 
   
@@ -28,9 +21,8 @@ const toggleHamburger = () => {
                     DÉVELOPPEUR WEB
                 </div>
              </div>
-             <div className="button" onClick={toggleHamburger}>
-               <div className="hamburger md:hidden">
-               </div>
+             <div className="button">
+
              </div>
              <div className="mobileMenu hidden">
                 <div>

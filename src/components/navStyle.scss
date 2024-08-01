@@ -35,51 +35,8 @@
             // display: none;
         }
 
-        .button{
-            background-color: rgba(114, 224, 197, 0.438);
-            cursor: pointer;
-            height: 35px;
-        }
         
-        .hamburger {
-            --height: 6px;
-            --width: 60px;
-            --gapFactor: 0.5;
-            background-color: white;
-            position: relative;
-            top: calc(var(--height) * 2);
-            height: var(--height);
-            width: var(--width);
-        }
-        .hamburger::before {
-            content: " ";
-            background-color: white;
-            display: block;
-            transform: translateY(calc(var(--height) * (-2 - var(--gapFactor))));
-            height: var(--height);
-            width: calc(var(--width) * 0.5);
-        }
-        
-        .hamburger::after {
-            content: " ";
-            background-color: white;
-            display: block;
-            transform: translateY(calc(var(--height) * (1 + var(--gapFactor)))) translateX(calc(var(--width) * 0.5));
-            height: var(--height);
-            width: calc(var(--width) * 0.5);
-        }
 
-        @keyframes beforeAnimation {
-            0% { transform: translateY(0); }
-            50% { transform: translateY(10px); }
-            100% { transform: translateY(0); }
-          }
-          
-          @keyframes afterAnimation {
-            0% { transform: translateX(0); }
-            50% { transform: translateX(10px); }
-            100% { transform: translateX(0); }
-          }
           
     }
 
