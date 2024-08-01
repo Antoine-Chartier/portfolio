@@ -30,6 +30,16 @@
             margin-top: 10px;
             text-transform: uppercase;
         }
+
+        .mobileMenu{
+            // display: none;
+        }
+
+        .button{
+            background-color: rgba(114, 224, 197, 0.438);
+            cursor: pointer;
+            height: 35px;
+        }
         
         .hamburger {
             --height: 6px;
@@ -41,7 +51,6 @@
             height: var(--height);
             width: var(--width);
         }
-        
         .hamburger::before {
             content: " ";
             background-color: white;
@@ -59,5 +68,19 @@
             height: var(--height);
             width: calc(var(--width) * 0.5);
         }
+
+        @keyframes beforeAnimation {
+            0% { transform: translateY(0); }
+            50% { transform: translateY(10px); }
+            100% { transform: translateY(0); }
+          }
+          
+          @keyframes afterAnimation {
+            0% { transform: translateX(0); }
+            50% { transform: translateX(10px); }
+            100% { transform: translateX(0); }
+          }
+          
     }
+
 }
