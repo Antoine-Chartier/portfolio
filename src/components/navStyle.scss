@@ -17,8 +17,12 @@
             
             .carreCouleur{
                 background-color: #b48484;
-                height: 30px;
+                height: 0px;
                 width: 30px;
+                // pour préserver l'aspect ratio
+                padding-bottom: 30px;
+                flex-shrink: 0;
+                flex-grow: 0;
             }
             .nom{
                 font-size: 2em;
@@ -31,41 +35,86 @@
             text-transform: uppercase;
         }
 
-        .mobileMenu{
-            // display: none;
-        }
-
         .buttonHamburger{
-            position: relative;
+            padding: 0px;
+            position: absolute;
+            z-index: 1000;
             width: 60px;
+            aspect-ratio: 1/1;
             height: 60px;
-            border-radius: 100%;
-            background-color: rgba(255, 255, 255, 0);
+            // border-radius:30%;
+            background-color: transparent;
             transition: background-color 0.2s;
             &:hover{
-                background-color: rgba(255, 255, 255, 0.11);
+                // background-color: #21354777;
             }
 
             .barre1{
                 position: absolute;
                 height: 4px;
                 width: 20px;
-                background-color: blue;
+                background-color: white;
             }
             .barre2{
                 position: absolute;
                 height: 4px;
                 width: 40px;
-                background-color: blue;
+                background-color: white;
             }
             .barre3{
                 position: absolute;
                 height: 4px;
                 width: 20px;
-                background-color: blue;
+                background-color: white;
             }
+        }
+        .buttonHamburger[data-isopen="true"]
+        {
+            // border-radius:30%;
         }
           
     }
+    .bigPopOut{
+        position: absolute;
+        right: 0%;
+        display: flex;
+        justify-content: right;
+        background-color: #213547;
+        overflow: hidden;
+        // border-radius:30%;
 
+    }
+
+}
+
+.bigMenuOverlay
+{
+    display: block;
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    width: 100vw;
+    height: 100vh;
+    // z-index: 1000;
+    // background-color: tomato;
+    color: white;
+    .bigMenu
+    {
+        margin: 20px;
+        display: flex;
+        justify-content: center;
+        left: 50%;
+    }
+}
+.bigMenuOverlay[data-isopen="false"]
+{
+    display: none;
+}
+
+
+.relative
+{
+    position: relative !important;
+    // width: 100%;
+    // height: 100%;
 }
