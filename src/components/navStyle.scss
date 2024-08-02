@@ -7,7 +7,7 @@
         justify-content: space-between;
         width: 100%;
         // background-color: #e61818;
-        padding: 20px;
+        padding: clamp(6px, 2vw, 200px);
         height: clamp(125px, 30vw, 200px);
         
         .carreNom{

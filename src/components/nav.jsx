@@ -31,10 +31,8 @@ function Nav() {
                       transition={{ type: "spring", stiffness: 150, damping: 20}}
                       initial={false}
                       animate={active ? "open" : "closed"}
-                      // style={{backgroundColor: active ? "#344cfe" : "#00000000"}}
-                      style={{width: "100vw", height: "100vh", overflow: "hidden"}}
                       variants={{
-                        open: {width: "96vw", height: "94vh"},
+                        open: {width: 'calc(100vw - 2 * clamp(6px, 2vw, 200px))', height: "94vh"},
                         closed: {width: "60px", height: "60px"}
                       }}>
                   <AnimatedHamburgerButton active={active} setActive={setActive} />
