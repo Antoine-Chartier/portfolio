@@ -44,9 +44,9 @@
             height: 60px;
             // border-radius:30%;
             background-color: transparent;
-            transition: background-color 0.2s;
+            // transition: background-color 0.2s;
             &:hover{
-                // background-color: #21354777;
+                // background-color: #758694b9;
             }
 
             .barre1{
@@ -103,13 +103,12 @@
         margin: 20px;
         display: flex;
         justify-content: center;
-        left: 50%;
     }
 }
-.bigMenuOverlay[data-isopen="false"]
-{
-    display: none;
-}
+// .bigMenuOverlay[data-isopen="false"]
+// {
+//     display: none;
+// }
 
 
 .relative

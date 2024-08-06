@@ -1,6 +1,7 @@
 import { useState } from "react";
 import "./navStyle.scss";
 import { motion } from "framer-motion";
+import { animate } from "framer-motion"
 
 
 function Nav() {
@@ -33,7 +34,7 @@ function Nav() {
                       animate={active ? "open" : "closed"}
                       variants={{
                         open: {width: 'calc(100vw - 2 * clamp(6px, 2vw, 200px))', height: "94vh"},
-                        closed: {width: "60px", height: "60px"}
+                        closed: {width: "60px", height: "60px", transition: {when: "afterChildren"}}
                       }}>
                   <AnimatedHamburgerButton active={active} setActive={setActive} />
                </motion.div>
@@ -51,24 +52,51 @@ function Nav() {
 
   const AnimatedBigMenu = ({setActive, active}) => {
     
-    return (
-      <motion.div 
+    const container = {
+      closed: { 
+        opacity: 0,
+        transition: {
+          staggerChildren: 0.5,
+          staggerDirection: -1,
+          // when: "afterChildren" 
+        }},
+      open: {
+        opacity: 1,
+        transition: {
+          staggerChildren: 0.5,
+        }
+      }
+    }
+    
+    const item = {
+      closed: { opacity: 0 },
+      open: { opacity: 1 }
+    }
 
-      // initial={{opacity: 0}}
-      // animate={{opacity: 1}}
-      // exit={{opacity: 0}}
+    return (
+      <motion.div
       className="bigMenu">
-        <div>
-          <div>
+        <motion.div
+          variants={container}
+          initial={closed}
+          animate={active ? "open" : "closed"}
+          >
+          <motion.div
+           variants={item}
+          >
             item 1
-          </div>
-          <div>
+          </motion.div>
+          <motion.div
+          variants={item}
+          >
             item 2
-          </div>
-          <div>
+          </motion.div>
+          <motion.div
+           variants={item}
+          >
             item 3
-          </div>
-        </div>
+          </motion.div>
+        </motion.div>
       </motion.div>
     );
   }
@@ -80,6 +108,7 @@ function Nav() {
       layout
       onClick={() => setActive(!active)}
       animate={active ? "open" : "closed"}
+      transition={{ when: "afterChildren" }}
       data-isopen={active}
       className="buttonHamburger">
         <motion.span
