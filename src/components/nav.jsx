@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import "./navStyle.scss";
 import { motion } from "framer-motion";
 import { animate } from "framer-motion";
@@ -53,6 +53,14 @@ function Nav() {
 export default Nav;
 
 const AnimatedBigMenu = () => {
+  const [isDesktop, setIsDesktop] = useState(window.innerWidth > 768);
+
+  useEffect(() => {
+    const handleResize = () => setIsDesktop(window.innerWidth > 768);
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+
   const antoine = {
     closed: {
       y: -60,
@@ -110,26 +118,30 @@ const AnimatedBigMenu = () => {
           </div>
           <div className="titre">DÉVELOPPEUR WEB</div>
         </div>
-        <motion.div className="bigMenu md:hiddenBeyond">
-          <motion.div variants={container} className="md:hiddenBeyond">
-            <motion.div variants={item}>accueil.</motion.div>
-            <motion.div variants={item}>portfolio.</motion.div>
-            <motion.div variants={item}>parcours.</motion.div>
-            <motion.div variants={item}>cv.</motion.div>
-          </motion.div>
+        <motion.div className="bigMenu">
+          {!isDesktop && (
+            <motion.div variants={container}>
+              <motion.div variants={item}>accueil.</motion.div>
+              <motion.div variants={item}>portfolio.</motion.div>
+              <motion.div variants={item}>parcours.</motion.div>
+              <motion.div variants={item}>cv.</motion.div>
+            </motion.div>
+          )}
         </motion.div>
         <motion.div variants={rejoindre} className="icones">
           <CiLinkedin className="icone" />
           <FiGithub className="icone" />
         </motion.div>
       </motion.div>
-      <motion.div className="bigMenu md:hiddenBefore">
-        <motion.div variants={container} className="md:hiddenBefore">
-          <motion.div variants={item}>accueil.</motion.div>
-          <motion.div variants={item}>portfolio.</motion.div>
-          <motion.div variants={item}>parcours.</motion.div>
-          <motion.div variants={item}>cv.</motion.div>
-        </motion.div>
+      <motion.div className="bigMenu">
+        {isDesktop && (
+          <motion.div variants={container}>
+            <motion.div variants={item}>accueil.</motion.div>
+            <motion.div variants={item}>portfolio.</motion.div>
+            <motion.div variants={item}>parcours.</motion.div>
+            <motion.div variants={item}>cv.</motion.div>
+          </motion.div>
+        )}
         <motion.div variants={rejoindre} className="MeRejoindre">
           Me rejoindre
         </motion.div>
