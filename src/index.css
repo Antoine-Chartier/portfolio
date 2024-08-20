@@ -62,7 +62,12 @@ button:focus-visible {
 }
 
 @media (min-width: 768px) {
-  .md\:hidden {
+  .md\:hiddenBeyond {
+     display: none;
+  }
+}
+@media (max-width: 768px) {
+  .md\:hiddenBefore {
      display: none;
   }
 }
