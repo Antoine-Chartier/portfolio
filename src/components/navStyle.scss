@@ -1,119 +1,141 @@
-.topNav
-{
+.topNav {
+  display: flex;
+  .navWrap {
     display: flex;
-    .navWrap
-    {
-        display: flex;
-        justify-content: space-between;
-        width: 100%;
-        // background-color: #e61818;
-        padding: clamp(6px, 2vw, 200px);
-        height: clamp(125px, 30vw, 200px);
-        
-        .carreNom{
-            display: flex;
-            align-items: center;
-            gap: 20px;
-            
-            .carreCouleur{
-                background-color: #b48484;
-                height: 0px;
-                width: 30px;
-                // pour préserver l'aspect ratio
-                padding-bottom: 30px;
-                flex-shrink: 0;
-                flex-grow: 0;
-            }
-            .nom{
-                font-size: 2em;
-                font-weight: bold;
-            }
-        }
-        
-        .titre {
-            margin-top: 10px;
-            text-transform: uppercase;
-        }
+    justify-content: space-between;
+    width: 100%;
+    // background-color: #e61818;
+    padding: clamp(6px, 2vw, 200px);
+    height: clamp(125px, 30vw, 200px);
 
-        .buttonHamburger{
-            padding: 0px;
-            position: absolute;
-            z-index: 1000;
-            width: 60px;
-            aspect-ratio: 1/1;
-            height: 60px;
-            // border-radius:30%;
-            background-color: transparent;
-            // transition: background-color 0.2s;
-            &:hover{
-                // background-color: #758694b9;
-            }
+    .carreNom {
+      display: flex;
+      align-items: center;
+      gap: 20px;
 
-            .barre1{
-                position: absolute;
-                height: 4px;
-                width: 20px;
-                background-color: white;
-            }
-            .barre2{
-                position: absolute;
-                height: 4px;
-                width: 40px;
-                background-color: white;
-            }
-            .barre3{
-                position: absolute;
-                height: 4px;
-                width: 20px;
-                background-color: white;
-            }
-        }
-        .buttonHamburger[data-isopen="true"]
-        {
-            // border-radius:30%;
-        }
-          
+      .carreCouleur {
+        background-color: #b48484;
+        height: 0px;
+        width: 30px;
+        // pour préserver l'aspect ratio
+        padding-bottom: 30px;
+        flex-shrink: 0;
+        flex-grow: 0;
+      }
+      .nom {
+        font-size: 2em;
+        font-weight: bold;
+      }
     }
-    .bigPopOut{
+
+    .titre {
+      margin-top: 10px;
+      text-transform: uppercase;
+    }
+
+    .buttonHamburger {
+      padding: 0px;
+      position: absolute;
+      z-index: 1000;
+      width: 60px;
+      aspect-ratio: 1/1;
+      height: 60px;
+      // border-radius:30%;
+      background-color: transparent;
+      // transition: background-color 0.2s;
+      &:hover {
+        // background-color: #758694b9;
+      }
+
+      .barre1 {
         position: absolute;
-        right: 0%;
-        display: flex;
-        justify-content: right;
-        background-color: #213547;
-        overflow: hidden;
-        // border-radius:30%;
-
+        height: 4px;
+        width: 20px;
+        background-color: white;
+      }
+      .barre2 {
+        position: absolute;
+        height: 4px;
+        width: 40px;
+        background-color: white;
+      }
+      .barre3 {
+        position: absolute;
+        height: 4px;
+        width: 20px;
+        background-color: white;
+      }
     }
-
+  }
+  .bigPopOut {
+    position: absolute;
+    right: 0%;
+    display: flex;
+    justify-content: right;
+    background-color: #213547;
+    overflow: hidden;
+  }
 }
 
-.bigMenuOverlay
-{
-    display: block;
-    position: absolute;
-    top: 0%;
-    left: 0%;
-    width: 100vw;
-    height: 100vh;
-    // z-index: 1000;
-    // background-color: tomato;
-    color: white;
-    .bigMenu
-    {
-        margin: 20px;
+.bigMenuOverlay {
+  //   display: block;
+  top: 0%;
+  left: 0%;
+  width: 100vw;
+  //   background-color: tomato;
+  color: white;
+  .bigMenuOverlayWrap {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    .antoineColonne{
         display: flex;
-        justify-content: center;
+        flex-direction: column;
+        justify-content: space-between;
+        .icones{
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            margin: 20px;
+            gap: 20px;
+            .icone{
+                font-size: clamp(2.5em, 2.5vw, 6em);
+            }
+        }
     }
+  }
+  .bigMenu {
+    // margin: 20px;
+    display: flex;
+    height: 100%;
+    justify-content: center;
+    flex-direction: column;
+    flex-grow: 1;
+    > div {
+        flex-grow: 1;
+      > div {
+        margin: 20px;
+        font-size: clamp(1em, 6vw, 10em);
+      }
+    }
+    .MeRejoindre {
+      display: flex;
+      justify-content: end;
+      align-self: flex-end;
+      align-items: flex-end;
+      margin: 20px;
+    }
+  }
 }
 // .bigMenuOverlay[data-isopen="false"]
 // {
 //     display: none;
 // }
 
-
-.relative
-{
-    position: relative !important;
-    // width: 100%;
-    // height: 100%;
+.relative {
+  position: relative !important;
+  // width: 100%;
+  // height: 100%;
 }
