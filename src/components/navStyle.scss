@@ -121,6 +121,9 @@
       > div {
         margin: 20px;
         font-size: clamp(1em, 6vw, 10em);
+        &:hover {
+          color: #b48484;
+        }
       }
     }
     .MeRejoindre {
@@ -128,7 +131,17 @@
       justify-content: end;
       align-self: flex-end;
       align-items: flex-end;
-      margin: 20px;
+      margin: 0px 20px;
+      p{
+        font-size: clamp(1em, 2vw, 10em);
+      background-color: #0e2c47;
+      padding: 15px 45px 18px;
+      border-radius: 80px;
+      &:hover {
+        background-color: #fff;
+        color: #213547;
+      }
+      }
     }
   }
 }

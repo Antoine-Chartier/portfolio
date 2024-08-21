@@ -158,7 +158,7 @@ const AnimatedBigMenu = ({ active }) => {
           )}
         </AnimatePresence>
         <motion.div variants={rejoindre} className="MeRejoindre">
-          Me rejoindre
+          <p>ME REJOINDRE</p>
         </motion.div>
       </motion.div>
     </div>
