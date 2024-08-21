@@ -40,7 +40,7 @@ function Nav() {
             >
               <AnimatedHamburgerButton active={active} setActive={setActive} />
               <div className="bigMenuOverlay" data-isopen={active}>
-                <AnimatedBigMenu active={active}/>
+                <AnimatedBigMenu active={active} />
               </div>
             </motion.div>
           </div>
@@ -52,7 +52,7 @@ function Nav() {
 
 export default Nav;
 
-const AnimatedBigMenu = ({active}) => {
+const AnimatedBigMenu = ({ active }) => {
   const [isDesktop, setIsDesktop] = useState(window.innerWidth > 768);
 
   useEffect(() => {
@@ -122,7 +122,11 @@ const AnimatedBigMenu = ({active}) => {
         <motion.div className="bigMenu">
           <AnimatePresence>
             {!isDesktop && (
-              <motion.div variants={container} exit="exit" animate={active ? "open" : "closed"}>
+              <motion.div
+                variants={container}
+                exit="exit"
+                animate={active ? "open" : "closed"}
+              >
                 <motion.div variants={item}>accueil.</motion.div>
                 <motion.div variants={item}>portfolio.</motion.div>
                 <motion.div variants={item}>parcours.</motion.div>
@@ -141,7 +145,11 @@ const AnimatedBigMenu = ({active}) => {
       <motion.div className="bigMenu">
         <AnimatePresence>
           {isDesktop && (
-            <motion.div variants={container} exit="exit" animate={active ? "open" : "closed"}>
+            <motion.div
+              variants={container}
+              exit="exit"
+              animate={active ? "open" : "closed"}
+            >
               <motion.div variants={item}>accueil.</motion.div>
               <motion.div variants={item}>portfolio.</motion.div>
               <motion.div variants={item}>parcours.</motion.div>

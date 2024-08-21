@@ -90,20 +90,20 @@
     align-items: center;
     height: 100%;
     width: 100%;
-    .antoineColonne{
+    .antoineColonne {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      .icones {
         display: flex;
+        align-items: center;
         flex-direction: column;
-        justify-content: space-between;
-        .icones{
-            display: flex;
-            align-items: center;
-            flex-direction: column;
-            margin: 20px;
-            gap: 20px;
-            .icone{
-                font-size: clamp(2.5em, 2.5vw, 6em);
-            }
+        margin: 20px;
+        gap: 20px;
+        .icone {
+          font-size: clamp(2.5em, 2.5vw, 6em);
         }
+      }
     }
   }
   .bigMenu {
@@ -114,7 +114,10 @@
     flex-direction: column;
     flex-grow: 1;
     > div {
-        flex-grow: 1;
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+      flex-grow: 1;
       > div {
         margin: 20px;
         font-size: clamp(1em, 6vw, 10em);
