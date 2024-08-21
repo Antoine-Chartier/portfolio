@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import "./navStyle.scss";
 import { motion } from "framer-motion";
-import { animate } from "framer-motion";
+import { AnimatePresence } from "framer-motion";
 import { CiLinkedin } from "react-icons/ci";
 import { FiGithub } from "react-icons/fi";
 
@@ -40,7 +40,7 @@ function Nav() {
             >
               <AnimatedHamburgerButton active={active} setActive={setActive} />
               <div className="bigMenuOverlay" data-isopen={active}>
-                <AnimatedBigMenu />
+                <AnimatedBigMenu active={active} />
               </div>
             </motion.div>
           </div>
@@ -52,7 +52,7 @@ function Nav() {
 
 export default Nav;
 
-const AnimatedBigMenu = () => {
+const AnimatedBigMenu = ({ active }) => {
   const [isDesktop, setIsDesktop] = useState(window.innerWidth > 768);
 
   useEffect(() => {
@@ -97,6 +97,7 @@ const AnimatedBigMenu = () => {
         staggerChildren: 0.05,
       },
     },
+    exit: { opacity: 0 },
   };
 
   const item = {
@@ -107,7 +108,6 @@ const AnimatedBigMenu = () => {
   return (
     <div className="bigMenuOverlayWrap">
       <div
-        
         style={{ width: "fit-content", height: "100%" }}
         className="antoineColonne"
       >
@@ -118,30 +118,45 @@ const AnimatedBigMenu = () => {
           </div>
           <div className="titre">DÉVELOPPEUR WEB</div>
         </motion.div>
+
         <motion.div className="bigMenu">
-          {!isDesktop && (
-            <motion.div variants={container}>
+          <AnimatePresence>
+            {!isDesktop && (
+              <motion.div
+                variants={container}
+                exit="exit"
+                animate={active ? "open" : "closed"}
+              >
+                <motion.div variants={item}>accueil.</motion.div>
+                <motion.div variants={item}>portfolio.</motion.div>
+                <motion.div variants={item}>parcours.</motion.div>
+                <motion.div variants={item}>cv.</motion.div>
+              </motion.div>
+            )}
+          </AnimatePresence>
+        </motion.div>
+
+        <motion.div variants={rejoindre} className="icones">
+          <CiLinkedin className="icone" />
+          <FiGithub className="icone" />
+        </motion.div>
+      </div>
+
+      <motion.div className="bigMenu">
+        <AnimatePresence>
+          {isDesktop && (
+            <motion.div
+              variants={container}
+              exit="exit"
+              animate={active ? "open" : "closed"}
+            >
               <motion.div variants={item}>accueil.</motion.div>
               <motion.div variants={item}>portfolio.</motion.div>
               <motion.div variants={item}>parcours.</motion.div>
               <motion.div variants={item}>cv.</motion.div>
             </motion.div>
           )}
-        </motion.div>
-        <motion.div variants={rejoindre} className="icones">
-          <CiLinkedin className="icone" />
-          <FiGithub className="icone" />
-        </motion.div>
-      </div>
-      <motion.div className="bigMenu">
-        {isDesktop && (
-          <motion.div variants={container}>
-            <motion.div variants={item}>accueil.</motion.div>
-            <motion.div variants={item}>portfolio.</motion.div>
-            <motion.div variants={item}>parcours.</motion.div>
-            <motion.div variants={item}>cv.</motion.div>
-          </motion.div>
-        )}
+        </AnimatePresence>
         <motion.div variants={rejoindre} className="MeRejoindre">
           Me rejoindre
         </motion.div>
