@@ -106,18 +106,18 @@ const AnimatedBigMenu = () => {
 
   return (
     <div className="bigMenuOverlayWrap">
-      <motion.div
-        variants={antoine}
+      <div
+        
         style={{ width: "fit-content", height: "100%" }}
         className="antoineColonne"
       >
-        <div>
+        <motion.div variants={antoine}>
           <div className="carreNom">
             <div className="carreCouleur"></div>
             <div className="nom">Antoine Chartier</div>
           </div>
           <div className="titre">DÉVELOPPEUR WEB</div>
-        </div>
+        </motion.div>
         <motion.div className="bigMenu">
           {!isDesktop && (
             <motion.div variants={container}>
@@ -132,7 +132,7 @@ const AnimatedBigMenu = () => {
           <CiLinkedin className="icone" />
           <FiGithub className="icone" />
         </motion.div>
-      </motion.div>
+      </div>
       <motion.div className="bigMenu">
         {isDesktop && (
           <motion.div variants={container}>
