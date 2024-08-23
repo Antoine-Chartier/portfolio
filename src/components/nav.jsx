@@ -4,6 +4,7 @@ import { motion } from "framer-motion";
 import { AnimatePresence } from "framer-motion";
 import { CiLinkedin } from "react-icons/ci";
 import { FiGithub } from "react-icons/fi";
+import { GoArrowRight } from "react-icons/go";
 
 function Nav() {
   const [active, setActive] = useState(false);
@@ -158,7 +159,7 @@ const AnimatedBigMenu = ({ active }) => {
           )}
         </AnimatePresence>
         <motion.div variants={rejoindre} className="MeRejoindre">
-          <p>ME REJOINDRE</p>
+          <p>{isDesktop && ("ME REJOINDRE") } <GoArrowRight className="fleche"/></p>
         </motion.div>
       </motion.div>
     </div>
