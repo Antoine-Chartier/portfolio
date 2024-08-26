@@ -1,0 +1,42 @@
+.carreNom {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+
+  .carreCouleur {
+    background-color: #b48484;
+    height: 0px;
+    width: 30px;
+    // pour préserver l'aspect ratio
+    padding-bottom: 30px;
+    flex-shrink: 0;
+    flex-grow: 0;
+  }
+  .nom {
+    font-size: 2em;
+    font-weight: bold;
+
+    &::after {
+      content: " / DÉVELOPPEUR WEB";
+      font-weight: 300;
+      font-size: 0.73em;
+    }
+
+    @media (max-width: 1024px) {
+      &::after {
+        content: " DÉVELOPPEUR WEB";
+        display: block;
+        font-weight: 300;
+        font-size: 0.73em;
+      }
+    }
+  }
+}
+
+.titre {
+  margin-top: 10px;
+  text-transform: uppercase;
+
+  // font-weight: 300;
+  // font-size: 0.8em;
+}

@@ -1,20 +1,61 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
-import Nav from './components/nav'
+import { useState } from "react";
+import reactLogo from "./assets/react.svg";
+import viteLogo from "/vite.svg";
+import "./App.css";
+import Nav from "./components/nav";
 
 function App() {
-  const [count, setCount] = useState(0)
+  const [count, setCount] = useState(0);
 
   return (
     <>
+    <div style={{position:"fixed", width: "100%"}}>
+      <Nav />
+    </div>
 
-      <Nav/>
-
-      <div className="mainCard">
-        ef
-      </div>
+      <div className="mainCard">ef</div>
+      <div className="mainCard">ef</div>
+      <div className="mainCard">ef</div>
+      <div className="mainCard">efewf</div>
+      <div className="mainCard">ef</div>
+      <div className="mainCard">ef</div>
+      <div className="mainCard">ef</div>
+      <div className="mainCard">ef</div>
+      <div className="mainCard">ef</div>
+      <div className="mainCard">ef</div>
+      <div className="mainCard">ef</div>
+      <div className="mainCard">ef</div>
+      <div className="mainCard">ef</div>
+      <div className="mainCard">ffffffffffffffffef</div>
+      <div className="mainCard">ef</div>
+      <div className="mainCard">ef</div>
+      <div className="mainCard">ef</div>
+      <div className="mainCard">ef</div>
+      <div className="mainCard">ef</div>
+      <div className="mainCard">ef</div>
+      <div className="mainCard">ef</div>
+      <div className="mainCard">ef</div>
+      <div className="mainCard">eeeeeeeeeeef</div>
+      <div className="mainCard">ef</div>
+      <div className="mainCard">ef</div>
+      <div className="mainCard">ef</div>
+      <div className="mainCard">AAAAAAAAAAAAAAAAAAA</div>
+      <div className="mainCard">ef</div>
+      <div className="mainCard">ef</div>
+      <div className="mainCard">ef</div>
+      <div className="mainCard">ef</div>
+      <div className="mainCard">ef</div>
+      <div className="mainCard">ef</div>
+      <div className="mainCard">ef</div>
+      <div className="mainCard">ef</div>
+      <div className="mainCard">ef</div>
+      <div className="mainCard">ef</div>
+      <div className="mainCard">ef</div>
+      <div className="mainCard">ef</div>
+      <div className="mainCard">ef</div>
+      <div className="mainCard">ef</div>
+      <div className="mainCard">ef</div>
+      <div className="mainCard">ef</div>
 
       {/* <div>
         <a href="https://vitejs.dev" target="_blank">
@@ -37,7 +78,7 @@ function App() {
         Click on the Vite and React logos to learn more
       </p> */}
     </>
-  )
+  );
 }
 
-export default App
+export default App;

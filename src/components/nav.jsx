@@ -1,10 +1,11 @@
 import { useEffect, useState } from "react";
-import "./navStyle.scss";
+import "./nav.scss";
 import { motion } from "framer-motion";
 import { AnimatePresence } from "framer-motion";
 import { CiLinkedin } from "react-icons/ci";
 import { FiGithub } from "react-icons/fi";
 import { GoArrowRight } from "react-icons/go";
+import Logo from "./Logo";
 
 function Nav() {
   const [active, setActive] = useState(false);
@@ -13,13 +14,7 @@ function Nav() {
     <>
       <nav className="topNav">
         <div className="navWrap ">
-          <div>
-            <div className="carreNom">
-              <div className="carreCouleur"></div>
-              <div className="nom">Antoine Chartier</div>
-            </div>
-            <div className="titre">DÉVELOPPEUR WEB</div>
-          </div>
+          <Logo />
           <div className="relative">
             <motion.div
               className="bigPopOut"
@@ -30,11 +25,11 @@ function Nav() {
               variants={{
                 open: {
                   width: "calc(100vw - 2 * clamp(6px, 2vw, 200px))",
-                  height: "94vh",
+                  height: "calc(92vh)",
                 },
                 closed: {
-                  width: "60px",
-                  height: "60px",
+                  width: "70px",
+                  height: "70px",
                   transition: { when: "afterChildren" },
                 },
               }}
@@ -64,12 +59,12 @@ const AnimatedBigMenu = ({ active }) => {
 
   const antoine = {
     closed: {
-      y: -60,
+      x: -120,
       opacity: 0,
     },
     open: {
       transition: { delay: 0.85 },
-      y: 0,
+      x: 0,
       opacity: 1,
     },
   };
@@ -113,11 +108,7 @@ const AnimatedBigMenu = ({ active }) => {
         className="antoineColonne"
       >
         <motion.div variants={antoine}>
-          <div className="carreNom">
-            <div className="carreCouleur"></div>
-            <div className="nom">Antoine Chartier</div>
-          </div>
-          <div className="titre">DÉVELOPPEUR WEB</div>
+          <Logo />
         </motion.div>
 
         <motion.div className="bigMenu">
@@ -146,20 +137,25 @@ const AnimatedBigMenu = ({ active }) => {
       <motion.div className="bigMenu">
         <AnimatePresence>
           {isDesktop && (
-            <motion.div
-              variants={container}
-              exit="exit"
-              animate={active ? "open" : "closed"}
-            >
-              <motion.div variants={item}>accueil.</motion.div>
-              <motion.div variants={item}>portfolio.</motion.div>
-              <motion.div variants={item}>parcours.</motion.div>
-              <motion.div variants={item}>cv.</motion.div>
-            </motion.div>
+            <>
+              <div style={{ height: "70px" }}></div>
+              <motion.div
+                variants={container}
+                exit="exit"
+                animate={active ? "open" : "closed"}
+              >
+                <motion.div variants={item}>accueil.</motion.div>
+                <motion.div variants={item}>portfolio.</motion.div>
+                <motion.div variants={item}>parcours.</motion.div>
+                <motion.div variants={item}>cv.</motion.div>
+              </motion.div>
+            </>
           )}
         </AnimatePresence>
         <motion.div variants={rejoindre} className="MeRejoindre">
-          <p>{isDesktop && ("ME REJOINDRE") } <GoArrowRight className="fleche"/></p>
+          <p>
+            {isDesktop && "ME REJOINDRE"} <GoArrowRight className="fleche" />
+          </p>
         </motion.div>
       </motion.div>
     </div>
