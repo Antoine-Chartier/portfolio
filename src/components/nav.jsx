@@ -14,8 +14,8 @@ function Nav() {
     <>
       <nav className="topNav">
         <div className="navWrap ">
-          <Logo />
-          <div className="relative">
+          <Logo menuIsOpen={active} setActive={setActive}/>
+          <div className="relative" style={{ width: "100%" }}>
             <motion.div
               className="bigPopOut"
               layout
@@ -24,8 +24,10 @@ function Nav() {
               animate={active ? "open" : "closed"}
               variants={{
                 open: {
-                  width: "calc(100vw - 2 * clamp(6px, 2vw, 200px))",
-                  height: "calc(92vh)",
+                  // width: "calc(100dvw - (2 * var(--clampRacine)) - 17px)",
+                  width: "100%",
+                  // marginLeft: "150px",
+                  height: "calc(92vh - var(--clampRacine))",
                 },
                 closed: {
                   width: "70px",
@@ -107,9 +109,9 @@ const AnimatedBigMenu = ({ active }) => {
         style={{ width: "fit-content", height: "100%" }}
         className="antoineColonne"
       >
-        <motion.div variants={antoine}>
-          <Logo />
-        </motion.div>
+        {/* <motion.div variants={antoine}>
+          <Logo menuIsOpen={active}/>
+        </motion.div> */}
 
         <motion.div className="bigMenu">
           <AnimatePresence>

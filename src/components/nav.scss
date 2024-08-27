@@ -4,8 +4,8 @@
     display: flex;
     justify-content: space-between;
     width: 100%;
-    // background-color: #e61818;
-    padding: clamp(6px, 2vw, 200px);
+    // background-color: tomato;
+    padding: var(--clampRacine);
     // height: clamp(125px, 30vw, 200px);
 
 
@@ -21,7 +21,7 @@
       background-color: transparent;
       // transition: background-color 0.2s;
       &:hover {
-        // background-color: #758694b9;
+        background-color: #758694b9;
       }
 
       .barre1 {
@@ -73,7 +73,7 @@
       .icones {
         display: flex;
         align-items: center;
-        flex-direction: column;
+        // flex-direction: column;
         margin: 20px;
         gap: 20px;
         .icone {
@@ -108,12 +108,13 @@
       justify-content: end;
       align-self: flex-end;
       align-items: flex-end;
-      margin: 0px 20px;
+      margin: 20px;
       p {
         font-size: clamp(1em, calc(1vw + 1vh), 10em);
         background-color: #0e2c47;
         padding: 15px 45px 18px;
-        border-radius: 80px;
+        margin: 0px;
+        border-radius: 8px;
         display: flex;
         align-items: center;
         gap: 10px;

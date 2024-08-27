@@ -12,51 +12,21 @@ function App() {
     <div style={{position:"fixed", width: "100%"}}>
       <Nav />
     </div>
-
-      <div className="mainCard">ef</div>
-      <div className="mainCard">ef</div>
-      <div className="mainCard">ef</div>
-      <div className="mainCard">efewf</div>
-      <div className="mainCard">ef</div>
-      <div className="mainCard">ef</div>
-      <div className="mainCard">ef</div>
-      <div className="mainCard">ef</div>
-      <div className="mainCard">ef</div>
-      <div className="mainCard">ef</div>
-      <div className="mainCard">ef</div>
-      <div className="mainCard">ef</div>
-      <div className="mainCard">ef</div>
-      <div className="mainCard">ffffffffffffffffef</div>
-      <div className="mainCard">ef</div>
-      <div className="mainCard">ef</div>
-      <div className="mainCard">ef</div>
-      <div className="mainCard">ef</div>
-      <div className="mainCard">ef</div>
-      <div className="mainCard">ef</div>
-      <div className="mainCard">ef</div>
-      <div className="mainCard">ef</div>
-      <div className="mainCard">eeeeeeeeeeef</div>
-      <div className="mainCard">ef</div>
-      <div className="mainCard">ef</div>
-      <div className="mainCard">ef</div>
-      <div className="mainCard">AAAAAAAAAAAAAAAAAAA</div>
-      <div className="mainCard">ef</div>
-      <div className="mainCard">ef</div>
-      <div className="mainCard">ef</div>
-      <div className="mainCard">ef</div>
-      <div className="mainCard">ef</div>
-      <div className="mainCard">ef</div>
-      <div className="mainCard">ef</div>
-      <div className="mainCard">ef</div>
-      <div className="mainCard">ef</div>
-      <div className="mainCard">ef</div>
-      <div className="mainCard">ef</div>
-      <div className="mainCard">ef</div>
-      <div className="mainCard">ef</div>
-      <div className="mainCard">ef</div>
-      <div className="mainCard">ef</div>
-      <div className="mainCard">ef</div>
-
+    <div>
+      few <br/> lines <br/> of <br/> code
+      few <br/> lines <br/> of <br/> code
+      few <br/> lines <br/> of <br/> code
+      few <br/> lines <br/> of <br/> code
+      few <br/> lines <br/> of <br/> code
+      few <br/> lines <br/> of <br/> code
+      few <br/> lines <br/> of <br/> code
+      few <br/> lines <br/> of <br/> code
+      few <br/> lines <br/> of <br/> code
+      few <br/> lines <br/> of <br/> code
+      few <br/> lines <br/> of <br/> code
+      few <br/> lines <br/> of <br/> code
+      few <br/> lines <br/> of <br/> code
+    </div>
       {/* <div>
         <a href="https://vitejs.dev" target="_blank">
           <img src={viteLogo} className="logo" alt="Vite logo" />

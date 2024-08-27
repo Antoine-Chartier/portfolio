@@ -1,10 +1,48 @@
+$base-color: #b48484;
+
+.wrapLogo {
+  position: absolute;
+  font-size: clamp(0.6em, calc(1.1vw + 1.1vh), 1.2em);
+  @media (max-width: 1024px) {
+    &::after {
+      content: " DÉVELOPPEUR WEB";
+      display: block;
+      font-weight: 300;
+      // color: $base-color;
+    }
+  }
+}
+.menu-open {
+  .nom {
+    z-index: 1000;
+    transition: color 0.3s ease;
+    transition-delay: 0.5s;
+    font-size: 1.5em;
+    color: $base-color;
+  }
+}
+
 .carreNom {
+  position: relative;
+  z-index: 1000;
   display: flex;
   align-items: center;
+  justify-content: center;
+  align-self: center;
   gap: 20px;
 
+  @media (min-width: 1025px) {
+    &::after {
+      content: "/ DÉVELOPPEUR WEB";
+      font-weight: 300;
+      margin-top: 6px;
+      margin-left: -10px;
+    }
+  }
+
   .carreCouleur {
-    background-color: #b48484;
+    z-index: 1000;
+    background-color: $base-color;
     height: 0px;
     width: 30px;
     // pour préserver l'aspect ratio
@@ -15,28 +53,28 @@
   .nom {
     font-size: 2em;
     font-weight: bold;
-
-    &::after {
-      content: " / DÉVELOPPEUR WEB";
-      font-weight: 300;
-      font-size: 0.73em;
-    }
-
-    @media (max-width: 1024px) {
+  }
+}
+.menu-open {
+  .carreNom {
+    @media (min-width: 1025px) {
       &::after {
-        content: " DÉVELOPPEUR WEB";
-        display: block;
-        font-weight: 300;
-        font-size: 0.73em;
+        transition: color 0.1s ease;
+        transition-delay: 0.5s;
+        color: $base-color;
       }
     }
   }
-}
-
-.titre {
-  margin-top: 10px;
-  text-transform: uppercase;
-
-  // font-weight: 300;
-  // font-size: 0.8em;
+  @media (max-width: 1024px) {
+    &::after {
+      content: " DÉVELOPPEUR WEB";
+      position: relative;
+      z-index: 1000;
+      display: block;
+      font-weight: 300;
+      transition: color 0.1s ease-out;
+      transition-delay: 0.5s;
+      color: $base-color;
+    }
+  }
 }

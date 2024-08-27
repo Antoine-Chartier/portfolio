@@ -1,13 +1,13 @@
 import "./Logo.scss";
 
-const Logo = () => {
+const Logo = ({menuIsOpen, setActive, active}) => {
+  console.log(menuIsOpen);
   return (
-    <div>
-      <div className="carreNom">
-        <div className="carreCouleur"></div>
-        <div>
-          <span className="nom">Antoine Chartier</span>
-          {/* <span className="titre"> / DÉVELOPPEUR WEB</span> */}
+    <div className={`wrapLogo ${menuIsOpen ? 'menu-open' : ''}`}>
+      <div className="carreNom" >
+        <div className="carreCouleur" onClick={() => setActive(!menuIsOpen)}></div>
+        <div className="nom">
+          Antoine Chartier
         </div>
       </div>
     </div>
