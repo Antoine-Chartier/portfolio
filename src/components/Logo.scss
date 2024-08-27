@@ -2,23 +2,14 @@ $base-color: #b48484;
 
 .wrapLogo {
   position: absolute;
-  font-size: clamp(0.6em, calc(1.1vw + 1.1vh), 1.2em);
+  font-size: clamp(0.75em, calc(1.1vw + 1.1vh), 1.2em);
   @media (max-width: 1024px) {
     &::after {
       content: " DÉVELOPPEUR WEB";
       display: block;
       font-weight: 300;
-      // color: $base-color;
+      font-size: clamp(1.35em, calc(1.1vw + 1.1vh), 2em);
     }
-  }
-}
-.menu-open {
-  .nom {
-    z-index: 1000;
-    transition: color 0.3s ease;
-    transition-delay: 0.5s;
-    font-size: 1.5em;
-    color: $base-color;
   }
 }
 
@@ -26,17 +17,19 @@ $base-color: #b48484;
   position: relative;
   z-index: 1000;
   display: flex;
-  align-items: center;
+  align-items: baseline;
   justify-content: center;
   align-self: center;
-  gap: 20px;
+  // gap: 20px;
+  .nom {
+    margin: 0px 10px 0px clamp(10px, calc(1.1vw + 1.1vh), 20px);
+  }
 
   @media (min-width: 1025px) {
     &::after {
       content: "/ DÉVELOPPEUR WEB";
       font-weight: 300;
-      margin-top: 6px;
-      margin-left: -10px;
+      font-size: 1.35em;
     }
   }
 
@@ -49,17 +42,32 @@ $base-color: #b48484;
     padding-bottom: 30px;
     flex-shrink: 0;
     flex-grow: 0;
+    @media (max-width: 1025px) {
+      width: clamp(1.5em, calc(1.1vw + 1.1vh), 2em);
+      padding-bottom: clamp(1.5em, calc(1.1vw + 1.1vh), 2em);
+    }
   }
   .nom {
     font-size: 2em;
     font-weight: bold;
   }
 }
+
+.menu-open {
+  .nom {
+    z-index: 1000;
+    transition: color 0.3s ease;
+    transition-delay: 0.5s;
+    // font-size: 1.5em;
+    color: $base-color;
+  }
+}
+
 .menu-open {
   .carreNom {
     @media (min-width: 1025px) {
       &::after {
-        transition: color 0.1s ease;
+        transition: color 0.2s ease;
         transition-delay: 0.5s;
         color: $base-color;
       }
@@ -72,7 +80,7 @@ $base-color: #b48484;
       z-index: 1000;
       display: block;
       font-weight: 300;
-      transition: color 0.1s ease-out;
+      transition: color 0.2s ease;
       transition-delay: 0.5s;
       color: $base-color;
     }
