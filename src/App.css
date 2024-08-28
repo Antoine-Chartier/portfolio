@@ -1,10 +1,14 @@
-.menuTampon
-{
+.menuTampon {
   padding: var(--clampRacine);
   height: 70px;
-  background-color: #97b3ca9c;
+  /* background-color: #97b3ca9c; */
+  /* width: 100%; */
 }
-
+.background {
+  z-index: 2;
+  background-color: none;
+  height: calc(2 * var(--clampRacine) + 70px);
+}
 
 .logo {
   height: 6em;

@@ -10,16 +10,18 @@ function App() {
 
   return (
     <>
-    <div style={{position:"fixed", width: "100%"}}>
-      <Nav />
-    </div>
-    <div className="menuTampon">
-      {/* menu zone */}
-    </div>
-    <div>
-      <HeroSection />
-    </div>
+      <div className="background" style={{ position: "fixed", width: "100%" }}>
+        <Nav />
+      </div>
+      <div className="menuTampon">
+        <div>{/* menu zone */}</div>
+      </div>
+      <div>
+        <HeroSection />
+      </div>
+      <div>
 
+      </div>
 
       <div>
         <a href="https://vitejs.dev" target="_blank">

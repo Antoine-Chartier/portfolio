@@ -7,7 +7,7 @@ const Logo = ({menuIsOpen, setActive, active}) => {
       <div className="carreNom" >
         <div className="carreCouleur" onClick={() => setActive(!menuIsOpen)}></div>
         <div className="nom">
-          Antoine Chartier
+          Antoine
         </div>
       </div>
     </div>

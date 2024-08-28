@@ -5,7 +5,7 @@
 
   color-scheme: light dark;
   color: rgba(255, 255, 255, 0.87);
-  background-color: #000000;
+  /* background-color: #000000; */
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
@@ -13,10 +13,7 @@
   -moz-osx-font-smoothing: grayscale;
   box-sizing: border-box;
   overflow-x: hidden;
-  --scrollbar-width: 17px;
-  --clampRacine: clamp(6px, 2vw, 200px);
-  /* scrollbar-gutter: stable; */
-  /* scrollbar-width: var(--scrollbar-width); */
+  --clampRacine: clamp(6px, 2vw + 1em, 200px);
 }
 
 
@@ -31,7 +28,7 @@ a:hover {
 
 body {
   margin: 0;
-  background-color: #97b3ca9c;
+  /* background-color: #97b3ca9c; */
   /* display: flex;
   place-items: center;
   min-width: 320px;
@@ -45,14 +42,12 @@ h1 {
 
 button {
   /* border-radius: 8px; */
-  border: 1px solid transparent;
+  border: 0px;
+  cursor: pointer;
   padding: 0.6em 1.2em;
-  font-size: 1em;
   font-weight: 500;
   font-family: inherit;
-  background-color: none;
-  cursor: pointer;
-  transition: border-color 0.25s;
+  font-size: 1em;
 }
 
 button:focus,

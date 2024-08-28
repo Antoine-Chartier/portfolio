@@ -26,8 +26,7 @@ function Nav() {
                 open: {
                   // width: "calc(100dvw - (2 * var(--clampRacine)) - 17px)",
                   width: "100%",
-                  // marginLeft: "150px",
-                  height: "calc(92vh - var(--clampRacine))",
+                  height: "calc(92dvh - var(--clampRacine))",
                 },
                 closed: {
                   width: "70px",

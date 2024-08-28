@@ -2,7 +2,7 @@ $base-color: #b48484;
 
 .wrapLogo {
   position: absolute;
-  font-size: clamp(0.75em, calc(1.1vw + 1.1vh), 1.2em);
+  font-size: clamp(0.7em, calc(1.03vw + 1.03vh), 1.2em);
   @media (max-width: 1024px) {
     &::after {
       content: " DÉVELOPPEUR WEB";
@@ -18,7 +18,7 @@ $base-color: #b48484;
   z-index: 1000;
   display: flex;
   align-items: baseline;
-  justify-content: center;
+  // justify-content: center;
   align-self: center;
   // gap: 20px;
   .nom {
