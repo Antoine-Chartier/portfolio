@@ -6,7 +6,7 @@
 }
 .background {
   z-index: 2;
-  background-color: none;
+  background-color: white;
   height: calc(2 * var(--clampRacine) + 70px);
 }
 

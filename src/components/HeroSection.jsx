@@ -39,9 +39,17 @@ const HeroSection = () => {
         </div>
       </div>
       <div className="boxHero2">
-        <div className="textSection">
+        <div>
           <h1>Hello</h1>
           <h2>Qui je suis et ce que je fais</h2>
+          <div className="boxCTA2">
+            <div className="btnCV">
+              <button>cv</button>
+            </div>
+            <div className="btnProjets">
+              <button>projets</button>
+            </div>
+          </div>
           <p>
             Paragraphe. Cliquez ici pour ajouter votre propre texte. Cliquez sur
             « Modifier Texte » ou double-cliquez ici pour ajouter votre contenu
