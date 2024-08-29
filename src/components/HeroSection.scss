@@ -48,11 +48,11 @@
     width: 100%;
     div:first-child {
       button {
-        background-color: black;
-        color: white;
+        background-color: var(--black);
+        color: var(--white);
         &:hover {
-          background-color: white;
-          color: black;
+          background-color: var(--white);
+          color: var(--black);
           transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
           transition-duration: 0.35s;
         }
@@ -62,18 +62,18 @@
       width: 40%;
       max-width: 282px;
       button {
-        border: 2px black solid;
+        border: 2px var(--black) solid;
         border-radius: 8px;
         text-transform: uppercase;
         font-weight: bold;
         background-color: transparent;
-        color: black;
+        color: var(--black);
         width: 100%;
         padding: 10px;
         font-size: larger;
         &:hover {
-          background-color: black;
-          color: white;
+          background-color: var(--black);
+          color: var(--white);
           transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
           transition-duration: 0.35s;
         }
@@ -86,7 +86,7 @@
   .boxIcones {
     width: 100%;
     height: 3.5em;
-    background-color: white;
+    background-color: var(--white);
     .icones {
       display: flex;
       justify-content: center;
@@ -127,7 +127,6 @@
     display: flex;
     justify-content: center;
     padding: 180px 0;
-    // background-color: rgb(33, 141, 141);
     .boxHero1 {
       margin: 0;
       padding: var(--clampRacine) 0 0 0;
@@ -152,11 +151,11 @@
         margin: 35px 0;
         div:first-child {
           button {
-            background-color: black;
-            color: white;
+            background-color: var(--black);
+            color: var(--white);
             &:hover {
-              background-color: white;
-              color: black;
+              background-color: var(--white);
+              color: var(--black);
               transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
               transition-duration: 0.35s;
             }
@@ -166,18 +165,18 @@
           width: 40%;
           max-width: 282px;
           button {
-            border: 2px black solid;
+            border: 2px var(--black) solid;
             border-radius: 8px;
             text-transform: uppercase;
             font-weight: bold;
             background-color: transparent;
-            color: black;
+            color: var(--black);
             width: 100%;
             padding: 10px;
             font-size: larger;
             &:hover {
-              background-color: black;
-              color: white;
+              background-color: var(--black);
+              color: var(--white);
               transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
               transition-duration: 0.35s;
             }
@@ -189,10 +188,10 @@
       z-index: -1;
       background-color: var(--color-bg);
       position: absolute;
-      left: 0;
       top: 0;
+      bottom: 0;
+      height: 100%;
       width: 40%;
-      height: 1000px;
     }
   }
 }

@@ -1,3 +1,33 @@
-footer{
+footer {
+  .coordonnees {
     margin: var(--clampRacine);
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1em;
+    > div {
+      margin-right: 2em;
+    }
+    > div:last-child {
+      flex-basis: 35%;
+    }
+    .icones {
+      display: flex;
+      gap: 1.6em;
+      .icone {
+        font-size: 1.5em;
+        color: gray;
+        &:hover {
+          color: var(--black);
+          transition: color 0.3s;
+        }
+      }
+    }
+  }
+  .copyright {
+    margin: 4em var(--clampRacine) 2em;
+    p {
+      font-size: 0.8em;
+      color: gray;
+    }
+  }
 }
