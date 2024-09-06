@@ -1,8 +1,10 @@
 $base-color: #b48484;
 
+
 .wrapLogo {
   position: absolute;
   font-size: clamp(0.7em, calc(1.03vw + 1.03vh), 1.2em);
+  color: var(--black);
   @media (max-width: 1024px) {
     &::after {
       content: " DÉVELOPPEUR WEB";

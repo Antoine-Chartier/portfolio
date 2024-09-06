@@ -1,5 +1,6 @@
 .heroSection {
   position: relative;
+  color: var(--black);
 }
 .boxHero1 {
   display: flex;
@@ -185,7 +186,7 @@
       }
     }
     .backSplashCouleur {
-      z-index: -1;
+      // z-index: -1;
       background-color: var(--color-bg);
       position: absolute;
       top: 0;

@@ -1,7 +1,7 @@
 import "./Logo.scss";
 
 const Logo = ({menuIsOpen, setActive, active}) => {
-  console.log(menuIsOpen);
+  // console.log(menuIsOpen);
   return (
     <div className={`wrapLogo ${menuIsOpen ? 'menu-open' : ''}`}>
       <div className="carreNom" >

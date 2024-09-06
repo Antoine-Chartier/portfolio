@@ -5,6 +5,7 @@ import "./App.css";
 import Nav from "./components/nav";
 import HeroSection from "./components/HeroSection";
 import Footer from "./components/Footer";
+import BtnDarkMode from "./components/btnDarkMode";
 
 function App() {
   const [count, setCount] = useState(0);
@@ -18,7 +19,7 @@ function App() {
         <div>{/* menu zone */}</div>
       </div>
       <HeroSection />
-
+      <BtnDarkMode />
       <Footer />
 
       {/* <div>

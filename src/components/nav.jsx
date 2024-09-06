@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import "./nav.scss";
+import "./Nav.scss";
 import { motion } from "framer-motion";
 import { AnimatePresence } from "framer-motion";
 import { CiLinkedin } from "react-icons/ci";
@@ -9,12 +9,21 @@ import Logo from "./Logo";
 
 function Nav() {
   const [active, setActive] = useState(false);
+  const [firstMount, setFirstMount] = useState(true);
+  console.log(firstMount);
+
+
+  useEffect(() => {
+    setFirstMount(false);
+    console.log(firstMount);
+  }, []);
+
 
   return (
     <>
       <nav className="topNav">
         <div className="navWrap ">
-          <Logo menuIsOpen={active} setActive={setActive}/>
+          <Logo menuIsOpen={active} setActive={setActive} />
           <div className="relative" style={{ width: "100%" }}>
             <motion.div
               className="bigPopOut"
@@ -37,7 +46,7 @@ function Nav() {
             >
               <AnimatedHamburgerButton active={active} setActive={setActive} />
               <div className="bigMenuOverlay" data-isopen={active}>
-                <AnimatedBigMenu active={active} />
+                <AnimatedBigMenu active={active} firstMount={firstMount} />
               </div>
             </motion.div>
           </div>
@@ -49,7 +58,7 @@ function Nav() {
 
 export default Nav;
 
-const AnimatedBigMenu = ({ active }) => {
+const AnimatedBigMenu = ({ active, firstMount }) => {
   const [isDesktop, setIsDesktop] = useState(window.innerWidth > 768);
 
   useEffect(() => {
@@ -102,6 +111,7 @@ const AnimatedBigMenu = ({ active }) => {
     open: { opacity: 1, transform: "scale(1)", filter: "blur(0px)" },
   };
 
+
   return (
     <div className="bigMenuOverlayWrap">
       <div
@@ -135,7 +145,7 @@ const AnimatedBigMenu = ({ active }) => {
         </motion.div>
       </div>
 
-      <motion.div className="bigMenu">
+      <motion.div className="bigMenu" >
         <AnimatePresence>
           {isDesktop && (
             <>
@@ -144,6 +154,7 @@ const AnimatedBigMenu = ({ active }) => {
                 variants={container}
                 exit="exit"
                 animate={active ? "open" : "closed"}
+                initial={firstMount ? false : true}
               >
                 <motion.div variants={item}>accueil.</motion.div>
                 <motion.div variants={item}>portfolio.</motion.div>

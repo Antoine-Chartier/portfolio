@@ -36,7 +36,7 @@ a:hover {
 
 body {
   margin: 0;
-  /* background-color: #97b3ca9c; */
+  background-color: var(--white);
   /* display: flex;
   place-items: center;
   min-width: 320px;
@@ -85,6 +85,13 @@ button:focus-visible {
     --color-bg-light: var(--main-color-light);
     --color-bg-dark: var(--main-color-dark);
   }
+  body.dark{
+    --white: black;
+    --black: white;
+    --color-bg: var(--dark-main-color);
+    --color-bg-light: var(--dark-main-color);
+    --color-bg-dark: var(--dark-main-color-light);
+  }
   a:hover {
     color: var(--black);
   }
@@ -99,6 +106,13 @@ button:focus-visible {
     --color-bg: var(--dark-main-color);
     --color-bg-light: var(--dark-main-color);
     --color-bg-dark: var(--dark-main-color-light);
+  }
+  body.light{
+    --white: white;
+    --black: black;
+    --color-bg: var(--main-color);
+    --color-bg-light: var(--main-color-light);
+    --color-bg-dark: var(--main-color-dark);
   }
   a:hover {
     color: #d1d1d1;
