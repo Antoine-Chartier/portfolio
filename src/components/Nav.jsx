@@ -7,7 +7,7 @@ import { FiGithub } from "react-icons/fi";
 import { GoArrowRight } from "react-icons/go";
 import Logo from "./Logo";
 
-const NavBar = () => {
+const Nav = () => {
   const [active, setActive] = useState(false);
   const [firstMount, setFirstMount] = useState(true);
 
@@ -54,7 +54,7 @@ const NavBar = () => {
   );
 }
 
-export default NavBar;
+export default Nav;
 
 const AnimatedBigMenu = ({ active, firstMount }) => {
   const [isDesktop, setIsDesktop] = useState(window.innerWidth > 768);
