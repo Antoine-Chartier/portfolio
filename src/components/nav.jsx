@@ -7,7 +7,7 @@ import { FiGithub } from "react-icons/fi";
 import { GoArrowRight } from "react-icons/go";
 import Logo from "./Logo";
 
-function Nav() {
+const Nav = () => {
   const [active, setActive] = useState(false);
   const [firstMount, setFirstMount] = useState(true);
 
