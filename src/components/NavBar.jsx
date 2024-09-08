@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import "./Nav.scss";
+import "./NavBar.scss";
 import { motion } from "framer-motion";
 import { AnimatePresence } from "framer-motion";
 import { CiLinkedin } from "react-icons/ci";
@@ -7,7 +7,7 @@ import { FiGithub } from "react-icons/fi";
 import { GoArrowRight } from "react-icons/go";
 import Logo from "./Logo";
 
-const Nav = () => {
+const NavBar = () => {
   const [active, setActive] = useState(false);
   const [firstMount, setFirstMount] = useState(true);
 
@@ -54,7 +54,7 @@ const Nav = () => {
   );
 }
 
-export default Nav;
+export default NavBar;
 
 const AnimatedBigMenu = ({ active, firstMount }) => {
   const [isDesktop, setIsDesktop] = useState(window.innerWidth > 768);
