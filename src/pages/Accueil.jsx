@@ -1,6 +1,6 @@
 import "./Accueil.scss";
 import HeroSection from "../components/HeroSection";
-import BtnDarkMode from "../components/btnDarkMode";
+import BtnDarkMode from "../components/BtnDarkMode";
 
 function Accueil() {
   return (
