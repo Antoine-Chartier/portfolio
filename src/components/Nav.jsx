@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import "./NavBar.scss";
+import "./Nav.scss";
 import { motion } from "framer-motion";
 import { AnimatePresence } from "framer-motion";
 import { CiLinkedin } from "react-icons/ci";
