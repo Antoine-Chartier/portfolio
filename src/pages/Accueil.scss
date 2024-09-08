@@ -1,0 +1,19 @@
+.menuTampon {
+    padding: var(--clampRacine);
+    height: 70px;
+    /* background-color: #97b3ca9c; */
+    /* width: 100%; */
+  }
+  .background {
+    z-index: 2;
+    height: calc(2 * var(--clampRacine) + 70px);
+    background-color: var(--white);
+    @media (min-width: 768px) {
+      background-color: transparent;
+      &:hover {
+        background-color: var(--white);
+        transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+        transition-duration: 0.15s;
+      }
+    }
+  }

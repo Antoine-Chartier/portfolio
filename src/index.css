@@ -77,14 +77,14 @@ button:focus-visible {
   }
 }
 
-@media (prefers-color-scheme: light) {
+/* @media (prefers-color-scheme: light) {
   :root {
     --white: white;
     --black: black;
     --color-bg: var(--main-color);
     --color-bg-light: var(--main-color-light);
     --color-bg-dark: var(--main-color-dark);
-  }
+  } */
   body.dark{
     --white: black;
     --black: white;
@@ -98,15 +98,15 @@ button:focus-visible {
   button {
     /* background-color: #f9f9f9; */
   }
-}
-@media (prefers-color-scheme: dark) {
+/* } */
+/* @media (prefers-color-scheme: dark) {
   :root {
     --white: black;
     --black: white;
     --color-bg: var(--dark-main-color);
     --color-bg-light: var(--dark-main-color);
     --color-bg-dark: var(--dark-main-color-light);
-  }
+  } */
   body.light{
     --white: white;
     --black: black;
@@ -120,4 +120,4 @@ button:focus-visible {
   button {
     /* background-color: #1f1f1f; */
   }
-}
+/* } */

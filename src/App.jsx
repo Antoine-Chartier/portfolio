@@ -1,49 +1,31 @@
-import { useState } from "react";
-import reactLogo from "./assets/react.svg";
-import viteLogo from "/vite.svg";
+
 import "./App.css";
-import Nav from "./components/nav";
-import HeroSection from "./components/HeroSection";
-import Footer from "./components/Footer";
-import BtnDarkMode from "./components/btnDarkMode";
+
+
+import {
+  Navigate,
+  RouterProvider,
+  createBrowserRouter,
+} from "react-router-dom";
+import Accueil from "./pages/Accueil";
+import UnePage from "./pages/UnePage";
+import Layout from "./Layout";
+import UneAutrePage from "./pages/UneAutrePage";
 
 function App() {
-  const [count, setCount] = useState(0);
+  const routes = [
+    {
+      path: "/",
+      element: <Layout />,
+      children: [
+        { element: <Accueil />, index: true },
+        { path: "/unepage", element: <UnePage /> },
+        { path: "/uneAutrePage", element: <UneAutrePage /> },
+      ],
+    },
+  ];
 
-  return (
-    <>
-      <div className="background" style={{ position: "fixed", width: "100%" }}>
-        <Nav />
-      </div>
-      <div className="menuTampon">
-        <div>{/* menu zone */}</div>
-      </div>
-      <HeroSection />
-      <BtnDarkMode />
-      <Footer />
-
-      {/* <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p> */}
-    </>
-  );
+  return <RouterProvider router={createBrowserRouter(routes)} />;
 }
 
 export default App;

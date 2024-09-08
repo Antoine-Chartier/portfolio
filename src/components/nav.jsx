@@ -10,12 +10,10 @@ import Logo from "./Logo";
 function Nav() {
   const [active, setActive] = useState(false);
   const [firstMount, setFirstMount] = useState(true);
-  console.log(firstMount);
 
 
   useEffect(() => {
     setFirstMount(false);
-    console.log(firstMount);
   }, []);
 
 
@@ -132,7 +130,7 @@ const AnimatedBigMenu = ({ active, firstMount }) => {
               >
                 <motion.div variants={item}>accueil.</motion.div>
                 <motion.div variants={item}>portfolio.</motion.div>
-                <motion.div variants={item}>parcours.</motion.div>
+                <motion.div variants={item}><a href="/unepage">parcours.</a></motion.div>
                 <motion.div variants={item}>cv.</motion.div>
               </motion.div>
             )}
@@ -158,7 +156,7 @@ const AnimatedBigMenu = ({ active, firstMount }) => {
               >
                 <motion.div variants={item}>accueil.</motion.div>
                 <motion.div variants={item}>portfolio.</motion.div>
-                <motion.div variants={item}>parcours.</motion.div>
+                <motion.div variants={item}><a href="/unepage">parcours.</a></motion.div>
                 <motion.div variants={item}>cv.</motion.div>
               </motion.div>
             </>
