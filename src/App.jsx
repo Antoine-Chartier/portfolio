@@ -1,10 +1,9 @@
-import "./App.css";
-
 import {
   Navigate,
   RouterProvider,
   createBrowserRouter,
 } from "react-router-dom";
+import "./App.css";
 import Accueil from "./pages/Accueil";
 import UnePage from "./pages/UnePage";
 import Layout from "./Layout";
