@@ -21,6 +21,10 @@ function App() {
         { path: "uneAutrePage", element: <UneAutrePage /> },
       ],
     },
+    {
+      path: "*",
+      element: <Navigate to="/" replace />,
+    },
   ];
 
   return <RouterProvider router={createBrowserRouter(routes)} />;
