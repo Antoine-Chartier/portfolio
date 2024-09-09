@@ -17,8 +17,8 @@ function App() {
       element: <Layout />,
       children: [
         { element: <Accueil />, index: true },
-        { path: "/unepage", element: <UnePage /> },
-        { path: "/uneAutrePage", element: <UneAutrePage /> },
+        { path: "unepage", element: <UnePage /> },
+        { path: "uneAutrePage", element: <UneAutrePage /> },
       ],
     },
   ];
