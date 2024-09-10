@@ -1,21 +1,20 @@
 import { useEffect, useState } from "react";
 import "./Nav.scss";
-import { motion } from "framer-motion";
-import { AnimatePresence } from "framer-motion";
+import { motion, AnimatePresence } from "framer-motion";
 import { CiLinkedin } from "react-icons/ci";
 import { FiGithub } from "react-icons/fi";
 import { GoArrowRight } from "react-icons/go";
 import Logo from "./Logo";
+import BtnToggleModeCssOnly from "./BtnToggleModeCssOnly";
+import { Link } from "react-router-dom";
 
 const Nav = () => {
   const [active, setActive] = useState(false);
   const [firstMount, setFirstMount] = useState(true);
 
-
   useEffect(() => {
     setFirstMount(false);
   }, []);
-
 
   return (
     <>
@@ -44,7 +43,11 @@ const Nav = () => {
             >
               <AnimatedHamburgerButton active={active} setActive={setActive} />
               <div className="bigMenuOverlay" data-isopen={active}>
-                <AnimatedBigMenu active={active} firstMount={firstMount} />
+                <AnimatedBigMenu
+                  active={active}
+                  setActive={setActive}
+                  firstMount={firstMount}
+                />
               </div>
             </motion.div>
           </div>
@@ -52,30 +55,23 @@ const Nav = () => {
       </nav>
     </>
   );
-}
+};
 
 export default Nav;
 
-const AnimatedBigMenu = ({ active, firstMount }) => {
-  const [isDesktop, setIsDesktop] = useState(window.innerWidth > 768);
+const AnimatedBigMenu = ({ active, setActive, firstMount }) => {
+  const [isDesktop, setIsDesktop] = useState(window.innerWidth > 767);
+  const [text, setText] = useState(isDesktop ? "Me Rejoindre." : "");
+  // useEffect(() => {
+  //   setText(isDesktop ? "Me Rejoindre." : "");
+  // }, [isDesktop]);
 
   useEffect(() => {
-    const handleResize = () => setIsDesktop(window.innerWidth > 768);
+    const handleResize = () => setIsDesktop(window.innerWidth > 767);
     window.addEventListener("resize", handleResize);
     return () => window.removeEventListener("resize", handleResize);
   }, []);
 
-  const antoine = {
-    closed: {
-      x: -120,
-      opacity: 0,
-    },
-    open: {
-      transition: { delay: 0.85 },
-      x: 0,
-      opacity: 1,
-    },
-  };
   const rejoindre = {
     closed: {
       y: 120,
@@ -86,6 +82,19 @@ const AnimatedBigMenu = ({ active, firstMount }) => {
       y: 0,
       opacity: 1,
     },
+    exit: { opacity: 0 },
+  };
+  const rejoindreText = {
+    closed: {
+      y: 120,
+      opacity: 0,
+    },
+    open: {
+      transition: { delay: 0.85 },
+      y: 0,
+      opacity: 1,
+    },
+    exit: { opacity: 0 },
   };
 
   const container = {
@@ -109,17 +118,9 @@ const AnimatedBigMenu = ({ active, firstMount }) => {
     open: { opacity: 1, transform: "scale(1)", filter: "blur(0px)" },
   };
 
-
   return (
     <div className="bigMenuOverlayWrap">
-      <div
-        style={{ width: "fit-content", height: "100%" }}
-        className="antoineColonne"
-      >
-        {/* <motion.div variants={antoine}>
-          <Logo menuIsOpen={active}/>
-        </motion.div> */}
-
+      <div className="antoineColonne">
         <motion.div className="bigMenu">
           <AnimatePresence>
             {!isDesktop && (
@@ -130,7 +131,11 @@ const AnimatedBigMenu = ({ active, firstMount }) => {
               >
                 <motion.div variants={item}>accueil.</motion.div>
                 <motion.div variants={item}>portfolio.</motion.div>
-                <motion.div variants={item}><a href="/unepage">parcours.</a></motion.div>
+                <motion.div variants={item}>
+                  <Link to={"/unePage"} onClick={() => setActive(false)}>
+                    parcours.
+                  </Link>
+                </motion.div>
                 <motion.div variants={item}>cv.</motion.div>
               </motion.div>
             )}
@@ -140,10 +145,11 @@ const AnimatedBigMenu = ({ active, firstMount }) => {
         <motion.div variants={rejoindre} className="icones">
           <CiLinkedin className="icone" />
           <FiGithub className="icone" />
+          <BtnToggleModeCssOnly />
         </motion.div>
       </div>
 
-      <motion.div className="bigMenu" >
+      <motion.div className="bigMenu">
         <AnimatePresence>
           {isDesktop && (
             <>
@@ -156,16 +162,20 @@ const AnimatedBigMenu = ({ active, firstMount }) => {
               >
                 <motion.div variants={item}>accueil.</motion.div>
                 <motion.div variants={item}>portfolio.</motion.div>
-                <motion.div variants={item}><a href="/unepage">parcours.</a></motion.div>
+                <motion.div variants={item}>
+                  <Link to={"/unePage"} onClick={() => setActive(false)}>
+                    parcours.
+                  </Link>
+                </motion.div>
                 <motion.div variants={item}>cv.</motion.div>
               </motion.div>
             </>
           )}
         </AnimatePresence>
         <motion.div variants={rejoindre} className="MeRejoindre">
-          <p>
-            {isDesktop && "ME REJOINDRE"} <GoArrowRight className="fleche" />
-          </p>
+          <motion.p>
+            <GoArrowRight className="fleche" />
+          </motion.p>
         </motion.div>
       </motion.div>
     </div>

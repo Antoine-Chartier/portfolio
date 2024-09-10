@@ -2,8 +2,22 @@
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
   font-weight: 400;
+  /* light styles here */
+  color-scheme: var(--color-scheme, light);
+  /* page preference is "system", and system preference is "dark" */
+  /* page preference is "dark" */
+  &:has(#color-scheme option[value="dark"]:checked) {
+    --color-scheme: dark;
+    /* any additional dark styles */
+  }
 
-  color-scheme: light dark;
+  /* page preference is "system", and system preference is "dark" */
+  @media (prefers-color-scheme: dark) {
+    &:has(#color-scheme option[value="system"]:checked) {
+      --color-scheme: dark;
+      /* any additional dark styles, again */
+    }
+  }
   /* color: rgba(255, 255, 255, 0.87); */
   /* background-color: #000000; */
   /* light mode */
@@ -23,7 +37,6 @@
   overflow-x: hidden;
   --clampRacine: clamp(6px, 2vw + 1em, 200px);
 }
-
 
 a {
   font-weight: 500;
@@ -63,17 +76,16 @@ button:focus-visible {
   /* outline: 4px auto -webkit-focus-ring-color; */
 }
 
-
 /* Responsive utilities */
 
 @media (min-width: 768px) {
   .md\:hiddenBeyond {
-     display: none;
+    display: none;
   }
 }
 @media (max-width: 768px) {
   .md\:hiddenBefore {
-     display: none;
+    display: none;
   }
 }
 
@@ -85,19 +97,19 @@ button:focus-visible {
     --color-bg-light: var(--main-color-light);
     --color-bg-dark: var(--main-color-dark);
   } */
-  body.dark{
-    --white: black;
-    --black: white;
-    --color-bg: var(--dark-main-color);
-    --color-bg-light: var(--dark-main-color);
-    --color-bg-dark: var(--dark-main-color-light);
-  }
-  a:hover {
-    color: var(--black);
-  }
-  button {
-    /* background-color: #f9f9f9; */
-  }
+body.dark {
+  --white: black;
+  --black: white;
+  --color-bg: var(--dark-main-color);
+  --color-bg-light: var(--dark-main-color);
+  --color-bg-dark: var(--dark-main-color-light);
+}
+a:hover {
+  color: var(--black);
+}
+button {
+  /* background-color: #f9f9f9; */
+}
 /* } */
 /* @media (prefers-color-scheme: dark) {
   :root {
@@ -107,17 +119,17 @@ button:focus-visible {
     --color-bg-light: var(--dark-main-color);
     --color-bg-dark: var(--dark-main-color-light);
   } */
-  body.light{
-    --white: white;
-    --black: black;
-    --color-bg: var(--main-color);
-    --color-bg-light: var(--main-color-light);
-    --color-bg-dark: var(--main-color-dark);
-  }
-  a:hover {
-    color: #d1d1d1;
-  }
-  button {
-    /* background-color: #1f1f1f; */
-  }
+body.light {
+  --white: white;
+  --black: black;
+  --color-bg: var(--main-color);
+  --color-bg-light: var(--main-color-light);
+  --color-bg-dark: var(--main-color-dark);
+}
+a:hover {
+  color: #d1d1d1;
+}
+button {
+  /* background-color: #1f1f1f; */
+}
 /* } */

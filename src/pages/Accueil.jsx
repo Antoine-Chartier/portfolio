@@ -1,12 +1,13 @@
 import "./Accueil.scss";
 import HeroSection from "../components/HeroSection";
-import BtnDarkMode from "../components/BtnDarkMode";
+import TestComp from "../components/TestComp";
+// import BtnDarkMode from "../components/BtnDarkMode";
 
 function Accueil() {
   return (
     <div>
+      {/* <TestComp /> */}
       <HeroSection />
-      <BtnDarkMode />
       <a href="/uneAutrePAge">UneAutrePage</a>
     </div>
   );

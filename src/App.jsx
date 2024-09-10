@@ -3,7 +3,7 @@ import {
   RouterProvider,
   createBrowserRouter,
 } from "react-router-dom";
-import "./App.css";
+import "./App.scss";
 import Accueil from "./pages/Accueil";
 import UnePage from "./pages/UnePage";
 import Layout from "./Layout";

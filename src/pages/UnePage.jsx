@@ -1,9 +1,9 @@
+import "./UnePage.scss";
 
-
-function UnePage() {
+const UnePage = () => {
 
   return (
-    <div>
+    <div className="clamp">
       Allo
     </div>
   );
