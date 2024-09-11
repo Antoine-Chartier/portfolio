@@ -8,7 +8,7 @@ const setPreferenceInit = () => {
 };
 
 const setPreference = (theme) => {
-//   theme.value = theme.value;
+  //   theme.value = theme.value;
   localStorage.setItem(storageKey, theme.value);
   reflectPreference(theme);
 };
@@ -29,7 +29,6 @@ const reflectPreference = (theme) => {
     ?.setAttribute("aria-label", theme.value);
 };
 
-
 window.onload = () => {
   // set on load so screen readers can get the latest value on the button
   reflectPreference(theme);
@@ -46,3 +45,10 @@ const onClick = () => {
 
 setPreferenceInit();
 
+// listen for changes to the system theme and update the THEME
+window
+  .matchMedia("(prefers-color-scheme: dark)")
+  .addEventListener("change", ({ matches: isDark }) => {
+    theme.value = isDark ? "dark" : "light";
+    setPreference(theme);
+  });

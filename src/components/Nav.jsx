@@ -61,10 +61,6 @@ export default Nav;
 
 const AnimatedBigMenu = ({ active, setActive, firstMount }) => {
   const [isDesktop, setIsDesktop] = useState(window.innerWidth > 767);
-  const [text, setText] = useState(isDesktop ? "Me Rejoindre." : "");
-  // useEffect(() => {
-  //   setText(isDesktop ? "Me Rejoindre." : "");
-  // }, [isDesktop]);
 
   useEffect(() => {
     const handleResize = () => setIsDesktop(window.innerWidth > 767);
@@ -128,6 +124,7 @@ const AnimatedBigMenu = ({ active, setActive, firstMount }) => {
                 variants={container}
                 exit="exit"
                 animate={active ? "open" : "closed"}
+                initial={firstMount ? false : true}
               >
                 <motion.div variants={item}>accueil.</motion.div>
                 <motion.div variants={item}>portfolio.</motion.div>
