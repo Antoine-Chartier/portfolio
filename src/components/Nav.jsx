@@ -5,7 +5,7 @@ import { CiLinkedin } from "react-icons/ci";
 import { FiGithub } from "react-icons/fi";
 import { GoArrowRight } from "react-icons/go";
 import Logo from "./Logo";
-import BtnToggleModeCssOnly from "./BtnToggleModeCssOnly";
+// import BtnToggleModeCssOnly from "./BtnToggleModeCssOnly";
 import { Link } from "react-router-dom";
 
 const Nav = () => {
@@ -145,7 +145,7 @@ const AnimatedBigMenu = ({ active, setActive, firstMount }) => {
         <motion.div variants={rejoindre} className="icones">
           <CiLinkedin className="icone" />
           <FiGithub className="icone" />
-          <BtnToggleModeCssOnly />
+          {/* <BtnToggleModeCssOnly /> */}
         </motion.div>
       </div>
 

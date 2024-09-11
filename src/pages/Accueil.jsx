@@ -6,7 +6,7 @@ import TestComp from "../components/TestComp";
 function Accueil() {
   return (
     <div>
-      {/* <TestComp /> */}
+      <TestComp />
       <HeroSection />
       <a href="/uneAutrePAge">UneAutrePage</a>
     </div>
