@@ -3,7 +3,7 @@ import "./Logo.scss";
 
 const Logo = ({menuIsOpen, setActive}) => {
   return (
-    <div className={`wrapLogo ${menuIsOpen ? 'menu-open' : ''}`}>
+    <div className={`wrapLogo ${menuIsOpen && 'menu-open'}`}>
       <div className="carreNom" >
         <div className="carreCouleur" onClick={() => setActive(!menuIsOpen)}></div>
         <div className="nom">

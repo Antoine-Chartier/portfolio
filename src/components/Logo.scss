@@ -1,16 +1,17 @@
-$base-color: #b48484;
-
-
 .wrapLogo {
   position: absolute;
   font-size: clamp(0.7em, calc(1.03vw + 1.03vh), 1.2em);
-  color: var(--black);
   @media (max-width: 1024px) {
     &::after {
       content: " DÉVELOPPEUR WEB";
+      position: relative;
+      z-index: 2000;
       display: block;
       font-weight: 300;
       font-size: clamp(1.35em, calc(1.1vw + 1.1vh), 2em);
+      transition: color 0.1s ease;
+      transition-delay: 0.5s;
+      color: var(--black);
     }
   }
 }
@@ -24,12 +25,20 @@ $base-color: #b48484;
   align-self: center;
   // gap: 20px;
   .nom {
+    font-size: 2em;
+    font-weight: bold;
+    transition: color 0.1s ease;
+    transition-delay: 0.5s;
+    color: var(--black);
     margin: 0px 10px 0px clamp(10px, calc(1.1vw + 1.1vh), 20px);
   }
 
   @media (min-width: 1025px) {
     &::after {
       content: "/ DÉVELOPPEUR WEB";
+      transition: color 0.1s ease;
+      transition-delay: 0.5s;
+      color: var(--black);
       font-weight: 300;
       font-size: 1.35em;
     }
@@ -37,7 +46,7 @@ $base-color: #b48484;
 
   .carreCouleur {
     z-index: 1000;
-    background-color: $base-color;
+    background-color: var(--color-rouge);
     height: 0px;
     width: 30px;
     // pour préserver l'aspect ratio
@@ -49,42 +58,36 @@ $base-color: #b48484;
       padding-bottom: clamp(1.5em, calc(1.1vw + 1.1vh), 2em);
     }
   }
-  .nom {
-    font-size: 2em;
-    font-weight: bold;
-  }
 }
 
 .menu-open {
-  .nom {
-    z-index: 1000;
-    transition: color 0.3s ease;
-    transition-delay: 0.5s;
-    // font-size: 1.5em;
-    color: $base-color;
-  }
-}
-
-.menu-open {
-  .carreNom {
-    @media (min-width: 1025px) {
-      &::after {
-        transition: color 0.2s ease;
-        transition-delay: 0.5s;
-        color: $base-color;
-      }
-    }
-  }
   @media (max-width: 1024px) {
     &::after {
       content: " DÉVELOPPEUR WEB";
       position: relative;
-      z-index: 1000;
+      z-index: 2000;
       display: block;
       font-weight: 300;
-      transition: color 0.2s ease;
-      transition-delay: 0.5s;
-      color: $base-color;
+      font-size: clamp(1.35em, calc(1.1vw + 1.1vh), 2em);
+      transition: color 0.1s ease;
+      transition-delay: 0.2s;
+      color: var(--color-rouge);
+    }
+  }
+  .nom {
+    z-index: 1000;
+    transition: color 0.1s ease;
+    transition-delay: 0.2s;
+    color: var(--color-rouge);
+  }
+
+  .carreNom {
+    @media (min-width: 1025px) {
+      &::after {
+        transition: color 0.1s ease;
+        transition-delay: 0.2s;
+        color: var(--color-rouge);
+      }
     }
   }
 }

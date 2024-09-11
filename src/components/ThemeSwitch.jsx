@@ -1,7 +1,7 @@
-import "./TestComp.scss";
-// test push
+import "./ThemeSwitch.scss";
 
-const TestComp = () => {
+
+const ThemeSwitch = () => {
   return (
     <>
       <div className="center">
@@ -48,4 +48,4 @@ const TestComp = () => {
   );
 };
 
-export default TestComp;
+export default ThemeSwitch;
