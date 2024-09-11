@@ -14,7 +14,7 @@ const TestComp = () => {
       setTexte((prevState) => prevState.slice(0, -9));
     }
   };
-
+  console.log("testComp");
   return (
     <>
       <button onClick={() => handleClick("add")}>Ajoute texte</button>
