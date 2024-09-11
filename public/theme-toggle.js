@@ -1,16 +1,9 @@
 const storageKey = "theme-preference";
-const theme = { value: "light" };
 
-const setPreferenceInit = () => {
-  theme.value = getColorPreference();
-  localStorage.setItem(storageKey, getColorPreference());
-  reflectPreference(theme);
-};
-
-const setPreference = (theme) => {
-  //   theme.value = theme.value;
-  localStorage.setItem(storageKey, theme.value);
-  reflectPreference(theme);
+const onClick = () => {
+  theme.value = theme.value === "light" ? "dark" : "light";
+  console.log("onClick is called, with : ", theme.value);
+  setPreference();
 };
 
 const getColorPreference = () => {
@@ -21,34 +14,34 @@ const getColorPreference = () => {
       : "light";
 };
 
-const reflectPreference = (theme) => {
+const setPreference = () => {
+  localStorage.setItem(storageKey, theme.value);
+  reflectPreference();
+};
+
+const reflectPreference = () => {
   document.firstElementChild.setAttribute("data-theme", theme.value);
-  console.log("reflectPreference is called, with : ", theme.value);
   document
     .querySelector("#theme-toggle")
     ?.setAttribute("aria-label", theme.value);
 };
 
+const theme = { value: getColorPreference() };
+
+reflectPreference();
+
 window.onload = () => {
   // set on load so screen readers can get the latest value on the button
-  reflectPreference(theme);
+  reflectPreference();
 
   // now this script can find and listen for clicks on the control
   document.querySelector("#theme-toggle").addEventListener("click", onClick);
 };
-
-const onClick = () => {
-  theme.value = theme.value === "light" ? "dark" : "light";
-  console.log("onClick is called, with : ", theme.value);
-  setPreference(theme);
-};
-
-setPreferenceInit();
 
 // listen for changes to the system theme and update the THEME
 window
   .matchMedia("(prefers-color-scheme: dark)")
   .addEventListener("change", ({ matches: isDark }) => {
     theme.value = isDark ? "dark" : "light";
-    setPreference(theme);
+    setPreference();
   });

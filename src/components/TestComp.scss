@@ -1,3 +1,5 @@
+@import "https://unpkg.com/open-props/easings.min.css";
+
 .center {
   display: flex;
   justify-content: center;
@@ -10,6 +12,7 @@
   @media (hover: none) {
     --size: 48px;
   }
+
   background: none;
   border: none;
   padding: 0;
@@ -74,17 +77,17 @@
 }
 
 .sun {
-  transition: transform 0.5s ease;
+  transition: transform 0.5s var(--ease-elastic-out-3);
 }
 
 ​​.sun-and-moon {
   // @media (--motionOK) {
   & > .sun {
-    transition: transform 0.5s var(--ease-elastic-3);
+    transition: transform 0.5s var(--ease-elastic-out-3);
   }
 
   & > .sun-beams {
-    transition: transform 0.5s var(--ease-elastic-4), opacity 0.5s var(--ease-3);
+    transition: transform .5s var(--ease-elastic-out-4), opacity 0.5s var(--ease-3);
   }
 
   [data-theme="dark"] & {
