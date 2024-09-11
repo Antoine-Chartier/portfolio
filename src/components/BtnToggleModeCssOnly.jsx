@@ -6,6 +6,7 @@ function BtnToggleModeCssOnly() {
     localStorage.setItem("theme", theme);
     // Here you can also add logic to apply the theme to your application
     document.getElementById("color-scheme").value = theme;
+    console.log("Theme changed to", theme);
   }, [theme]);
 
   const handleChange = (event) => {
