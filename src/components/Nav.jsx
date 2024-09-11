@@ -7,6 +7,7 @@ import { GoArrowRight } from "react-icons/go";
 import Logo from "./Logo";
 // import BtnToggleModeCssOnly from "./BtnToggleModeCssOnly";
 import { Link } from "react-router-dom";
+import TestComp from "./TestComp";
 
 const Nav = () => {
   const [active, setActive] = useState(false);
@@ -20,6 +21,7 @@ const Nav = () => {
     <>
       <nav className="topNav">
         <div className="navWrap ">
+
           <Logo menuIsOpen={active} setActive={setActive} />
           <div className="relative" style={{ width: "100%" }}>
             <motion.div
@@ -43,6 +45,7 @@ const Nav = () => {
             >
               <AnimatedHamburgerButton active={active} setActive={setActive} />
               <div className="bigMenuOverlay" data-isopen={active}>
+              <TestComp />
                 <AnimatedBigMenu
                   active={active}
                   setActive={setActive}

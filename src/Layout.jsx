@@ -6,6 +6,7 @@ const Layout = () => {
   return (
     <div>
       <div className="background" style={{ position: "fixed", width: "100%" }}>
+
         <Nav />
       </div>
       <div className="menuTampon">
