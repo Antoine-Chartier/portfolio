@@ -3,21 +3,8 @@
   line-height: 1.5;
   font-weight: 400;
   /* light styles here */
-  color-scheme: var(--color-scheme, light);
-  /* page preference is "system", and system preference is "dark" */
-  /* page preference is "dark" */
-  &:has(#color-scheme option[value="dark"]:checked) {
-    --color-scheme: dark;
-    /* any additional dark styles */
-  }
+  color-scheme: light dark;
 
-  /* page preference is "system", and system preference is "dark" */
-  @media (prefers-color-scheme: dark) {
-    &:has(#color-scheme option[value="system"]:checked) {
-      --color-scheme: dark;
-      /* any additional dark styles, again */
-    }
-  }
   /* color: rgba(255, 255, 255, 0.87); */
   /* background-color: #000000; */
   /* light mode */
@@ -38,22 +25,32 @@
   --clampRacine: clamp(6px, 2vw + 1em, 200px);
 }
 
+[data-theme="light"] {
+  --white: white;
+  --black: black;
+  --color-bg: var(--main-color);
+  --color-bg-light: var(--main-color-light);
+  --color-bg-dark: var(--main-color-dark);
+}
+[data-theme="dark"] {
+  --white: black;
+  --black: white;
+  --color-bg: var(--dark-main-color);
+  --color-bg-light: var(--dark-main-color);
+  --color-bg-dark: var(--dark-main-color-light);
+}
+
+
 a {
   font-weight: 500;
   color: gray;
   text-decoration: inherit;
 }
-a:hover {
-  /* color: #535bf2; */
-}
+
 
 body {
   margin: 0;
   background-color: var(--white);
-  /* display: flex;
-  place-items: center;
-  min-width: 320px;
-  min-height: 100vh; */
 }
 
 h1 {
@@ -62,7 +59,6 @@ h1 {
 }
 
 button {
-  /* border-radius: 8px; */
   border: 0px;
   cursor: pointer;
   padding: 0.6em 1.2em;
@@ -71,10 +67,6 @@ button {
   font-size: 1em;
 }
 
-button:focus,
-button:focus-visible {
-  /* outline: 4px auto -webkit-focus-ring-color; */
-}
 
 /* Responsive utilities */
 
@@ -89,47 +81,9 @@ button:focus-visible {
   }
 }
 
-/* @media (prefers-color-scheme: light) {
-  :root {
-    --white: white;
-    --black: black;
-    --color-bg: var(--main-color);
-    --color-bg-light: var(--main-color-light);
-    --color-bg-dark: var(--main-color-dark);
-  } */
-body.dark {
-  --white: black;
-  --black: white;
-  --color-bg: var(--dark-main-color);
-  --color-bg-light: var(--dark-main-color);
-  --color-bg-dark: var(--dark-main-color-light);
-}
 a:hover {
   color: var(--black);
-}
-button {
-  /* background-color: #f9f9f9; */
-}
-/* } */
-/* @media (prefers-color-scheme: dark) {
-  :root {
-    --white: black;
-    --black: white;
-    --color-bg: var(--dark-main-color);
-    --color-bg-light: var(--dark-main-color);
-    --color-bg-dark: var(--dark-main-color-light);
-  } */
-body.light {
-  --white: white;
-  --black: black;
-  --color-bg: var(--main-color);
-  --color-bg-light: var(--main-color-light);
-  --color-bg-dark: var(--main-color-dark);
 }
 a:hover {
   color: #d1d1d1;
 }
-button {
-  /* background-color: #1f1f1f; */
-}
-/* } */

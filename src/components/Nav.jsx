@@ -5,7 +5,7 @@ import { CiLinkedin } from "react-icons/ci";
 import { FiGithub } from "react-icons/fi";
 import { GoArrowRight } from "react-icons/go";
 import Logo from "./Logo";
-import BtnToggleModeCssOnly from "./BtnToggleModeCssOnly";
+// import BtnToggleModeCssOnly from "./BtnToggleModeCssOnly";
 import { Link } from "react-router-dom";
 
 const Nav = () => {
@@ -61,10 +61,6 @@ export default Nav;
 
 const AnimatedBigMenu = ({ active, setActive, firstMount }) => {
   const [isDesktop, setIsDesktop] = useState(window.innerWidth > 767);
-  const [text, setText] = useState(isDesktop ? "Me Rejoindre." : "");
-  // useEffect(() => {
-  //   setText(isDesktop ? "Me Rejoindre." : "");
-  // }, [isDesktop]);
 
   useEffect(() => {
     const handleResize = () => setIsDesktop(window.innerWidth > 767);
@@ -128,6 +124,7 @@ const AnimatedBigMenu = ({ active, setActive, firstMount }) => {
                 variants={container}
                 exit="exit"
                 animate={active ? "open" : "closed"}
+                initial={firstMount ? false : true}
               >
                 <motion.div variants={item}>accueil.</motion.div>
                 <motion.div variants={item}>portfolio.</motion.div>
@@ -145,7 +142,7 @@ const AnimatedBigMenu = ({ active, setActive, firstMount }) => {
         <motion.div variants={rejoindre} className="icones">
           <CiLinkedin className="icone" />
           <FiGithub className="icone" />
-          <BtnToggleModeCssOnly />
+          {/* <BtnToggleModeCssOnly /> */}
         </motion.div>
       </div>
 
