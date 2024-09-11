@@ -39,7 +39,7 @@ const TestComp = () => {
             </g>
             <mask className="moon" id="moon-mask">
               <rect x="0" y="0" width="100%" height="100%" fill="white" />
-              <circle cx="24" cy="10" r="6" fill="black" />
+              <circle cx="24" cy="10" r="5" fill="black" />
             </mask>
           </svg>
         </button>
