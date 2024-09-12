@@ -42,8 +42,9 @@
       }
     }
   }
+  
   .bigPopOut {
-    position: absolute;
+    // position: absolute;
     right: 0%;
     display: flex;
     justify-content: right;
@@ -151,6 +152,33 @@
       }
     }
   }
+}
+
+.background {
+  position: fixed;
+  width: 100%;
+  z-index: 2;
+  height: calc(2 * var(--clampRacine) + 70px);
+  background-color: var(--white);
+  @media (min-width: 768px) {
+    background-color: var(--white-transparent);
+    transition-duration: 0.1s;
+    &:hover {
+      background-color: var(--white);
+      transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+      transition-duration: 0.1s;
+    }
+    &.menu-ouvert{
+      background-color: var(--white);
+    }
+  }
+}
+
+.bar
+{
+  width: 100%;
+  display: flex;
+  justify-content: right;
 }
 
 .relative {

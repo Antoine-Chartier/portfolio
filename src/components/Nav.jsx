@@ -6,6 +6,7 @@ import { FiGithub } from "react-icons/fi";
 import { GoArrowRight } from "react-icons/go";
 import Logo from "./Logo";
 import { Link } from "react-router-dom";
+import ThemeSwitch from "./ThemeSwitch";
 
 const Nav = () => {
   const [active, setActive] = useState(false);
@@ -16,11 +17,12 @@ const Nav = () => {
   }, []);
 
   return (
-    <div className="background" style={{ position: "fixed", width: "100%" }}>
+    <div className={`background ${active && "menu-ouvert"}`}>
       <nav className="topNav">
         <div className="navWrap ">
           <Logo menuIsOpen={active} setActive={setActive} />
-          <div className="relative" style={{ width: "100%" }}>
+          <div className="relative bar">
+            <ThemeSwitch />
             <motion.div
               className="bigPopOut"
               layout

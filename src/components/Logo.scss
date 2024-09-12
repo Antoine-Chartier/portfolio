@@ -1,16 +1,17 @@
+
 .wrapLogo {
   position: absolute;
+  z-index: 2000;
   font-size: clamp(0.7em, calc(1.03vw + 1.03vh), 1.2em);
   @media (max-width: 1024px) {
     &::after {
       content: " DÉVELOPPEUR WEB";
       position: relative;
-      z-index: 2000;
       display: block;
       font-weight: 300;
       font-size: clamp(1.35em, calc(1.1vw + 1.1vh), 2em);
       transition: color 0.1s ease;
-      transition-delay: 0.5s;
+      transition-delay: var(--transition-delay);
       color: var(--black);
     }
   }
@@ -18,7 +19,6 @@
 
 .carreNom {
   position: relative;
-  z-index: 1000;
   display: flex;
   align-items: baseline;
   // justify-content: center;
@@ -28,7 +28,7 @@
     font-size: 2em;
     font-weight: bold;
     transition: color 0.1s ease;
-    transition-delay: 0.5s;
+    transition-delay: var(--transition-delay);
     color: var(--black);
     margin: 0px 10px 0px clamp(10px, calc(1.1vw + 1.1vh), 20px);
   }
@@ -37,7 +37,7 @@
     &::after {
       content: "/ DÉVELOPPEUR WEB";
       transition: color 0.1s ease;
-      transition-delay: 0.5s;
+      transition-delay: var(--transition-delay);
       color: var(--black);
       font-weight: 300;
       font-size: 1.35em;
@@ -45,7 +45,6 @@
   }
 
   .carreCouleur {
-    z-index: 1000;
     background-color: var(--color-rouge);
     height: 0px;
     width: 30px;
@@ -65,7 +64,6 @@
     &::after {
       content: " DÉVELOPPEUR WEB";
       position: relative;
-      z-index: 2000;
       display: block;
       font-weight: 300;
       font-size: clamp(1.35em, calc(1.1vw + 1.1vh), 2em);
@@ -75,7 +73,6 @@
     }
   }
   .nom {
-    z-index: 1000;
     transition: color 0.1s ease;
     transition-delay: 0.2s;
     color: var(--color-rouge);

@@ -6,6 +6,14 @@ const onClick = () => {
   setPreference();
 };
 
+const transitionManager = () => {
+  const enable = () =>
+    document.documentElement.style.setProperty("--transition-delay", "0.5s");
+  const disable = () =>
+    document.documentElement.style.setProperty("--transition-delay", "0.0s");
+  return { enable, disable };
+};
+
 const getColorPreference = () => {
   if (localStorage.getItem(storageKey)) return localStorage.getItem(storageKey);
   else
@@ -20,10 +28,21 @@ const setPreference = () => {
 };
 
 const reflectPreference = () => {
+  const transitions = transitionManager();
+  transitions.disable();
   document.firstElementChild.setAttribute("data-theme", theme.value);
   document
     .querySelector("#theme-toggle")
     ?.setAttribute("aria-label", theme.value);
+
+  window.getComputedStyle(document.documentElement).transitionDelay;
+  console.log(
+    window.getComputedStyle(document.documentElement).transitionDelay
+  );
+  transitions.enable();
+  console.log(
+    window.getComputedStyle(document.documentElement).transitionDelay
+  );
 };
 
 const theme = { value: getColorPreference() };

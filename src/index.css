@@ -30,6 +30,7 @@
 
 [data-theme="light"] {
   --white: var(--color-white);
+  --white-transparent: rgba(245, 245, 245, 0.8);
   --black: var(--color-black);
   --color-bg: var(--main-color);
   --color-bg-light: var(--main-color-light);
@@ -37,21 +38,21 @@
   --color-bg-menu: #32516d;
 }
 [data-theme="dark"] {
-  --white: var(--color-white);
-  --black: var(--color-black);
+  --white: var(--color-black);
+  --white-transparent: rgba(26, 26, 26, 0.8);
+  --black: var(--color-white);
   --color-bg: var(--dark-main-color);
   --color-bg-light: var(--dark-main-color);
   --color-bg-dark: var(--dark-main-color-light);
   --color-bg-menu: #213547;
 }
 
-/* * {
-  transition-duration: 250ms;
-  transition-property: background-color, color;
-} */
+* {
+  transition-duration: 300ms;
+  transition-property: background-color;
+}
 
 a {
-  
   color: inherit;
   text-decoration: inherit;
 }
