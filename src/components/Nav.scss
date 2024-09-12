@@ -44,7 +44,7 @@
   }
   
   .bigPopOut {
-    // position: absolute;
+    position: absolute;
     right: 0%;
     display: flex;
     justify-content: right;
@@ -108,7 +108,7 @@
       > div {
         // margin: 8px 0px;
         padding: 16px 0px;
-        font-size: clamp(1em, calc(2.2vw + 1vh), 10em);
+        font-size: clamp(1em, calc(1.3vw + 1.6vh), 10em);
         cursor: pointer;
         &:hover {
           color: #b48484;
@@ -179,8 +179,9 @@
 .bar
 {
   width: 100%;
-  display: flex;
-  justify-content: right;
+  position: relative !important;
+  // display: flex;
+  // justify-content: right;
 }
 
 .relative {

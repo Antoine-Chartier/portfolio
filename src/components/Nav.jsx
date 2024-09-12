@@ -21,7 +21,7 @@ const Nav = () => {
       <nav className="topNav">
         <div className="navWrap ">
           <Logo menuIsOpen={active} setActive={setActive} />
-          <div className="relative bar">
+          <div className="bar">
             <ThemeSwitch />
             <motion.div
               className="bigPopOut"

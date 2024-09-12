@@ -1,6 +1,7 @@
 @import "./animationSunMoon.css";
 
 .theme-toggle {
+  z-index: 1;
   position: absolute;
   right: calc(70px + var(--clampRacine));
   // top: 35px;
