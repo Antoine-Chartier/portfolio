@@ -1,0 +1,34 @@
+@import "./animationSunMoon.css";
+
+.theme-toggle {
+  position: absolute;
+  right: calc(70px + var(--clampRacine));
+  // top: 35px;
+
+  --icon-fill: hsl(207, 34%, 67%);
+  --icon-fill-hover: hsl(73, 74%, 44%);
+  --size: 70px;
+  @media (hover: none) {
+    --size: 70px;
+  }
+
+  background: none;
+  border: none;
+  padding: 0;
+
+  inline-size: var(--size);
+  block-size: var(--size);
+  aspect-ratio: 1;
+  border-radius: 50%;
+
+  cursor: pointer;
+  touch-action: manipulation;
+  -webkit-tap-highlight-color: transparent;
+  // outline-offset: 5px;
+
+  & > svg {
+    inline-size: 100%;
+    block-size: 100%;
+    stroke-linecap: round;
+  }
+}

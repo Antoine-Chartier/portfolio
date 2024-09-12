@@ -1,35 +1,4 @@
-.center {
-  display: flex;
-  justify-content: center;
-}
-
-.theme-toggle {
-  --icon-fill: hsl(207, 34%, 67%);
-  --icon-fill-hover: hsl(73, 74%, 44%);
-  --size: 2rem;
-  @media (hover: none) {
-    --size: 48px;
-  }
-  background: none;
-  border: none;
-  padding: 0;
-
-  inline-size: var(--size);
-  block-size: var(--size);
-  aspect-ratio: 1;
-  border-radius: 50%;
-
-  cursor: pointer;
-  touch-action: manipulation;
-  -webkit-tap-highlight-color: transparent;
-  outline-offset: 5px;
-
-  & > svg {
-    inline-size: 100%;
-    block-size: 100%;
-    stroke-linecap: round;
-  }
-}
+@import "https://unpkg.com/open-props/easings.min.css";
 
 .sun-and-moon {
   & > :is(.moon, .sun, .sun-beams) {
@@ -39,7 +8,7 @@
   & > :is(.moon, .sun) {
     fill: var(--icon-fill);
 
-    .theme-toggle:is(:hover, :focus-visible) > & {
+    .theme-toggle:is(:hover, :focus-visible) & {
       fill: var(--icon-fill-hover);
     }
   }
@@ -53,7 +22,9 @@
     }
   }
 
-  [data-theme="dark"] & {
+
+
+  html[data-theme="dark"] & {
     & > .sun {
       transform: scale(1.75);
     }
@@ -71,23 +42,17 @@
       }
     }
   }
-}
 
-.sun {
-  transition: transform 0.5s ease;
-}
-
-​​.sun-and-moon {
-  // @media (--motionOK) {
   & > .sun {
-    transition: transform 0.5s var(--ease-elastic-3);
+    transition: transform 0.5s var(--ease-elastic-out-4);
   }
 
   & > .sun-beams {
-    transition: transform 0.5s var(--ease-elastic-4), opacity 0.5s var(--ease-3);
+    transition: transform 0.5s var(--ease-elastic-out-4),
+      opacity 0.5s var(--ease-3);
   }
 
-  [data-theme="dark"] & {
+  html[data-theme="dark"] & {
     & > .sun {
       transform: scale(1.75);
       transition-timing-function: var(--ease-3);
@@ -99,27 +64,22 @@
       transition-duration: 0.15s;
     }
   }
-  // }
-}
 
-​​.sun-and-moon {
-  // @media (--motionOK) {
   & .moon > circle {
     transform: translateX(-7px);
     transition: transform 0.25s var(--ease-out-5);
 
     @supports (cx: 1) {
       transform: translateX(0);
-      cx: 17;
+      cx: 24;
       transition: cx 0.25s var(--ease-out-5);
     }
   }
 
-  [data-theme="dark"] & {
+  html[data-theme="dark"] & {
     & > .moon > circle {
       transition-delay: 0.25s;
       transition-duration: 0.5s;
     }
   }
-  // }
 }
