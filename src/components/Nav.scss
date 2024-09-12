@@ -106,8 +106,10 @@
       flex-direction: column;
       flex-grow: 1;
       > div {
-        margin: 16px 0px;
-        font-size: clamp(1em, calc(2.2vw + 2.2vh), 10em);
+        // margin: 8px 0px;
+        padding: 16px 0px;
+        font-size: clamp(1em, calc(2.2vw + 1vh), 10em);
+        cursor: pointer;
         &:hover {
           color: #b48484;
           transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);

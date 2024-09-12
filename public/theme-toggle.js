@@ -10,7 +10,7 @@ const transitionManager = () => {
   const enable = () =>
     document.documentElement.style.setProperty("--transition-delay", "0.5s");
   const disable = () =>
-    document.documentElement.style.setProperty("--transition-delay", "0.0s");
+    document.documentElement.style.setProperty("--transition-delay", "0");
   return { enable, disable };
 };
 

@@ -1,11 +1,15 @@
 @import "./animationSunMoon.css";
 
 .theme-toggle {
+  position: absolute;
+  right: calc(70px + var(--clampRacine));
+  // top: 35px;
+
   --icon-fill: hsl(207, 34%, 67%);
   --icon-fill-hover: hsl(73, 74%, 44%);
-  --size: 2rem;
+  --size: 70px;
   @media (hover: none) {
-    --size: 48px;
+    --size: 70px;
   }
 
   background: none;

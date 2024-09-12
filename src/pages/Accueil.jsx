@@ -5,7 +5,6 @@ function Accueil() {
   return (
     <div>
       <HeroSection />
-      <a href="/uneAutrePAge">UneAutrePage</a>
     </div>
   );
 }

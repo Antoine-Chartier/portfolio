@@ -4,6 +4,12 @@ footer {
     display: flex;
     flex-wrap: wrap;
     gap: 1em;
+    h3{
+      color: var(--black);
+    }
+    p{
+      color: var(--black);
+    }
     > div {
       margin-right: 2em;
     }
