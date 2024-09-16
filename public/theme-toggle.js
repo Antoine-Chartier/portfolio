@@ -54,7 +54,7 @@ window.onload = () => {
   reflectPreference();
 
   // now this script can find and listen for clicks on the control
-  document.querySelector("#theme-toggle").addEventListener("click", onClick);
+  document.getElementById("theme-toggle").addEventListener("click", onClick);
 };
 
 // listen for changes to the system theme and update the THEME
