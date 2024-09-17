@@ -77,7 +77,7 @@ button {
 }
 
 /* Responsive utilities */
-
+/* 
 @media (min-width: 768px) {
   .md\:hiddenBeyond {
     display: none;
@@ -87,4 +87,4 @@ button {
   .md\:hiddenBefore {
     display: none;
   }
-}
+} */

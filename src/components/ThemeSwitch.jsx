@@ -1,6 +1,43 @@
+import { useEffect, useState } from "react";
 import "./ThemeSwitch.scss";
 
 const ThemeSwitch = () => {
+  const storageKey = "theme";
+
+  useEffect(() => {
+    reflectPreference(theme);
+  }, []);
+
+  const getColorPreference = () => {
+    if (localStorage.getItem(storageKey))
+      return localStorage.getItem(storageKey);
+    else
+      return window.matchMedia("(prefers-color-scheme: dark)").matches
+        ? "dark"
+        : "light";
+  };
+
+  const [theme, setTheme] = useState(getColorPreference());
+
+  const onClick = () => {
+    const newTheme = theme === "light" ? "dark" : "light";
+    setTheme(newTheme);
+    console.log("onClick is called, with : ", newTheme);
+    setPreference(newTheme);
+  };
+
+  const setPreference = (newTheme) => {
+    localStorage.setItem(storageKey, newTheme);
+    reflectPreference(newTheme);
+  };
+
+  const reflectPreference = (newTheme) => {
+    document.documentElement.setAttribute("data-theme", newTheme);
+    document
+      .getElementById("theme-toggle")
+      ?.setAttribute("aria-label", newTheme);
+  };
+
   return (
     <>
       <button
@@ -9,6 +46,7 @@ const ThemeSwitch = () => {
         title="Toggles light & dark"
         aria-label="auto"
         aria-live="polite"
+        onClick={onClick}
       >
         <svg
           className="sun-and-moon"

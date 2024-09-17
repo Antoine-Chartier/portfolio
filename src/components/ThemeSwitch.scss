@@ -9,9 +9,7 @@
   --icon-fill: hsl(207, 34%, 67%);
   --icon-fill-hover: hsl(73, 74%, 44%);
   --size: 70px;
-  @media (hover: none) {
-    --size: 70px;
-  }
+
 
   background: none;
   border: none;
@@ -32,4 +30,7 @@
     block-size: 100%;
     stroke-linecap: round;
   }
+  // @media (hover: none) {
+  //   --size: 70px;
+  // }
 }
