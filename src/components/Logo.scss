@@ -12,6 +12,7 @@
       font-size: clamp(1.35em, calc(1.1vw + 1.1vh), 2em);
       transition: color 0.1s ease;
       transition-delay: var(--transition-delay);
+      // transition-delay: 300ms;
       color: var(--black);
     }
   }
@@ -29,6 +30,7 @@
     font-weight: bold;
     transition: color 0.1s ease;
     transition-delay: var(--transition-delay);
+    // transition-delay: 300ms;
     color: var(--black);
     margin: 0px 10px 0px clamp(10px, calc(1.1vw + 1.1vh), 20px);
   }
@@ -38,6 +40,7 @@
       content: "/ DÉVELOPPEUR WEB";
       transition: color 0.1s ease;
       transition-delay: var(--transition-delay);
+      // transition-delay: 300ms;
       color: var(--black);
       font-weight: 300;
       font-size: 1.35em;

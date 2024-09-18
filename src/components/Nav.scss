@@ -42,7 +42,7 @@
       }
     }
   }
-  
+
   .bigPopOut {
     position: absolute;
     right: 0%;
@@ -57,7 +57,7 @@
   top: 0%;
   left: 0%;
   width: 100%;
-  //   background-color: tomato;
+  // background-color: tomato;
   // color: white;
   .bigMenuOverlayWrap {
     display: flex;
@@ -70,9 +70,9 @@
       flex-direction: column;
       justify-content: space-between;
       height: 100%;
-      .bigMenu{
+      .bigMenu {
         margin-top: 2.8em;
-        > div{
+        > div {
           margin-left: 20px;
         }
       }
@@ -124,6 +124,7 @@
       align-items: flex-end;
       margin: 20px;
       p {
+        transition-property: all;
         transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
         transition-duration: 0.15s;
         font-size: clamp(1em, calc(1vw + 1vh), 10em);
@@ -170,14 +171,13 @@
       transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
       transition-duration: 0.1s;
     }
-    &.menu-ouvert{
+    &.menu-ouvert {
       background-color: var(--white);
     }
   }
 }
 
-.bar
-{
+.bar {
   width: 100%;
   position: relative !important;
   // display: flex;

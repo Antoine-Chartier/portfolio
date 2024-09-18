@@ -1,41 +1,14 @@
-import { useEffect, useState } from "react";
+
+import { useTheme } from "./ThemeContext";
 import "./ThemeSwitch.scss";
 
+
 const ThemeSwitch = () => {
-  const storageKey = "theme";
-
-  useEffect(() => {
-    reflectPreference(theme);
-  }, []);
-
-  const getColorPreference = () => {
-    if (localStorage.getItem(storageKey))
-      return localStorage.getItem(storageKey);
-    else
-      return window.matchMedia("(prefers-color-scheme: dark)").matches
-        ? "dark"
-        : "light";
-  };
-
-  const [theme, setTheme] = useState(getColorPreference());
+  const { toggleTheme } = useTheme();
 
   const onClick = () => {
-    const newTheme = theme === "light" ? "dark" : "light";
-    setTheme(newTheme);
-    console.log("onClick is called, with : ", newTheme);
-    setPreference(newTheme);
-  };
+    toggleTheme();
 
-  const setPreference = (newTheme) => {
-    localStorage.setItem(storageKey, newTheme);
-    reflectPreference(newTheme);
-  };
-
-  const reflectPreference = (newTheme) => {
-    document.documentElement.setAttribute("data-theme", newTheme);
-    document
-      .getElementById("theme-toggle")
-      ?.setAttribute("aria-label", newTheme);
   };
 
   return (

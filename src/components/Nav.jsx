@@ -31,7 +31,6 @@ const Nav = () => {
               animate={active ? "open" : "closed"}
               variants={{
                 open: {
-                  // width: "calc(100dvw - (2 * var(--clampRacine)) - 17px)",
                   width: "100%",
                   height: "calc(92dvh - var(--clampRacine))",
                 },
@@ -140,7 +139,7 @@ const AnimatedBigMenu = ({ active, setActive, firstMount }) => {
           </AnimatePresence>
         </motion.div>
 
-        <motion.div variants={rejoindre} className="icones">
+        <motion.div variants={rejoindreText} className="icones">
           <CiLinkedin className="icone" />
           <FiGithub className="icone" />
         </motion.div>
@@ -169,11 +168,13 @@ const AnimatedBigMenu = ({ active, setActive, firstMount }) => {
             </>
           )}
         </AnimatePresence>
-        <motion.div variants={rejoindre} className="MeRejoindre">
-          <motion.p>
-            <GoArrowRight className="fleche" />
-          </motion.p>
-        </motion.div>
+        <AnimatePresence>
+          <motion.div variants={rejoindre} layout className="MeRejoindre">
+            <motion.p layout>
+              <GoArrowRight className="fleche" layout />
+            </motion.p>
+          </motion.div>
+        </AnimatePresence>
       </motion.div>
     </div>
   );
