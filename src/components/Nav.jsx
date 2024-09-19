@@ -168,13 +168,11 @@ const AnimatedBigMenu = ({ active, setActive, firstMount }) => {
             </>
           )}
         </AnimatePresence>
-        <AnimatePresence>
-          <motion.div variants={rejoindre} layout className="MeRejoindre">
-            <motion.p layout>
-              <GoArrowRight className="fleche" layout />
-            </motion.p>
-          </motion.div>
-        </AnimatePresence>
+        <motion.div variants={rejoindre} className="MeRejoindre">
+          <motion.p>
+            <GoArrowRight className="fleche" />
+          </motion.p>
+        </motion.div>
       </motion.div>
     </div>
   );
