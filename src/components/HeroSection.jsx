@@ -9,7 +9,7 @@ const HeroSection = () => {
       <div className="boxHero1">
         <div className="boxPhoto">
           <div className="photo">
-            <img src={headShot} height={480} width={719} alt="HeadShot pro Antoine Chartier" />
+            <img width={480} height={719} src={headShot} alt="HeadShot pro Antoine Chartier" />
           </div>
           <div className="nom">
             Antoine

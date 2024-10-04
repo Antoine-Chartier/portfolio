@@ -124,7 +124,7 @@ const AnimatedBigMenu = ({ active, setActive, firstMount }) => {
                 variants={container}
                 exit="exit"
                 animate={active ? "open" : "closed"}
-                initial={firstMount ? false : true}
+                initial={false}
               >
                 <motion.div variants={item}>accueil.</motion.div>
                 <motion.div variants={item}>portfolio.</motion.div>
