@@ -5,8 +5,8 @@ import sharp from 'sharp';
 
 const pattern = '?optimized';
 
-// const isProd = process.env.NODE_ENV === 'production';
-const isProd = true;
+const isProd = process.env.NODE_ENV === 'production';
+// const isProd = false;
 
 function isIdForOptimization(id: string | undefined) {
  return id?.includes(pattern);
