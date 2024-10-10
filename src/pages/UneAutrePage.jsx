@@ -1,14 +1,12 @@
-
+import image from "../assets/imgLourde.jpg?optimized";
+import ImageOp from "../utils/imageOp";
 
 function UneAutrePage() {
-
     return (
-      <div>
-        Je suis une autre page 
-        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Architecto, aspernatur vero quod aut laudantium soluta blanditiis, accusamus dolorem possimus aperiam temporibus ut beatae. Sequi enim assumenda voluptatem fugiat consequatur animi.
-      </div>
+        <div>
+            <ImageOp src={image} alt="test" />
+        </div>
     );
-  }
-  
-  export default UneAutrePage;
-  
+}
+
+export default UneAutrePage;

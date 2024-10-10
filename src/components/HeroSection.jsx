@@ -1,5 +1,7 @@
 import "./HeroSection.scss";
-import headShot from "../assets/headShotPro.webp";
+import headShot from "../assets/headShotPro.webp?optimized";
+import ImageOp from "../utils/imageOp";
+
 import { CiLinkedin } from "react-icons/ci";
 import { FiGithub } from "react-icons/fi";
 
@@ -9,7 +11,7 @@ const HeroSection = () => {
       <div className="boxHero1">
         <div className="boxPhoto">
           <div className="photo">
-            <img width={480} height={719} src={headShot} alt="HeadShot pro Antoine Chartier" />
+            <ImageOp width={480} height={719} src={headShot} alt="HeadShot pro Antoine Chartier" />
           </div>
           <div className="nom">
             Antoine
