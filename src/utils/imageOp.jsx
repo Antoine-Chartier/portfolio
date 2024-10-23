@@ -9,6 +9,7 @@ function getSource(src) {
 const ImageOp = ({ src, alt}) => {
   const [sources, setSources] = useState(getSource(src));
     console.log(sources);
+    console.log(alt);
 
   useEffect(() => {
     setSources(getSource(src));
@@ -17,8 +18,8 @@ const ImageOp = ({ src, alt}) => {
   return (
     <picture>
       {sources.avif && <source srcSet={sources.avif} type="image/avif" alt={alt} />}
-      {sources.webp && <source srcSet={sources.webp} type="image/webp" />}
-      <img src={sources.fallback} alt="" />
+      {sources.webp && <source srcSet={sources.webp} type="image/webp" alt={alt} />}
+      <img src={sources.fallback} alt={alt}  />
     </picture>
   );
 };

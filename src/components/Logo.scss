@@ -1,12 +1,13 @@
-
 .wrapLogo {
   position: absolute;
   max-height: 70px;
   z-index: 2000;
   font-size: clamp(0.7em, calc(1.03vw + 1.03vh), 1.2em);
+  .DeveloppeurWeb {
+    display: none;
+  }
   @media (max-width: 1024px) {
-    &::after {
-      content: " DÉVELOPPEUR WEB";
+    .DeveloppeurWeb {
       position: relative;
       display: block;
       font-weight: 300;
@@ -35,10 +36,12 @@
     color: var(--black);
     margin: 0px 10px 0px clamp(10px, calc(1.1vw + 1.1vh), 20px);
   }
-
+ .DeveloppeurWeb {
+    display: none;
+  }
   @media (min-width: 1025px) {
-    &::after {
-      content: "/ DÉVELOPPEUR WEB";
+    .DeveloppeurWeb{
+      display: block;
       transition: color 0.1s ease;
       transition-delay: var(--transition-delay);
       // transition-delay: 300ms;
@@ -65,8 +68,12 @@
 
 .menu-open {
   @media (max-width: 1024px) {
-    &::after {
-      content: " DÉVELOPPEUR WEB";
+    .carreNom{
+      .DeveloppeurWeb {
+        display: none;
+      }
+    }
+    .DeveloppeurWeb {
       position: relative;
       display: block;
       font-weight: 300;
@@ -84,7 +91,7 @@
 
   .carreNom {
     @media (min-width: 1025px) {
-      &::after {
+      .DeveloppeurWeb {
         transition: color 0.1s ease;
         transition-delay: 0.2s;
         color: var(--color-rouge);

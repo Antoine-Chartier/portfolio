@@ -52,7 +52,7 @@ const HeroSection = () => {
               <button>projets</button>
             </div>
           </div>
-          <p>
+          <p className="pTestAfter">
             Paragraphe. Cliquez ici pour ajouter votre propre texte. Cliquez sur
             « Modifier Texte » ou double-cliquez ici pour ajouter votre contenu
             et personnaliser les polices.

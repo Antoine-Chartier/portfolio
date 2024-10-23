@@ -6,10 +6,12 @@ const Logo = ({menuIsOpen, setActive}) => {
     <div className={`wrapLogo ${menuIsOpen && 'menu-open'}`}>
       <div className="carreNom" >
         <div className="carreCouleur" onClick={() => setActive(!menuIsOpen)}></div>
-        <div className="nom">
-          <Link to={"/"} onClick={() => setActive(false)}>Antoine</Link>
+          <div className="nom">
+            <Link to={"/"} onClick={() => setActive(false)}>Antoine</Link>
         </div>
+        <span className="DeveloppeurWeb">/ DEVVV WEB</span>
       </div>
+      <span className="DeveloppeurWeb">DEVVV WEB</span>
     </div>
   );
 };
