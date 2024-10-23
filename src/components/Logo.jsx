@@ -9,9 +9,9 @@ const Logo = ({menuIsOpen, setActive}) => {
           <div className="nom">
             <Link to={"/"} onClick={() => setActive(false)}>Antoine</Link>
         </div>
-        <span className="DeveloppeurWeb">/ DEVVV WEB</span>
+        <span className="DeveloppeurWeb">/ DEVELOPPEUR WEB</span>
       </div>
-      <span className="DeveloppeurWeb">DEVVV WEB</span>
+      <span className="DeveloppeurWeb">DEVELOPPEUR WEB</span>
     </div>
   );
 };
