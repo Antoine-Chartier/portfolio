@@ -2,16 +2,17 @@
   position: absolute;
   max-height: 70px;
   z-index: 2000;
-  font-size: clamp(0.7em, calc(1.03vw + 1.03vh), 1.2em);
+  font-size: clamp(0.95em, calc(2vw), 1.2em);
   .DeveloppeurWeb {
     display: none;
   }
-  @media (max-width: 1024px) {
+  @media (max-width: 899px) {
     .DeveloppeurWeb {
       position: relative;
       display: block;
       font-weight: 300;
-      font-size: clamp(1.35em, calc(1.1vw + 1.1vh), 2em);
+      // font-size: clamp(1.35em, calc(1.1vw + 1.1vh), 2em);
+      font-size: 1.35em;
       transition: color 0.1s ease;
       transition-delay: var(--transition-delay);
       // transition-delay: 300ms;
@@ -34,12 +35,12 @@
     transition-delay: var(--transition-delay);
     // transition-delay: 300ms;
     color: var(--black);
-    margin: 0px 10px 0px clamp(10px, calc(1.1vw + 1.1vh), 20px);
+    margin: 0px 10px 0px clamp(10px, calc(2vw), 20px);
   }
  .DeveloppeurWeb {
     display: none;
   }
-  @media (min-width: 1025px) {
+  @media (min-width: 900px) {
     .DeveloppeurWeb{
       display: block;
       transition: color 0.1s ease;
@@ -59,7 +60,7 @@
     padding-bottom: 30px;
     flex-shrink: 0;
     flex-grow: 0;
-    @media (max-width: 1025px) {
+    @media (max-width: 900px) {
       width: clamp(1.5em, calc(1.1vw + 1.1vh), 2em);
       padding-bottom: clamp(1.5em, calc(1.1vw + 1.1vh), 2em);
     }
@@ -67,7 +68,7 @@
 }
 
 .menu-open {
-  @media (max-width: 1024px) {
+  @media (max-width: 899px) {
     .carreNom{
       .DeveloppeurWeb {
         display: none;
@@ -77,7 +78,8 @@
       position: relative;
       display: block;
       font-weight: 300;
-      font-size: clamp(1.35em, calc(1.1vw + 1.1vh), 2em);
+      // font-size: clamp(1.35em, calc(1.1vw + 1.1vh), 2em);
+      font-size: 1.35em;
       transition: color 0.1s ease;
       transition-delay: 0.2s;
       color: var(--color-rouge);
@@ -90,7 +92,7 @@
   }
 
   .carreNom {
-    @media (min-width: 1025px) {
+    @media (min-width: 900px) {
       .DeveloppeurWeb {
         transition: color 0.1s ease;
         transition-delay: 0.2s;

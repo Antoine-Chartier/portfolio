@@ -17,43 +17,49 @@ const Nav = () => {
   }, []);
 
   return (
-    <div className={`background ${active && "menu-ouvert"}`}>
-      <nav className="topNav">
-        <div className="navWrap ">
-          <Logo menuIsOpen={active} setActive={setActive} />
-          <div className="bar">
-            <ThemeSwitch />
-            <motion.div
-              className="bigPopOut"
-              layout
-              transition={{ type: "spring", stiffness: 150, damping: 20 }}
-              initial={false}
-              animate={active ? "open" : "closed"}
-              variants={{
-                open: {
-                  width: "100%",
-                  height: "calc(92dvh - var(--clampRacine))",
-                },
-                closed: {
-                  width: "70px",
-                  height: "70px",
-                  transition: { when: "afterChildren" },
-                },
-              }}
-            >
-              <AnimatedHamburgerButton active={active} setActive={setActive} />
-              <div className="bigMenuOverlay" data-isopen={active}>
-                <AnimatedBigMenu
+    <>
+      <div className={`background ${active && "menu-ouvert"}`}>
+        <nav className="topNav">
+          <div className="navWrap ">
+            <Logo menuIsOpen={active} setActive={setActive} />
+            <div className="bar">
+              <ThemeSwitch />
+              <motion.div
+                className="bigPopOut"
+                layout
+                transition={{ type: "spring", stiffness: 150, damping: 20 }}
+                initial={false}
+                animate={active ? "open" : "closed"}
+                variants={{
+                  open: {
+                    width: "100%",
+                    height: "calc(92dvh - var(--clampRacine))",
+                  },
+                  closed: {
+                    width: "70px",
+                    height: "70px",
+                    transition: { when: "afterChildren" },
+                  },
+                }}
+              >
+                <AnimatedHamburgerButton
                   active={active}
                   setActive={setActive}
-                  firstMount={firstMount}
                 />
-              </div>
-            </motion.div>
+                <div className="bigMenuOverlay" data-isopen={active}>
+                  <AnimatedBigMenu
+                    active={active}
+                    setActive={setActive}
+                    firstMount={firstMount}
+                  />
+                </div>
+              </motion.div>
+            </div>
           </div>
-        </div>
-      </nav>
-    </div>
+        </nav>
+      </div>
+      <div className="menuFiller"></div>
+    </>
   );
 };
 
@@ -133,7 +139,11 @@ const AnimatedBigMenu = ({ active, setActive, firstMount }) => {
                     parcours.
                   </Link>
                 </motion.div>
-                <motion.div variants={item}>cv.</motion.div>
+                <motion.div variants={item}>
+                  <Link to={"/cv"} onClick={() => setActive(false)}>
+                    cv.
+                  </Link>
+                </motion.div>
               </motion.div>
             )}
           </AnimatePresence>
@@ -163,7 +173,11 @@ const AnimatedBigMenu = ({ active, setActive, firstMount }) => {
                     parcours.
                   </Link>
                 </motion.div>
-                <motion.div variants={item}>cv.</motion.div>
+                <motion.div variants={item}>
+                  <Link to={"/cv"} onClick={() => setActive(false)}>
+                    cv.
+                  </Link>
+                </motion.div>
               </motion.div>
             </>
           )}

@@ -161,17 +161,26 @@
   height: calc(2 * var(--clampRacine) + 70px);
   background-color: var(--white);
   @media (min-width: 768px) {
-    background-color: var(--white-transparent);
-    transition-duration: 0.1s;
-    &:hover {
-      background-color: var(--white);
-      transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    @media (hover: hover) { // si le navigateur supporte le hover (donc pas un mobile) alors on fait l'effet de hover opaque sur la barre du nav
+      background-color: var(--white-transparent);
       transition-duration: 0.1s;
-    }
-    &.menu-ouvert {
-      background-color: var(--white);
+      &:hover {
+        background-color: var(--white);
+        transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+        transition-duration: 0.1s;
+      }
+      &.menu-ouvert {
+        background-color: var(--white);
+      }
     }
   }
+}
+
+// ajouter un padding pour éviter que le contenu ne soit caché par la barre du nav
+.menuFiller 
+{
+  padding: var(--clampRacine);
+  height: 70px;
 }
 
 .bar {
