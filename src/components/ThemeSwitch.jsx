@@ -1,14 +1,11 @@
-
 import { useTheme } from "./ThemeContext";
 import "./ThemeSwitch.scss";
-
 
 const ThemeSwitch = () => {
   const { toggleTheme } = useTheme();
 
   const onClick = () => {
     toggleTheme();
-
   };
 
   return (

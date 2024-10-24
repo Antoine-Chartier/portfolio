@@ -9,10 +9,6 @@ const Footer = () => {
     <footer>
       <div className="coordonnees">
         <div>
-          <h3>Tel</h3>
-          <p><a href="tel://5143781179">(514) 378-1179</a></p>
-        </div>
-        <div>
           <h3>E-mail</h3>
           <p><a href="mailto:antoinechartier.ca@gmail.com?subject=Offre%20d'emploi&body=Bonjour%20Antoine,">antoinechartier.ca@gmail.com</a></p>
         </div>

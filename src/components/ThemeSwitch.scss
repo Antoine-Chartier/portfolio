@@ -33,4 +33,8 @@
   // @media (hover: none) {
   //   --size: 70px;
   // }
+  @media (max-width: 380px){
+    right: calc(60px + var(--clampRacine));
+    --size:35px;
+  }
 }

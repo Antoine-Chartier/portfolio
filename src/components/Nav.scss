@@ -21,7 +21,6 @@
       &:hover {
         background-color: #758694b9;
       }
-
       .barre1 {
         position: absolute;
         height: 4px;
@@ -54,8 +53,6 @@
 }
 
 .bigMenuOverlay {
-  top: 0%;
-  left: 0%;
   width: 100%;
   // background-color: tomato;
   // color: white;
@@ -108,7 +105,7 @@
       > div {
         // margin: 8px 0px;
         padding: 16px 0px;
-        font-size: clamp(1em, calc(1.3vw + 1.6vh), 10em);
+        font-size: clamp(0.5em, calc(1vw + 1.9vh), 10em);
         cursor: pointer;
         &:hover {
           color: #b48484;
