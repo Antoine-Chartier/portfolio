@@ -173,11 +173,11 @@ const AnimatedBigMenu = ({ active, setActive, firstMount }) => {
                     parcours.
                   </Link>
                 </motion.div>
-                <motion.div variants={item}>
                   <Link to={"/cv"} onClick={() => setActive(false)}>
+                <motion.div variants={item}>
                     cv.
-                  </Link>
                 </motion.div>
+                  </Link>
               </motion.div>
             </>
           )}
