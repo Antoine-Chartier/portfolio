@@ -1,15 +1,13 @@
 @import "./animationSunMoon.css";
 
 .theme-toggle {
-  z-index: 1;
+  z-index: 1001;
   position: absolute;
   right: calc(70px + var(--clampRacine));
-  // top: 35px;
 
   --icon-fill: hsl(207, 34%, 67%);
   --icon-fill-hover: hsl(73, 74%, 44%);
   --size: 70px;
-
 
   background: none;
   border: none;
@@ -30,11 +28,11 @@
     block-size: 100%;
     stroke-linecap: round;
   }
-  // @media (hover: none) { 
+  // @media (hover: none) {
   //   --size: 70px;
   // }
-  @media (max-width: 380px){
+  @media (max-width: 380px) {
     right: calc(60px + var(--clampRacine));
-    --size:35px;
+    --size: 35px;
   }
 }

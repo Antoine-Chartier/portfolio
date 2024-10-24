@@ -4,11 +4,13 @@ import Nav from "./components/Nav";
 
 const Layout = () => {
   return (
-    <div>
+    <>
       <Nav />
+      <main style={{ flex:"1 1 auto"}}>
         <Outlet />
+      </main>
       <Footer />
-    </div>
+    </>
   );
 };
 

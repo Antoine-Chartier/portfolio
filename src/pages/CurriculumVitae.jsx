@@ -1,20 +1,24 @@
 
-import cvpdf from "../../public/AntoineChartier-CurriculumVitae.pdf";
+import cvpdf from "../assets/AntoineChartier-CV.pdf";
 
 function CurriculumVitae() {
-    return (
-<div style={{ height: "100vh", overflow: "hidden" }}>
-      <object
-        id="pdfEmbed"
-        data={cvpdf}
+
+
+  return (
+    <div style={{ height:"100%", overflow: "hidden" }}>
+      <iframe
+        // id="pdfIframe"
+        src={cvpdf}
         type="application/pdf"
         width="100%"
         height="100%"
-        style={{ border: "none" }}
+        style={{ width: "100%", height: "100%", border: "none" }}
       />
-    </div>
 
-    );
+
+      <p style={{color:"red", padding:"var(--clampRacine)"}}>stuff</p>
+    </div>
+  );
 }
 
 export default CurriculumVitae;

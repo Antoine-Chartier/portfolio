@@ -17,7 +17,7 @@ const Nav = () => {
   }, []);
 
   return (
-    <>
+    <header>
       <div className={`background ${active && "menu-ouvert"}`}>
         <nav className="topNav">
           <div className="navWrap ">
@@ -59,7 +59,7 @@ const Nav = () => {
         </nav>
       </div>
       <div className="menuFiller"></div>
-    </>
+    </header>
   );
 };
 

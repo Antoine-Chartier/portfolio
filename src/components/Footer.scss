@@ -1,4 +1,7 @@
 footer {
+  height: 100%;
+  flex: 0 1 250px;
+  
   .coordonnees {
     margin: var(--clampRacine);
     display: flex;

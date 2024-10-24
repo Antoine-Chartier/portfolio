@@ -1,7 +1,7 @@
 .wrapLogo {
   position: absolute;
   max-height: 70px;
-  z-index: 2000;
+  z-index: 1000;
   font-size: clamp(0.95em, calc(2vw), 1.2em);
   .DeveloppeurWeb {
     display: none;
@@ -25,9 +25,6 @@
   position: relative;
   display: flex;
   align-items: baseline;
-  // justify-content: center;
-  align-self: center;
-  // gap: 20px;
   .nom {
     font-size: 2em;
     font-weight: bold;

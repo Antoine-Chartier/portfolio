@@ -4,14 +4,12 @@
     display: flex;
     justify-content: space-between;
     width: 100%;
-    // background-color: tomato;
     padding: var(--clampRacine);
-    // height: clamp(125px, 30vw, 200px);
 
     .buttonHamburger {
       padding: 0px;
       position: absolute;
-      z-index: 1000;
+      z-index: 501;
       width: 70px;
       aspect-ratio: 1/1;
       height: 70px;
@@ -43,6 +41,7 @@
   }
 
   .bigPopOut {
+    z-index: 500;
     position: absolute;
     right: 0%;
     display: flex;
@@ -53,6 +52,8 @@
 }
 
 .bigMenuOverlay {
+  z-index: 500;
+
   width: 100%;
   // background-color: tomato;
   // color: white;
@@ -102,7 +103,7 @@
       justify-content: center;
       flex-direction: column;
       flex-grow: 1;
-       div {
+      div {
         // margin: 8px 0px;
         padding: 16px 0px;
         font-size: clamp(0.5em, calc(1vw + 1.9vh), 10em);
@@ -157,13 +158,15 @@
 .background {
   position: fixed;
   width: 100%;
-  z-index: 2;
+  // z-index: 2;
   height: calc(2 * var(--clampRacine) + 70px);
   background-color: var(--white);
+  transition-duration: 0.2s;
   @media (min-width: 768px) {
-    @media (hover: hover) { // si le navigateur supporte le hover (donc pas un mobile) alors on fait l'effet de hover opaque sur la barre du nav
+    @media (hover: hover) {
+      // si le navigateur supporte le hover (donc pas un mobile) alors on fait l'effet de hover opaque sur la barre du nav
       background-color: var(--white-transparent);
-      transition-duration: 0.1s;
+      transition-duration: 0.2s;
       &:hover {
         background-color: var(--white);
         transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
@@ -177,13 +180,17 @@
 }
 
 // ajouter un padding pour éviter que le contenu ne soit caché par la barre du nav
-.menuFiller 
-{
+.menuFiller {
   padding: var(--clampRacine);
   height: 70px;
 }
 
+header {
+  flex: 0 1 auto;
+}
+
 .bar {
+  // z-index: 2000;
   width: 100%;
   position: relative !important;
   // display: flex;
