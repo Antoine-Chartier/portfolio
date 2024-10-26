@@ -11,6 +11,15 @@ import UneAutrePage from "./pages/UneAutrePage";
 import CurriculumVitae from "./pages/CurriculumVitae";
 
 function App() {
+
+  if ('serviceWorker' in navigator) {
+    navigator.serviceWorker.getRegistrations().then(function(registrations) {
+      for(let registration of registrations) {
+        console.log('Service Worker:', registration);
+      }
+    });
+  }
+
   const routes = [
     {
       path: "/",
