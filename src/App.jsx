@@ -13,11 +13,14 @@ import CurriculumVitae from "./pages/CurriculumVitae";
 function App() {
 
   if ('serviceWorker' in navigator) {
+    console.log(navigator.serviceWorker);
     navigator.serviceWorker.getRegistrations().then(function(registrations) {
       for(let registration of registrations) {
         console.log('Service Worker:', registration);
       }
     });
+  } else {
+    console.log('Service Worker not supported');
   }
 
   const routes = [

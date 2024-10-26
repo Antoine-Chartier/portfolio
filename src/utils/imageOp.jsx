@@ -8,8 +8,8 @@ function getSource(src) {
 
 const ImageOp = ({ src, alt}) => {
   const [sources, setSources] = useState(getSource(src));
-    console.log(sources);
-    console.log(alt);
+    // console.log(sources);
+    // console.log(alt);
 
   useEffect(() => {
     setSources(getSource(src));
