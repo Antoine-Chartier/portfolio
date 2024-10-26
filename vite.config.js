@@ -5,7 +5,7 @@ import { VitePWA } from "vite-plugin-pwa";
 
 // https://vitejs.dev/config/
 export default defineConfig({
-  build: { manifest: "manifest.json" },
+  // build: { manifest: "manifest.json" },
   plugins: [
     imageOptimizerPlugin(),
     react(),
@@ -16,6 +16,7 @@ export default defineConfig({
         // start_url: "/custom-start-url",
         display: "standalone",
         background_color: "#ffffff",
+        theme_color: "#ffffff", 
         description: "A portfolio built with Vite and React",
         // icons: [
         //   {
