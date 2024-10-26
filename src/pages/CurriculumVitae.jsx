@@ -1,5 +1,5 @@
 
-import cvpdf from "../assets/AntoineChartier-CV.pdf";
+import cvpdf from "../../public/AntoineChartier-CV-pub.pdf";
 
 function CurriculumVitae() {
 
