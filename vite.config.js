@@ -2,7 +2,6 @@ import { defineConfig } from "vite";
 import react from "@vitejs/plugin-react";
 import { imageOptimizerPlugin } from "./src/plugin/imagesOptimizerPlugin";
 import { VitePWA } from "vite-plugin-pwa";
-import { getThemeColor } from "./src/config";
 
 // https://vitejs.dev/config/
 export default defineConfig({
