@@ -6,3 +6,5 @@ import { imageOptimizerPlugin } from './src/plugin/imagesOptimizerPlugin'
 export default defineConfig({
   plugins: [ imageOptimizerPlugin(), react()],
 })
+
+build.cssCodeSplit = false
