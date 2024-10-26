@@ -48,6 +48,9 @@ const ThemeProvider = ({ children }) => {
     document
       .getElementById("theme-toggle")
       ?.setAttribute("aria-label", newTheme);
+    document
+      .querySelector('meta[name="theme-color"]')
+      .setAttribute("content", newTheme === "dark" ? "#1a1a1a" : "#f5f5f5");
     setTimeout(() => {
       transitions.enable();
     }, 300);
