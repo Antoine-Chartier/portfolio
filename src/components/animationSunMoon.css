@@ -1,14 +1,16 @@
-
-
 .sun-and-moon {
-  & > :is(.moon, .sun, .sun-beams) {
+  & > .moon,
+  & > .sun,
+  & > .sun-beams {
     transform-origin: center center;
   }
 
-  & > :is(.moon, .sun) {
+  & > .moon,
+  & > .sun {
     fill: var(--icon-fill);
 
-    .theme-toggle:is(:hover, :focus-visible) & {
+    .theme-toggle:hover &,
+    .theme-toggle:focus-visible & {
       fill: var(--icon-fill-hover);
     }
   }
@@ -17,12 +19,11 @@
     stroke: var(--icon-fill);
     stroke-width: 2px;
 
-    .theme-toggle:is(:hover, :focus-visible) & {
+    .theme-toggle:hover &,
+    .theme-toggle:focus-visible & {
       stroke: var(--icon-fill-hover);
     }
   }
-
-
 
   html[data-theme="dark"] & {
     & > .sun {
@@ -44,17 +45,18 @@
   }
 
   & > .sun {
-    transition: transform 0.5s cubic-bezier(.5, 1.5, .75, 1.25);
+    transition: transform 0.5s cubic-bezier(0.5, 1.5, 0.75, 1.25);
   }
 
   & > .sun-beams {
-    transition: opacity 0.5s cubic-bezier(.25,0,.3,1), transform 0.5s cubic-bezier(.5, 1.5, .75, 1.25);
+    transition: opacity 0.5s cubic-bezier(0.25, 0, 0.3, 1),
+      transform 0.5s cubic-bezier(0.5, 1.5, 0.75, 1.25);
   }
 
   html[data-theme="dark"] & {
     & > .sun {
       transform: scale(1.75);
-      transition-timing-function: cubic-bezier(.25, 0, .3, 1);
+      transition-timing-function: cubic-bezier(0.25, 0, 0.3, 1);
       transition-duration: 0.25s;
     }
 
@@ -66,12 +68,12 @@
 
   & .moon > circle {
     transform: translateX(-7px);
-    transition: transform 0.25s cubic-bezier(.9, 0, .1, 1);
+    transition: transform 0.25s cubic-bezier(0.9, 0, 0.1, 1);
 
     @supports (cx: 1) {
       transform: translateX(0);
       cx: 24;
-      transition: cx 0.25s cubic-bezier(.9, 0, .1, 1);
+      transition: cx 0.25s cubic-bezier(0.9, 0, 0.1, 1);
     }
   }
 
