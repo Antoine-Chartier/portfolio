@@ -1,4 +1,5 @@
 import { defineConfig } from 'vite'
+import { cssCodeSplit } from 'vite-plugin-css-code-split'
 import react from '@vitejs/plugin-react'
 import { imageOptimizerPlugin } from './src/plugin/imagesOptimizerPlugin'
 
