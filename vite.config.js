@@ -5,6 +5,5 @@ import { imageOptimizerPlugin } from './src/plugin/imagesOptimizerPlugin'
 // https://vitejs.dev/config/
 export default defineConfig({
   plugins: [ imageOptimizerPlugin(), react()],
+  build.cssCodeSplit = false
 })
-
-build.cssCodeSplit = false
