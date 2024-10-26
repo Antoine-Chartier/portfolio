@@ -4,6 +4,6 @@ import { imageOptimizerPlugin } from './src/plugin/imagesOptimizerPlugin'
 
 // https://vitejs.dev/config/
 export default defineConfig({
-  build: { manifest: true},
+  build: {copyPublicDir: false, manifest: true},
   plugins: [ imageOptimizerPlugin(), react()],
 })
