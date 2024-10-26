@@ -2,6 +2,7 @@ import { defineConfig } from "vite";
 import react from "@vitejs/plugin-react";
 import { imageOptimizerPlugin } from "./src/plugin/imagesOptimizerPlugin";
 import { VitePWA } from "vite-plugin-pwa";
+import { getThemeColor } from "./src/config";
 
 // https://vitejs.dev/config/
 export default defineConfig({
@@ -16,7 +17,7 @@ export default defineConfig({
         // start_url: "/custom-start-url",
         display: "standalone",
         background_color: "#f5f5f5",
-        theme_color: "#f5f5f5", 
+        theme_color: getThemeColor(),
         description: "A portfolio built with Vite and React",
         // icons: [
         //   {
