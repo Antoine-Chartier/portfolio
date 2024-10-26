@@ -15,7 +15,7 @@ export default defineConfig({
         short_name: "Portfolio",
         // start_url: "/custom-start-url",
         display: "standalone",
-        background_color: "#ffffff",
+        background_color: "#f5f5f5",
         theme_color: "#ffffff", 
         description: "A portfolio built with Vite and React",
         // icons: [
