@@ -158,7 +158,7 @@
 .background {
   position: fixed;
   width: 100%;
-  // z-index: 2;
+  z-index: 1000;
   height: calc(2 * var(--clampRacine) + 70px);
   background-color: var(--white);
   transition-duration: 0.2s;

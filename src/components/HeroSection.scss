@@ -1,5 +1,4 @@
 .heroSection {
-  z-index: -10;
   position: relative;
   color: var(--black);
 }
@@ -10,7 +9,6 @@
   gap: 30px;
   margin: var(--clampRacine);
   padding: var(--clampRacine) 0;
-  // z-index: 1;
   background-color: var(--color-bg-light);
   box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
     rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
@@ -107,7 +105,6 @@
   padding: var(--clampRacine) var(--clampRacine) var(--clampRacine)
     var(--clampRacine);
   position: relative;
-  z-index: -1;
   .boxCTA2 {
     display: none;
   }
@@ -142,7 +139,6 @@
       }
     }
     .boxHero2 {
-      // z-index: 1;
       max-width: 420px;
       padding: 60px;
       top: 0;
@@ -187,7 +183,6 @@
       }
     }
     .backSplashCouleur {
-      // z-index: -1;
       background-color: var(--color-bg);
       position: absolute;
       top: 0;

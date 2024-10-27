@@ -4,6 +4,7 @@ import ImageOp from "../utils/imageOp";
 
 import { CiLinkedin } from "react-icons/ci";
 import { FiGithub } from "react-icons/fi";
+import { Link } from "react-router-dom";
 
 const HeroSection = () => {
   return (
@@ -11,7 +12,12 @@ const HeroSection = () => {
       <div className="boxHero1">
         <div className="boxPhoto">
           <div className="photo">
-            <ImageOp width={480} height={719} src={headShot} alt="HeadShot pro Antoine Chartier" />
+            <ImageOp
+              width={480}
+              height={719}
+              src={headShot}
+              alt="HeadShot pro Antoine Chartier"
+            />
           </div>
           <div className="nom">
             Antoine
@@ -23,7 +29,9 @@ const HeroSection = () => {
         <div className="ligneDeveloppeurWeb">DÉVELOPPEUR WEB</div>
         <div className="boxCTA">
           <div className="btnCV">
-            <button>cv</button>
+            <Link to={"/cv"}>
+              <button>cv</button>
+            </Link>
           </div>
           <div className="btnProjets">
             <button>projets</button>
@@ -46,7 +54,9 @@ const HeroSection = () => {
           <h2>Qui je suis et ce que je fais</h2>
           <div className="boxCTA2">
             <div className="btnCV">
-              <button>cv</button>
+              <Link to={"/cv"}>
+                <button>cv</button>
+              </Link>
             </div>
             <div className="btnProjets">
               <button>projets</button>
