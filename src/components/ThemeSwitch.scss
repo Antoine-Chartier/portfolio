@@ -7,6 +7,7 @@
 
   --icon-fill: hsl(207, 34%, 67%);
   --icon-fill-hover: hsl(73, 74%, 44%);
+
   --size: 70px;
 
   background: none;
@@ -34,5 +35,8 @@
   @media (max-width: 380px) {
     right: calc(60px + var(--clampRacine));
     --size: 35px;
+  }
+  @media (hover: none) {
+    --icon-fill-hover: inherit;
   }
 }
