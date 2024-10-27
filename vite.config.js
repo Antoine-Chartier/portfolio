@@ -12,7 +12,7 @@ export default defineConfig({
     VitePWA({
       workbox: {
         navigateFallbackDenylist: [/\.pdf$/],
-        globPatterns: ['**/*.{js,css,html,ico,png,svg}'],
+        globPatterns: ['**/*.{js,css,html,ico,png,svg,pdf}'],
       },
       manifest: {
         name: "Mon Portfolio",
