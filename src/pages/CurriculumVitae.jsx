@@ -1,4 +1,4 @@
-import cvpdf from "../assets/antoinechartier-cv.pdf";
+import cvpdf from "/AntoineChartier-CV.pdf";
 
 function CurriculumVitae() {
   return (
@@ -11,7 +11,7 @@ function CurriculumVitae() {
         height="100%"
         style={{ width: "100%", height: "100%", border: "none" }}
       />
-
+      {/* <img src="image.jpg" alt="" /> */}
       <p style={{ color: "red", padding: "var(--clampRacine)" }}>stuff</p>
     </div>
   );

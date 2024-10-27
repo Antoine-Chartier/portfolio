@@ -10,7 +10,11 @@ export default defineConfig({
     imageOptimizerPlugin(),
     react(),
     VitePWA({
-      includeAssets: ['src/public/antoinechartier-CV.pdf', '/AntoineChartier-CV.pfd', 'assets/antoinechartier-CV.pdf'],
+      includeAssets: ['src/public/AntoineChartier-CV.pdf', '/AntoineChartier-CV.pfd', 'assets/AntoineChartier-CV.pdf'],
+      workbox: {
+        // <other options>
+        navigateFallbackDenylist: [/\.pdf$/],
+      },
       manifest: {
         name: "Mon Portfolio",
         short_name: "Portfolio",
