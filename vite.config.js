@@ -14,6 +14,7 @@ export default defineConfig({
       workbox: {
         // navigateFallbackDenylist: [/\.pdf$/],
         globPatterns: ['**/*.{js,css,html,ico,png,webp,avif,svg,pdf}'],
+        maximumFileSizeToCacheInBytes: 3000000,
       },
       manifest: {
         name: "Mon Portfolio",
