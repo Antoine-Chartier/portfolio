@@ -10,9 +10,10 @@ export default defineConfig({
     imageOptimizerPlugin(),
     react(),
     VitePWA({
+      registerType: 'autoUpdate',
       workbox: {
-        navigateFallbackDenylist: [/\.pdf$/],
-        globPatterns: ['**/*.{js,css,html,ico,png,svg,pdf}'],
+        // navigateFallbackDenylist: [/\.pdf$/],
+        globPatterns: ['**/*.{js,css,html,ico,png,webp,avif,svg,pdf}'],
       },
       manifest: {
         name: "Mon Portfolio",
