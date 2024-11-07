@@ -13,12 +13,12 @@ console.log(screenSize);
 
 
   return (
-    <div style={{ height: "100%", overflow: "hidden" }}>
+    <div style={{width:screenSize, height: "100%", overflow: "hidden" }}>
       <iframe
         // id="pdfIframe"
         src={cvpdf}
         type="application/pdf"
-        width="100%"
+        width={{screenSize}}
         height="100%"
         style={{ width: screenSize, height: "100%", border: "none" }}
       />
