@@ -21,8 +21,7 @@ console.log(screenSize);
         width={{screenSize}}
         height="100%"
         style={{ width: screenSize, height: "100%", border: "none" }}
-      />
-      <p style={{ color: "red", padding: "var(--clampRacine)" }}>stuff</p>
+      /> 
     </div>
   );
 }
