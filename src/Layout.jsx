@@ -19,7 +19,7 @@ const Layout = () => {
   return (
     <>
       <Nav />
-      <main style={{ flex: "1 1 auto" }}>
+      <main style={{ flex: "1 1 auto", height:"100%" }}>
         <Outlet />
       </main>
       {!shouldNOTrenderFooter && <Footer/>}
