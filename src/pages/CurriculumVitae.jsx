@@ -4,7 +4,7 @@ import cvpdf from "/AntoineChartier-CV.pdf";
 function CurriculumVitae() {
 
   const [screenSize, setScreenSize] = useState(window.innerWidth);
-console.log(screenSize);
+
   useEffect(() => {
     const handleResize = () => setScreenSize(window.innerWidth);
     window.addEventListener("resize", handleResize);
@@ -14,14 +14,13 @@ console.log(screenSize);
 
   return (
     <div style={{width:screenSize, height: "100%", overflow: "hidden" }}>
-      <iframe
-        // id="pdfIframe"
+      <embed
         src={cvpdf}
         type="application/pdf"
-        width={{screenSize}}
+        width="100%"
         height="100%"
-        style={{ width: screenSize, height: "100%", border: "none" }}
-      /> 
+        style={{ border: "none" }}
+      />
     </div>
   );
 }
