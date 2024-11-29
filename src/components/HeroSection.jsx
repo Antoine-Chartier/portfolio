@@ -63,13 +63,10 @@ const HeroSection = () => {
             </div>
           </div>
           <p className="pTestAfter">
-            Paragraphe. Cliquez ici pour ajouter votre propre texte. Cliquez sur
-            « Modifier Texte » ou double-cliquez ici pour ajouter votre contenu
-            et personnaliser les polices.
+            Je suis développeur web spécialisé en front-end.
           </p>
           <p>
-            Relatez ici votre parcours et présentez votre activité à vos
-            visiteurs.
+          Diplômé d'un programme de trois ans en intégration multimédia au cégep, j'ai également effectué un stage chez Rouge Marketing. Je maîtrise divers logiciels et environnements de développement tels que React, WordPress et Adobe. Mon objectif est de contribuer à rendre le web un endroit meilleur.
           </p>
         </div>
       </div>
