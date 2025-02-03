@@ -48,6 +48,8 @@ const HeroSection = () => {
           </div>
         </div>
       </div>
+      <div className="backSplashCouleur"></div>
+
       <div className="boxHero2">
         <div>
           <h1>Hello</h1>
@@ -66,11 +68,12 @@ const HeroSection = () => {
             Je suis développeur web spécialisé en front-end.
           </p>
           <p>
-          Diplômé d'un programme de trois ans en intégration multimédia au cégep, j'ai également effectué un stage chez Rouge Marketing. Je maîtrise divers logiciels et environnements de développement tels que React, WordPress et Adobe. Mon objectif est de contribuer à rendre le web un endroit meilleur.
+          Diplômé d'un programme de trois ans en intégration multimédia au cégep. Je maîtrise divers logiciels et environnements de développement tels que React, WordPress et Adobe.
           </p>
+           
+           <p>Mon objectif est de contribuer à faire passer votre projet web de rêve à la réalité, simplement et efficacement.</p>
         </div>
       </div>
-      <div className="backSplashCouleur"></div>
     </div>
   );
 };

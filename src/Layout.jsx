@@ -14,7 +14,7 @@ const Layout = () => {
 
   // Check if the current path is in the noFooterPaths array
   const shouldNOTrenderFooter = noFooterPaths.includes(currentPath) && isDesktop;
-  console.log(shouldNOTrenderFooter);
+  // console.log(shouldNOTrenderFooter);
 
   return (
     <>
