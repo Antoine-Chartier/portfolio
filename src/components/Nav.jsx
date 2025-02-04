@@ -26,7 +26,7 @@ const Nav = () => {
               <ThemeSwitch />
               <motion.div
                 className="bigPopOut"
-                layout
+                // layout
                 transition={{ type: "spring", stiffness: 150, damping: 20 }}
                 initial={false}
                 animate={active ? "open" : "closed"}
@@ -202,7 +202,7 @@ const AnimatedBigMenu = ({ active, setActive, firstMount }) => {
 const AnimatedHamburgerButton = ({ setActive, active }) => {
   return (
     <motion.button
-      layout
+      // layout
       onClick={() => setActive(!active)}
       className="buttonHamburger"
     >
