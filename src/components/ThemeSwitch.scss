@@ -36,7 +36,7 @@
     right: calc(60px + var(--clampRacine));
     --size: 35px;
   }
-  @media (hover: none) {
-    --icon-fill-hover: inherit;
+  @media (hover: none) { 
+    --icon-fill-hover:  --icon-fill;
   }
 }
