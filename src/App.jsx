@@ -5,6 +5,7 @@ import Accueil from "./pages/Accueil";
 import UnePage from "./pages/UnePage";
 import UneAutrePage from "./pages/UneAutrePage";
 import CurriculumVitae from "./pages/CurriculumVitae";
+import Projets from "./pages/Projets";
 
 const routes = createBrowserRouter([
   {
@@ -13,6 +14,7 @@ const routes = createBrowserRouter([
     children: [
       { element: <Accueil />, index: true },
       { path: "unepage", element: <UnePage /> },
+      { path: "projets", element: <Projets /> },
       { path: "uneAutrePage", element: <UneAutrePage /> },
       { path: "CV", element: <CurriculumVitae /> },
     ],

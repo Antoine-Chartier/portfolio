@@ -61,7 +61,9 @@ const HeroSection = () => {
               </Link>
             </div>
             <div className="btnProjets">
+            <Link to={"/projets"}>
               <button>projets</button>
+            </Link>
             </div>
           </div>
           <p className="pTestAfter">

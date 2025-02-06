@@ -161,16 +161,16 @@
   z-index: 1000;
   height: calc(2 * var(--clampRacine) + 70px);
   background-color: var(--white);
-  transition-duration: 0.2s;
+  // transition-duration: 0.2s;
   @media (min-width: 768px) {
     @media (hover: hover) {
       // si le navigateur supporte le hover (donc pas un mobile) alors on fait l'effet de hover opaque sur la barre du nav
       background-color: var(--white-transparent);
-      transition-duration: 0.2s;
+      // transition-duration: 0.2s;
       &:hover {
         background-color: var(--white);
-        transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-        transition-duration: 0.1s;
+        // transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+        // transition-duration: 0.1s;
       }
       &.menu-ouvert {
         background-color: var(--white);
