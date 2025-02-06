@@ -21,7 +21,7 @@ const Nav = () => {
       <div className={`background ${active && "menu-ouvert"}`}>
         <nav className="topNav">
           <div className="navWrap ">
-            <Logo menuIsOpen={active} setActive={setActive} />
+            <Logo isNav={true} texte={"Antoine"} sousTexte={"DEVELOPPEUR WEB"} menuIsOpen={active} setActive={setActive} link={"/"} />
             <div className="bar">
               <ThemeSwitch />
               <motion.div

@@ -1,45 +1,5 @@
-.clamp {
-  padding: var(--clampRacine);
+.centered {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
-.black {
-  color: var(--black);
-}
-.centered{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.wrapLogo {
-  position: absolute;
-  max-height: 70px;
-  z-index: 1000;
-  font-size: clamp(0.95em, 2vw, 1.2em);
-}
-
-.carreNom {
-    position: relative;
-    display: flex;
-    align-items: baseline;
-    .nom {
-      font-weight: bold;
-      transition: color 0.1s ease;
-      transition-delay: var(--transition-delay);
-      // transition-delay: 300ms;
-    //   color: var(--black);
-      margin: 0px 10px 0px clamp(10px, 2vw, 20px);
-    }
-    .carreCouleur {
-      background-color: var(--color-rouge);
-      height: 0px;
-      width: 30px;
-      // pour préserver l'aspect ratio
-      padding-bottom: 30px;
-      flex-shrink: 0;
-      flex-grow: 0;
-      @media (max-width: 900px) {
-        width: clamp(1.5em, calc(1.1vw + 1.1vh), 2em);
-        padding-bottom: clamp(1.5em, calc(1.1vw + 1.1vh), 2em);
-      }
-    }
-  }

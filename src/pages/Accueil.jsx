@@ -1,7 +1,7 @@
 import "./Accueil.scss";
 import HeroSection from "../components/HeroSection";
 
-function Accueil() {
+const Accueil = () => {
   return (
     <div>
       <HeroSection />

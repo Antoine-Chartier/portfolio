@@ -5,7 +5,9 @@
     justify-content: space-between;
     width: 100%;
     padding: var(--clampRacine);
-
+    .wrapLogo{
+      z-index: 1000;
+    }
     .buttonHamburger {
       padding: 0px;
       position: absolute;

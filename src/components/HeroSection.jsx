@@ -34,7 +34,9 @@ const HeroSection = () => {
             </Link>
           </div>
           <div className="btnProjets">
-            <button>projets</button>
+            <Link to={"/projets"}>
+              <button>projets</button>
+            </Link>
           </div>
         </div>
         <div className="boxIcones">

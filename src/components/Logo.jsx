@@ -1,17 +1,19 @@
 import { Link } from "react-router-dom";
 import "./Logo.scss";
 
-const Logo = ({menuIsOpen, setActive}) => {
+const Logo = ({isNav, menuIsOpen, setActive, texte, sousTexte, link}) => {
+  console.log(link);
   return (
-    <div className={`wrapLogo ${menuIsOpen && 'menu-open'}`}>
+    <div className={`wrapLogo ${(menuIsOpen && isNav) && 'menu-open'}`}>
       <div className="carreNom" >
-        <div className="carreCouleur" onClick={() => setActive(!menuIsOpen)}></div>
+        {isNav && <div className="carreCouleur" onClick={() => setActive(!menuIsOpen)}></div>}
+        {!isNav && <div className="carreCouleur"></div>}
           <div className="nom">
-            <Link to={"/"} onClick={() => setActive(false)}>Antoine</Link>
+            <Link to={link} onClick={() => isNav && setActive(false)}>{texte}</Link>
         </div>
-        <span className="DeveloppeurWeb">/ DEVELOPPEUR WEB</span>
+        { sousTexte && <span className="DeveloppeurWeb">/ {sousTexte}</span>}
       </div>
-      <span className="DeveloppeurWeb">DEVELOPPEUR WEB</span>
+      { sousTexte && <span className="DeveloppeurWeb">{sousTexte}</span>}
     </div>
   );
 };
