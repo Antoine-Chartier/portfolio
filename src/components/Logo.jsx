@@ -2,7 +2,6 @@ import { Link } from "react-router-dom";
 import "./Logo.scss";
 
 const Logo = ({isNav, menuIsOpen, setActive, texte, sousTexte, link}) => {
-  console.log(link);
   return (
     <div className={`wrapLogo ${(menuIsOpen && isNav) && 'menu-open'}`}>
       <div className="carreNom" >
