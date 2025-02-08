@@ -1,0 +1,49 @@
+.carteProjet {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 750px;
+  height: 404px;
+  background-color: var(--white);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  .coteTxt {
+    width: 57%;
+    height: 100%;
+    // background-color: salmon;
+    color: var(--black);
+    .margeIn {
+      margin: 30px;
+      position: relative;
+      .accentRectangle{
+        position: absolute;
+        left: -30px;
+        width: 10px;
+        height: 50px;
+        background-color: var(--color-rouge);
+        margin-bottom: 10px;
+      }
+      h2{
+        font-size: 1.25em;
+        font-weight: bold;
+        margin-bottom: 0px;
+      }
+      h3{
+        font-size: 1em;
+        font-weight: 300;
+        margin:0px;
+      }
+    }
+  }
+  .coteImg {
+    width: 43%;
+    height: 100%;
+    // border-radius: 50%;
+    // overflow: hidden;
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+    }
+  }
+}
