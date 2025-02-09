@@ -1,8 +1,6 @@
 .carteProjet {
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
   width: 750px;
   height: 404px;
   background-color: var(--white);
@@ -13,37 +11,84 @@
     // background-color: salmon;
     color: var(--black);
     .margeIn {
-      margin: 30px;
+      margin: 70px 37px 37px 37px;
       position: relative;
-      .accentRectangle{
+      .accentRectangle {
         position: absolute;
-        left: -30px;
+        left: -37px;
         width: 10px;
         height: 50px;
         background-color: var(--color-rouge);
         margin-bottom: 10px;
       }
-      h2{
+      h2 {
         font-size: 1.25em;
         font-weight: bold;
         margin-bottom: 0px;
       }
-      h3{
+      h3 {
         font-size: 1em;
         font-weight: 300;
-        margin:0px;
+        margin: 0px;
       }
     }
   }
   .coteImg {
     width: 43%;
     height: 100%;
+    // background-color: red;
     // border-radius: 50%;
     // overflow: hidden;
     img {
       width: 100%;
       height: 100%;
       object-fit: contain;
+    }
+  }
+}
+@media (max-width: 760px) {
+  .carteProjet {
+    flex-direction: column;
+    width: 320px;
+    height: auto;
+    .coteTxt {
+      width: 100%;
+      // height: 100%;
+      // background-color: salmon;
+      .margeIn {
+        margin: 30px;
+        // position: relative;
+        .accentRectangle {
+          // position: absolute;
+          left: -30px;
+          // width: 10px;
+          // height: 50px;
+          // background-color: var(--color-rouge);
+          // margin-bottom: 10px;
+        }
+        h2 {
+          // font-size: 1.25em;
+          // font-weight: bold;
+          // margin-bottom: 0px;
+        }
+        h3 {
+          // font-size: 1em;
+          // font-weight: 300;
+          // margin: 0px;
+        }
+      }
+    }
+    .coteImg {
+      width: 100%;
+      height: 200px;
+      // background-color: red;
+      // border-radius: 50%;
+      // overflow: hidden;
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+      }
     }
   }
 }

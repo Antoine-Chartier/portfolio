@@ -12,7 +12,7 @@ const CarteProjet = ({ titre, technologies, description, coverPhoto }) => {
             <div className="accentRectangle"></div>
             <h2>Groovy Beats</h2>
             <h3>Framer Motion, vite, firestore</h3>
-            <p>À travers ce projet j'ai acquis plusieurs nouvelles compétences : base de données NoSQL Firestore, Google Auth, gestion de projet, travail d'équipe.</p>
+            <p>À travers ce projet final scolaire j'ai acquis plusieurs nouvelles compétences : base de données NoSQL Firestore, Google Auth, gestion de projet, travail d'équipe.</p>
         </div>
         </div>
       <div className="coteImg">
