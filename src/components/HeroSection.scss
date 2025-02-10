@@ -109,7 +109,11 @@
     display: none;
   }
   p, h1, h2{
-    color: red;
+    color: var(--black);
+  }
+  h1{
+    font-size: 6em;
+    margin: 0;
   }
 }
 .backSplashCouleur {
