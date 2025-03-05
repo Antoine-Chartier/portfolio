@@ -33,7 +33,7 @@ const Projets = () => {
             </div>
             <div>
               <CarteProjet titre="Groovy Beats" coverPhoto={groovyBeats} bgColor={radialRed} lien="https://groovebeats.netlify.app/" technologies="Framer Motion, React Vite, Firestore" description="À travers ce projet final scolaire j'ai acquis plusieurs nouvelles compétences : base de données NoSQL Firestore, Google Auth, gestion de projet, travail d'équipe" />
-              <CarteProjet titre="Mini-entrepôts" coverPhoto={theme === "light" ? miniEntrepotsCouleur : miniEntrepotsReversed} bgColor={linearBlue} lien="https://groovebeats.netlify.app/" technologies="Framer Motion, React Vite, Firestore" description="À travers ce projet final scolaire j'ai acquis plusieurs nouvelles compétences : base de données NoSQL Firestore, Google Auth, gestion de projet, travail d'équipe" />
+              <CarteProjet titre="Mini-entrepôts" coverPhoto={theme === "light" ? miniEntrepotsCouleur : miniEntrepotsReversed} bgColor={linearBlue} lien="https://test-ssg-testing.netlify.app/" technologies="Framer Motion, React Vite, Firestore" description="À travers ce projet final scolaire j'ai acquis plusieurs nouvelles compétences : base de données NoSQL Firestore, Google Auth, gestion de projet, travail d'équipe" />
             </div>
         </div>
       </div>
