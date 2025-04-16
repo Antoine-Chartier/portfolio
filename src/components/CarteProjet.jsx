@@ -9,7 +9,6 @@ const CarteProjet = ({
   description,
   bgColor = { background: "#8eaec7" },
 }) => {
-console.log(coverPhoto);
   return (
     <div className="carteProjet">
       <div className="coteTxt">

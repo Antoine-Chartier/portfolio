@@ -139,11 +139,6 @@ const AnimatedBigMenu = ({ active, setActive, firstMount }) => {
                 </motion.div>
                 <motion.div variants={item}>portfolio.</motion.div>
                 <motion.div variants={item}>
-                  <Link to={"/unePage"} onClick={() => setActive(false)}>
-                    parcours.
-                  </Link>
-                </motion.div>
-                <motion.div variants={item}>
                   <Link to={"/cv"} onClick={() => setActive(false)}>
                     cv.
                   </Link>
@@ -177,11 +172,6 @@ const AnimatedBigMenu = ({ active, setActive, firstMount }) => {
                   </Link>
                 </motion.div>
                 <motion.div variants={item}>portfolio.</motion.div>
-                <motion.div variants={item}>
-                  <Link to={"/unePage"} onClick={() => setActive(false)}>
-                    parcours.
-                  </Link>
-                </motion.div>
                 <Link to={"/cv"} onClick={() => setActive(false)}>
                   <motion.div variants={item}>cv.</motion.div>
                 </Link>

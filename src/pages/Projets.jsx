@@ -33,7 +33,8 @@ const Projets = () => {
             </div>
             <div>
               <CarteProjet titre="Groovy Beats" coverPhoto={groovyBeats} bgColor={radialRed} lien="https://groovebeats.netlify.app/" technologies="Framer Motion, React Vite, Firestore" description="À travers ce projet final scolaire j'ai acquis plusieurs nouvelles compétences : base de données NoSQL Firestore, Google Auth, gestion de projet, travail d'équipe" />
-              <CarteProjet titre="Mini-entrepôts" coverPhoto={theme === "light" ? miniEntrepotsCouleur : miniEntrepotsReversed} bgColor={linearBlue} lien="https://test-ssg-testing.netlify.app/" technologies="Framer Motion, React Vite, Firestore" description="À travers ce projet final scolaire j'ai acquis plusieurs nouvelles compétences : base de données NoSQL Firestore, Google Auth, gestion de projet, travail d'équipe" />
+              <CarteProjet titre="Mini-entrepôts" coverPhoto={theme === "light" ? miniEntrepotsCouleur : miniEntrepotsReversed} bgColor={linearBlue} lien="https://test-ssg-testing.netlify.app/" technologies="GSAP, Flat file CMS, Figma, Tailwind css" description="Durant mon stage chez Rouge Marketing, j'ai développé des compétences en développement web, notamment à travers l'utilisation de Statamic/Laravel (CMS), GSAP (animations) et Tailwind CSS (styling)" />
+              <CarteProjet titre="Portfolio" coverPhoto={theme === "light" ? miniEntrepotsCouleur : miniEntrepotsReversed} bgColor={linearBlue} lien="https://test-ssg-testing.netlify.app/" technologies="GSAP, Flat file CMS, Figma, Tailwind css" description="Durant mon stage chez Rouge Marketing, j'ai développé des compétences en développement web, notamment à travers l'utilisation de Statamic/Laravel (CMS), GSAP (animations) et Tailwind CSS (styling)" />
             </div>
         </div>
       </div>
