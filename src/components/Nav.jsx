@@ -132,17 +132,19 @@ const AnimatedBigMenu = ({ active, setActive, firstMount }) => {
                 animate={active ? "open" : "closed"}
                 initial={false}
               >
-                <motion.div variants={item}>
-                  <Link to={"/"} onClick={() => setActive(false)}>
-                    accueil.
-                  </Link>
-                </motion.div>
-                <motion.div variants={item}>portfolio.</motion.div>
-                <motion.div variants={item}>
-                  <Link to={"/cv"} onClick={() => setActive(false)}>
+                <Link to={"/"} onClick={() => setActive(false)}>
+                  <motion.div variants={item}>
+                      accueil.
+                  </motion.div>
+                </Link>
+                <Link to={"/projets"} onClick={() => setActive(false)}>
+                  <motion.div variants={item}>portfolio.</motion.div>
+                </Link>
+                <Link to={"/cv"} onClick={() => setActive(false)}>
+                  <motion.div variants={item}>
                     cv.
-                  </Link>
-                </motion.div>
+                  </motion.div>
+                </Link>
               </motion.div>
             )}
           </AnimatePresence>
@@ -163,17 +165,20 @@ const AnimatedBigMenu = ({ active, setActive, firstMount }) => {
                 variants={container}
                 exit="exit"
                 animate={active ? "open" : "closed"}
-                initial={firstMount ? false : true}
+                initial={false}
               >
-                <motion.div variants={item}>
-                  {" "}
-                  <Link to={"/"} onClick={() => setActive(false)}>
-                    accueil.
-                  </Link>
-                </motion.div>
-                <motion.div variants={item}>portfolio.</motion.div>
+                <Link to={"/"} onClick={() => setActive(false)}>
+                  <motion.div variants={item}>
+                      accueil.
+                  </motion.div>
+                </Link>
+                <Link to={"/projets"} onClick={() => setActive(false)}>
+                  <motion.div variants={item}>portfolio.</motion.div>
+                </Link>
                 <Link to={"/cv"} onClick={() => setActive(false)}>
-                  <motion.div variants={item}>cv.</motion.div>
+                  <motion.div variants={item}>
+                    cv.
+                  </motion.div>
                 </Link>
               </motion.div>
             </>
