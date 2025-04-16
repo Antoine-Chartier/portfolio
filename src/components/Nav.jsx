@@ -21,7 +21,14 @@ const Nav = () => {
       <div className={`background ${active && "menu-ouvert"}`}>
         <nav className="topNav">
           <div className="navWrap ">
-            <Logo isNav={true} texte={"Antoine"} sousTexte={"DEVELOPPEUR WEB"} menuIsOpen={active} setActive={setActive} link={"/"} />
+            <Logo
+              isNav={true}
+              texte={"Antoine"}
+              sousTexte={"DEVELOPPEUR WEB"}
+              menuIsOpen={active}
+              setActive={setActive}
+              link={"/"}
+            />
             <div className="bar">
               <ThemeSwitch />
               <motion.div
@@ -133,17 +140,13 @@ const AnimatedBigMenu = ({ active, setActive, firstMount }) => {
                 initial={false}
               >
                 <Link to={"/"} onClick={() => setActive(false)}>
-                  <motion.div variants={item}>
-                      accueil.
-                  </motion.div>
+                  <motion.div variants={item}>accueil.</motion.div>
                 </Link>
                 <Link to={"/projets"} onClick={() => setActive(false)}>
                   <motion.div variants={item}>portfolio.</motion.div>
                 </Link>
                 <Link to={"/cv"} onClick={() => setActive(false)}>
-                  <motion.div variants={item}>
-                    cv.
-                  </motion.div>
+                  <motion.div variants={item}>cv.</motion.div>
                 </Link>
               </motion.div>
             )}
@@ -151,8 +154,20 @@ const AnimatedBigMenu = ({ active, setActive, firstMount }) => {
         </motion.div>
 
         <motion.div variants={rejoindreText} className="icones">
-          <CiLinkedin className="icone" />
-          <FiGithub className="icone" />
+          <a
+            href="https://linkedin.com/in/antoinechartier/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <CiLinkedin className="icone" />
+          </a>
+          <a
+            href="https://github.com/Antoine-Chartier"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <FiGithub className="icone" />
+          </a>
         </motion.div>
       </div>
 
@@ -168,26 +183,24 @@ const AnimatedBigMenu = ({ active, setActive, firstMount }) => {
                 initial={false}
               >
                 <Link to={"/"} onClick={() => setActive(false)}>
-                  <motion.div variants={item}>
-                      accueil.
-                  </motion.div>
+                  <motion.div variants={item}>accueil.</motion.div>
                 </Link>
                 <Link to={"/projets"} onClick={() => setActive(false)}>
                   <motion.div variants={item}>portfolio.</motion.div>
                 </Link>
                 <Link to={"/cv"} onClick={() => setActive(false)}>
-                  <motion.div variants={item}>
-                    cv.
-                  </motion.div>
+                  <motion.div variants={item}>cv.</motion.div>
                 </Link>
               </motion.div>
             </>
           )}
         </AnimatePresence>
         <motion.div variants={rejoindre} className="MeRejoindre">
-          <motion.p>
-            <GoArrowRight className="fleche" />
-          </motion.p>
+          <a href="mailto:antoinechartier.ca@gmail.com?subject=Opportunité&body=Bonjour%20Antoine,">
+            <motion.p>
+              <GoArrowRight className="fleche" />
+            </motion.p>
+          </a>
         </motion.div>
       </motion.div>
     </div>
