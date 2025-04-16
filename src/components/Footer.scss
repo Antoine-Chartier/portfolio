@@ -7,11 +7,16 @@ footer {
     display: flex;
     flex-wrap: wrap;
     gap: 1em;
+    color: gray;
     h3{
       color: var(--black);
     }
     p{
-      color: var(--black);
+      transition: color 0.15s;
+      &:hover {
+        color: var(--black);
+        transition: color 0.3s;
+      }
     }
     > div {
       margin-right: 2em;
@@ -24,7 +29,7 @@ footer {
       gap: 1.6em;
       .icone {
         font-size: 1.5em;
-        color: gray;
+        transition: color 0.15s;
         &:hover {
           color: var(--black);
           transition: color 0.3s;

@@ -42,10 +42,22 @@ const HeroSection = () => {
         <div className="boxIcones">
           <div className="icones">
             <div className="icone">
-              <CiLinkedin className="icone" />
+              <a
+                href="https://linkedin.com/in/antoinechartier/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <CiLinkedin className="icone" />
+              </a>
             </div>
             <div className="icone">
-              <FiGithub className="icone" />
+              <a
+                href="https://github.com/Antoine-Chartier"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <FiGithub className="icone" />
+              </a>
             </div>
           </div>
         </div>
@@ -63,19 +75,24 @@ const HeroSection = () => {
               </Link>
             </div>
             <div className="btnProjets">
-            <Link to={"/projets"}>
-              <button>projets</button>
-            </Link>
+              <Link to={"/projets"}>
+                <button>projets</button>
+              </Link>
             </div>
           </div>
           <p className="pTestAfter">
             Je suis développeur web spécialisé en front-end.
           </p>
           <p>
-          Diplômé d'un programme de trois ans en intégration multimédia au cégep. Je maîtrise divers logiciels et environnements de développement tels que React, WordPress et Adobe.
+            Diplômé d'un programme de trois ans en intégration multimédia au
+            cégep. Je maîtrise divers logiciels et environnements de
+            développement tels que React, WordPress et Adobe.
           </p>
-           
-           <p>Mon objectif est de contribuer à faire passer votre projet web de rêve à la réalité, simplement et efficacement.</p>
+
+          <p>
+            Mon objectif est de contribuer à faire passer votre projet web de
+            rêve à la réalité, simplement et efficacement.
+          </p>
         </div>
       </div>
     </div>

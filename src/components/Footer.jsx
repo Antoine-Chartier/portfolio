@@ -10,13 +10,29 @@ const Footer = () => {
       <div className="coordonnees">
         <div>
           <h3>E-mail</h3>
-          <p><a href="mailto:antoinechartier.ca@gmail.com?subject=Offre%20d'emploi&body=Bonjour%20Antoine,">antoinechartier.ca@gmail.com</a></p>
+          <p className="contact">
+            <a href="mailto:antoinechartier.ca@gmail.com?subject=Offre%20d'emploi&body=Bonjour%20Antoine,">
+              antoinechartier.ca@gmail.com
+            </a>
+          </p>
         </div>
         <div>
           <h3>Réseaux</h3>
           <div className="icones">
-            <CiLinkedin className="icone" />
-            <FiGithub className="icone" />
+            <a
+              href="https://linkedin.com/in/antoinechartier/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <CiLinkedin className="icone" />
+            </a>
+            <a
+              href="https://github.com/Antoine-Chartier"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <FiGithub className="icone" />
+            </a>
           </div>
         </div>
       </div>
