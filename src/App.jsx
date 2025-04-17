@@ -3,7 +3,6 @@ import "./App.scss";
 import Layout from "./Layout";
 import Accueil from "./pages/Accueil";
 import UnePage from "./pages/UnePage";
-import UneAutrePage from "./pages/UneAutrePage";
 import CurriculumVitae from "./pages/CurriculumVitae";
 import Projets from "./pages/Projets";
 
@@ -16,7 +15,6 @@ const routes = createBrowserRouter([
       { element: <Accueil />, index: true },
       { path: "unepage", element: <UnePage /> },
       { path: "Projets", element: <Projets /> },
-      { path: "uneAutrePage", element: <UneAutrePage /> },
       { path: "CV", element: <CurriculumVitae /> },
     ],
   },

@@ -24,18 +24,18 @@ export default defineConfig({
         // background_color: "#f5f5f5",
         theme_color: "#f5f5f5",
         description: "A portfolio built with Vite and React",
-        // icons: [
-        //   {
-        //     src: "/icons/icon-192x192.png",
-        //     sizes: "192x192",
-        //     type: "image/png",
-        //   },
-        //   {
-        //     src: "/icons/icon-512x512.png",
-        //     sizes: "512x512",
-        //     type: "image/png",
-        //   },
-        // ],
+        icons: [
+          {
+            src: "/icons/icon-192x192.png",
+            sizes: "192x192",
+            type: "image/png",
+          },
+          {
+            src: "/icons/icon-512x512.png",
+            sizes: "512x512",
+            type: "image/png",
+          },
+        ],
       },
     }),
   ],
