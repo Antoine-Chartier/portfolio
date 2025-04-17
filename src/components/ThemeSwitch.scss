@@ -1,4 +1,94 @@
-@import "./animationSunMoon.scss";
+// @import "./animationSunMoon.scss";
+
+// animationSunMoon START
+.sun-and-moon {
+  & > .moon,
+  & > .sun,
+  & > .sun-beams {
+    transform-origin: center center;
+  }
+
+  & > .moon,
+  & > .sun {
+    fill: var(--icon-fill);
+
+    .theme-toggle:hover &,
+    .theme-toggle:focus-visible & {
+      fill: var(--icon-fill-hover);
+    }
+  }
+
+  & > .sun-beams {
+    stroke: var(--icon-fill);
+    stroke-width: 2px;
+
+    .theme-toggle:hover &,
+    .theme-toggle:focus-visible & {
+      stroke: var(--icon-fill-hover);
+    }
+  }
+
+  html[data-theme="dark"] & {
+    & > .sun {
+      transform: scale(1.75);
+    }
+
+    & > .sun-beams {
+      opacity: 0;
+    }
+
+    & > .moon > circle {
+      transform: translateX(-7px);
+
+      @supports (cx: 1) {
+        transform: translateX(0);
+        cx: 17;
+      }
+    }
+  }
+
+  & > .sun {
+    transition: transform 0.5s cubic-bezier(0.5, 1.5, 0.75, 1.25);
+  }
+
+  & > .sun-beams {
+    transition: opacity 0.5s cubic-bezier(0.25, 0, 0.3, 1),
+      transform 0.5s cubic-bezier(0.5, 1.5, 0.75, 1.25);
+  }
+
+  html[data-theme="dark"] & {
+    & > .sun {
+      transform: scale(1.75);
+      transition-timing-function: cubic-bezier(0.25, 0, 0.3, 1);
+      transition-duration: 0.25s;
+    }
+
+    & > .sun-beams {
+      transform: rotateZ(-25deg);
+      transition-duration: 0.15s;
+    }
+  }
+
+  & .moon > circle {
+    transform: translateX(-7px);
+    transition: transform 0.25s cubic-bezier(0.9, 0, 0.1, 1);
+
+    @supports (cx: 1) {
+      transform: translateX(0);
+      cx: 24;
+      transition: cx 0.25s cubic-bezier(0.9, 0, 0.1, 1);
+    }
+  }
+
+  html[data-theme="dark"] & {
+    & > .moon > circle {
+      transition-delay: 0.25s;
+      transition-duration: 0.5s;
+    }
+  }
+}
+// animationSunMoon END
+
 
 .theme-toggle {
   z-index: 1001;
