@@ -26,12 +26,12 @@ export default defineConfig({
         description: "A portfolio built with Vite and React",
         icons: [
           {
-            src: "/icons/icon-192x192.png",
+            src: "/icons/vite-192-192.png",
             sizes: "192x192",
             type: "image/png",
           },
           {
-            src: "/icons/icon-512x512.png",
+            src: "/icons/vite-512x512.png",
             sizes: "512x512",
             type: "image/png",
           },
