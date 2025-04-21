@@ -12,7 +12,7 @@ const CarteProjet = ({
   bgColor = { background: "#8eaec7" },
 }) => {
   return (
-    <div className="carteProjet">
+    <motion.div initial={{ scale: 0.9, x:-50 }} whileInView={{ scale: 1, x:0 }} className="carteProjet">
       <div className="coteTxt">
         <div className="margeIn">
           <div className="accentRectangle"></div>
@@ -21,7 +21,7 @@ const CarteProjet = ({
           <p> {description} </p>
         </div>
       </div>
-      <div className="coteImg" style={bgColor}>
+      <motion.div whileHover={{ scale: 1.1 }} className="coteImg" style={bgColor}>
         <a href={lien} target="_blank" rel="noopener noreferrer">
           <ImageOp
             width={480}
@@ -30,8 +30,8 @@ const CarteProjet = ({
             alt="Logo Groovy Beats"
           />
         </a>
-      </div>
-    </div>
+      </motion.div>
+    </motion.div>
   );
 };
 

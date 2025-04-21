@@ -6,18 +6,9 @@
   margin-bottom: 3.5em;
   background-color: var(--white);
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-  // animation
-  // transition: transform 0.5s ease;
-  // @media (hover: hover) {
-  //   &:hover {
-  //     transform: translateX(-50px) scale(1.015);
-  //     transition: transform 0.5s ease;
-  //   }
-  // }
   .coteTxt {
     width: 57%;
     height: 100%;
-    // background-color: salmon;
     color: var(--black);
     .margeIn {
       margin: 70px 37px 37px 37px;
@@ -48,49 +39,25 @@
   }
   .coteImg {
     width: 43%;
-    overflow: hidden;
     img {
       width: 100%;
       height: 100%;
       object-fit: contain;
-      // animation
-      transition: transform 0.5s ease;
-      &:hover {
-        transform: scale(1.05);
-        transition: transform 1.4s ease;
-      }
     }
   }
 }
 @media (max-width: 760px) {
   .carteProjet {
     flex-direction: column;
-    width: 320px;
+    // width: 320px;
+    width: clamp(320px, 50px, 400px);
     height: auto;
     .coteTxt {
       width: 100%;
-      // height: 100%;
-      // background-color: salmon;
       .margeIn {
         margin: 30px;
-        // position: relative;
         .accentRectangle {
-          // position: absolute;
           left: -30px;
-          // width: 10px;
-          // height: 50px;
-          // background-color: var(--color-rouge);
-          // margin-bottom: 10px;
-        }
-        h2 {
-          // font-size: 1.25em;
-          // font-weight: bold;
-          // margin-bottom: 0px;
-        }
-        h3 {
-          // font-size: 1em;
-          // font-weight: 300;
-          // margin: 0px;
         }
       }
     }
