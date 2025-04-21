@@ -1,5 +1,7 @@
 import "./CarteProjet.scss";
 import ImageOp from "../utils/imageOp";
+import { motion } from "motion/react"
+
 
 const CarteProjet = ({
   titre,

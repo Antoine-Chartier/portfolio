@@ -1,6 +1,8 @@
 import { useEffect, useState } from "react";
 import "./Nav.scss";
-import { motion, AnimatePresence } from "framer-motion";
+// import { motion, AnimatePresence } from "framer-motion";
+import { motion, AnimatePresence } from "motion/react"
+
 import { CiLinkedin } from "react-icons/ci";
 import { FiGithub } from "react-icons/fi";
 import { GoArrowRight } from "react-icons/go";
