@@ -1,7 +1,6 @@
 import "./CarteProjet.scss";
 import ImageOp from "../utils/imageOp";
 import { motion } from "motion/react"
-import { useRef } from "react";
 
 
 const CarteProjet = ({
@@ -12,11 +11,8 @@ const CarteProjet = ({
   description,
   bgColor = { background: "#8eaec7" },
 }) => {
-
-  const scrollRef = useRef(null)
-
   return (
-    <motion.div ref={scrollRef} initial={{ x:-50 }} whileInView={{ x:0 }} viewport={{ margin: "-20px" }} className="carteProjet">
+    <motion.div initial={{ x:-50 }} whileInView={{ x:0 }} viewport={{ margin: "-20px" }} className="carteProjet">
       <div className="coteTxt">
         <div className="margeIn">
           <div className="accentRectangle"></div>
@@ -28,8 +24,8 @@ const CarteProjet = ({
       <motion.div whileHover={{ scale: 1.1 }} className="coteImg" style={bgColor}>
         <a href={lien} target="_blank" rel="noopener noreferrer">
           <ImageOp
-            width={480}
-            height={719}
+            // width={480}
+            // height={719}
             src={coverPhoto}
             alt="Logo Groovy Beats"
           />

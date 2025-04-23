@@ -1,7 +1,7 @@
 import CarteProjet from "../components/CarteProjet";
 import Logo from "../components/Logo";
 import "./Projets.scss";
-import groovyBeats from "../assets/Logo_groovy.svg?optimized";
+import groovyBeats from "../assets/Logo_groovy.png?optimized";
 import miniEntrepotsCouleur from "../assets/Logo_miniEntrepot.png?optimized";
 import miniEntrepotsReversed from "../assets/Logo_miniEntrepotReversed.png?optimized";
 import portfolio from "../assets/Logo_vieuxPortfolio.png?optimized";

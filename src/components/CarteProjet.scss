@@ -1,18 +1,17 @@
-/* @link https://utopia.fyi/grid/calculator?c=320,18,1.2,2500,36,1.25,5,2,&s=0.75|0.5|0.25,1.5|2|3|4|6,s-l&g=s,l,xl,12 */
 .carteProjet {
   display: flex;
   flex-direction: row;
   max-width: 139rem;
-  height: auto;
+  max-height: 473px;
+  align-items: stretch;
   margin-bottom: 3.5em;
   background-color: var(--white);
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
   .coteTxt {
     width: 57%;
-    // height: auto;
-    max-height: 100%; 
+    height: 100%;
     color: var(--black);
-    text-wrap: balance; 
+    text-wrap: balance;
     .margeIn {
       margin: 70px 37px 37px 37px;
       position: relative;
@@ -34,16 +33,18 @@
         font-weight: 300;
         margin: 0px 0px 35px;
       }
-      p{
+      p {
         font-size: var(--step-0);
         line-height: 1.65em;
       }
     }
   }
   .coteImg {
+    /* let it stretch to the container’s height but never exceed it */
     width: 43%;
-    height: auto;
-    overflow: hidden;
+    // height: 100%;
+    min-height: 0; /* allow shrinking below content’s min-height */
+    overflow: hidden; /* crop any overflow */
     img {
       width: 100%;
       height: 100%;
@@ -56,7 +57,7 @@
     flex-direction: column;
     // width: 320px;
     // width: clamp(320px, 50px, 400px);
-    // height: auto;
+    max-height: 100%;
     .coteTxt {
       width: 100%;
       .margeIn {
