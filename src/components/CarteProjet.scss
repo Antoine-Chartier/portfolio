@@ -2,26 +2,26 @@
   display: flex;
   flex-direction: row;
   max-width: 139rem;
-  max-height: 473px;
-  align-items: stretch;
-  margin-bottom: 3.5em;
+  margin-bottom: var(--space-m-l);
   background-color: var(--white);
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 0 var(--step-6) rgba(0, 0, 0, 0.2);
   .coteTxt {
     width: 57%;
-    height: 100%;
     color: var(--black);
     text-wrap: balance;
+    display: flex; // Use flex to help manage inner content height
+    flex-direction: column; // Stack content vertically
     .margeIn {
-      margin: 70px 37px 37px 37px;
+      margin: var(--space-m) var(--space-m) var(--space-m);
       position: relative;
+      flex-grow: 1; // Allow this div to grow if needed within the flex column
       .accentRectangle {
         position: absolute;
-        left: -37px;
-        width: 10px;
-        height: var(--step-5);
+        left: calc(var(--space-m)*-1); // Adjust left position;
+        top: var(--space-m); // Position relative to the top margin of .margeIn
+        width: var(--step--3);
+        height: var(--step-6);
         background-color: var(--color-rouge);
-        margin-bottom: 10px;
       }
       h2 {
         color: var(--color-rouge);
@@ -31,7 +31,7 @@
       h3 {
         font-size: var(--step-1);
         font-weight: 300;
-        margin: 0px 0px 35px;
+        margin: 0px 0px var(--space-m-l);
       }
       p {
         font-size: var(--step-0);
@@ -40,41 +40,52 @@
     }
   }
   .coteImg {
-    /* let it stretch to the container’s height but never exceed it */
     width: 43%;
-    // height: 100%;
+    min-height: 100%;
+    display: flex;
     min-height: 0; /* allow shrinking below content’s min-height */
     overflow: hidden; /* crop any overflow */
-    img {
+    a {
+      display: flex; // Keep flex for centering picture/img
+      justify-content: center;
+      align-items: center;
       width: 100%;
-      height: 100%;
-      object-fit: contain;
-    }
-  }
-}
-@media (max-width: 760px) {
-  .carteProjet {
-    flex-direction: column;
-    // width: 320px;
-    // width: clamp(320px, 50px, 400px);
-    max-height: 100%;
-    .coteTxt {
-      width: 100%;
-      .margeIn {
-        margin: 30px;
-        .accentRectangle {
-          left: -30px;
+      height: 100%; // Make link fill the coteImg container height
+      overflow: hidden; // CRUCIAL: Clip content that exceeds the calculated height
+      picture {
+        display: flex; // Use flex to help contain/center the img
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 100%;
+        // Ensure picture itself doesn't overflow its container (the 'a' tag)
+        max-width: 100%;
+        max-height: 100%;
+
+        img {
+          display: block; // Good practice for images
+          max-width: 100%; // Technically redundant with width: 100%
+          max-height: 100%; // Technically redundant with height: 100%
+          object-fit: contain;
         }
       }
     }
+  }
+}
+
+@media (max-width: 760px) {
+  .carteProjet {
+    flex-direction: column;
+    align-items: stretch; // Reset alignment for column layout if needed
+    max-height: none; // Remove max-height constraint
+
+    .coteTxt {
+      width: 100%;
+    }
+
     .coteImg {
       width: 100%;
-      height: 200px;
-      img {
-        width: 100%;
-        height: 100%;
-        object-fit: contain;
-      }
+      height: 200px; // Keep fixed height for mobile, or change if needed
     }
   }
 }

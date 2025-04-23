@@ -6,6 +6,7 @@ import { motion } from "motion/react"
 const CarteProjet = ({
   titre,
   coverPhoto,
+  alt,
   lien,
   technologies,
   description,
@@ -24,10 +25,8 @@ const CarteProjet = ({
       <motion.div whileHover={{ scale: 1.1 }} className="coteImg" style={bgColor}>
         <a href={lien} target="_blank" rel="noopener noreferrer">
           <ImageOp
-            // width={480}
-            // height={719}
             src={coverPhoto}
-            alt="Logo Groovy Beats"
+            alt={alt}
           />
         </a>
       </motion.div>
