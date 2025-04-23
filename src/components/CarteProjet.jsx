@@ -1,6 +1,7 @@
 import "./CarteProjet.scss";
 import ImageOp from "../utils/imageOp";
 import { motion } from "motion/react"
+import { useRef } from "react";
 
 
 const CarteProjet = ({
@@ -11,14 +12,17 @@ const CarteProjet = ({
   description,
   bgColor = { background: "#8eaec7" },
 }) => {
+
+  const scrollRef = useRef(null)
+
   return (
-    <motion.div initial={{ scale: 0.9, x:-50 }} whileInView={{ scale: 1, x:0 }} className="carteProjet">
+    <motion.div ref={scrollRef} initial={{ x:-50 }} whileInView={{ x:0 }} viewport={{ margin: "-20px" }} className="carteProjet">
       <div className="coteTxt">
         <div className="margeIn">
           <div className="accentRectangle"></div>
           <h2> {titre} </h2>
           <h3> {technologies} </h3>
-          <p> {description} </p>
+          <motion.p> {description} </motion.p>
         </div>
       </div>
       <motion.div whileHover={{ scale: 1.1 }} className="coteImg" style={bgColor}>
