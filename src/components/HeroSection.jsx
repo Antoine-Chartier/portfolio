@@ -4,7 +4,7 @@ import ImageOp from "../utils/imageOp";
 
 import { CiLinkedin } from "react-icons/ci";
 import { FiGithub } from "react-icons/fi";
-import { Link } from "react-router-dom";
+import { Link } from "react-router";
 
 const HeroSection = () => {
   return (

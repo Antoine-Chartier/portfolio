@@ -1,11 +1,14 @@
-import { Navigate, RouterProvider, createBrowserRouter } from "react-router-dom";
+import {
+  Navigate,
+  RouterProvider,
+  createBrowserRouter,
+} from "react-router";
 import "./App.scss";
 import Layout from "./Layout";
 import Accueil from "./pages/Accueil";
 import UnePage from "./pages/UnePage";
 import CurriculumVitae from "./pages/CurriculumVitae";
 import Projets from "./pages/Projets";
-
 
 const routes = createBrowserRouter([
   {
@@ -23,6 +26,7 @@ const routes = createBrowserRouter([
     element: <Navigate to="/" replace />,
   },
 ]);
+
 
 function App() {
   return <RouterProvider router={routes} />;

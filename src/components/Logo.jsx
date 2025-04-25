@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import { Link } from "react-router";
 import "./Logo.scss";
 
 const Logo = ({isNav, menuIsOpen, setActive, texte, sousTexte, link}) => {

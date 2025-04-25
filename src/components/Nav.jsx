@@ -7,7 +7,7 @@ import { CiLinkedin } from "react-icons/ci";
 import { FiGithub } from "react-icons/fi";
 import { GoArrowRight } from "react-icons/go";
 import Logo from "./Logo";
-import { Link } from "react-router-dom";
+import { Link } from "react-router";
 import ThemeSwitch from "./ThemeSwitch";
 
 const Nav = () => {
