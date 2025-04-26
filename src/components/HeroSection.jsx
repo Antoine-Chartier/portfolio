@@ -17,6 +17,7 @@ const HeroSection = () => {
               height={719}
               src={headShot}
               alt="HeadShot pro Antoine Chartier"
+              priority={true}
             />
           </div>
           <div className="nom">

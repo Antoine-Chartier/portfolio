@@ -6,10 +6,11 @@ function getSource(src) {
   return src;
 }
 
-const ImageOp = ({ src, alt}) => {
+const ImageOp = ({ src, alt, priority = false }) => {
   const [sources, setSources] = useState(getSource(src));
-    // console.log(sources);
-    // console.log(alt);
+    console.log(sources);
+    console.log(alt);
+    console.log(priority);
 
   useEffect(() => {
     setSources(getSource(src));
@@ -19,7 +20,7 @@ const ImageOp = ({ src, alt}) => {
     <picture>
       {sources.avif && <source srcSet={sources.avif} type="image/avif" alt={alt} />}
       {sources.webp && <source srcSet={sources.webp} type="image/webp" alt={alt} />}
-      <img src={sources.fallback} alt={alt} fetchpriority="high" loading="eager" />
+      {priority ? <img src={sources.fallback} alt={alt} fetchpriority="high" loading="eager" /> : <img src={sources.fallback} alt={alt} />}
     </picture>
   );
 };
