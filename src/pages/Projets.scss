@@ -7,7 +7,7 @@
     align-items: center;
     margin-top: var(--space-xl-2xl);
     .sous-titre{
-      font-size: clamp(1.2em, calc(2vw), 1.6em);
+      font-size: var(--step-0);
       font-weight: 300;
       color: var(--black);
       margin-bottom: var(--space-l-xl);
