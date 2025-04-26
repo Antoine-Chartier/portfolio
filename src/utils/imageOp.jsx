@@ -19,7 +19,7 @@ const ImageOp = ({ src, alt}) => {
     <picture>
       {sources.avif && <source srcSet={sources.avif} type="image/avif" alt={alt} />}
       {sources.webp && <source srcSet={sources.webp} type="image/webp" alt={alt} />}
-      <img src={sources.fallback} alt={alt}  />
+      <img src={sources.fallback} alt={alt} fetchpriority="high" loading="eager" />
     </picture>
   );
 };
