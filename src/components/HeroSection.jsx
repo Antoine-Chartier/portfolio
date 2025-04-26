@@ -1,5 +1,6 @@
 import "./HeroSection.scss";
-import headShot from "../assets/headShotPro.webp?optimized";
+// Import requesting specific widths (e.g., 200px, 400px, and the original 480px)
+import headShotData from "../assets/headShotPro.webp?optimized&w=200;400;480";
 import ImageOp from "../utils/imageOp";
 
 import { CiLinkedin } from "react-icons/ci";
@@ -7,18 +8,27 @@ import { FiGithub } from "react-icons/fi";
 import { Link } from "react-router";
 
 const HeroSection = () => {
+
+      // --- Calculate the 'sizes' attribute ---
+    // This tells the browser how wide the image will be at different viewport widths.
+    // You MUST adjust these values based on your actual CSS/layout.
+    // Example: (max-width: 899px) 53vw, 300px
+    // Means: Below 900px viewport, image is 53% of viewport width.
+    //        At 900px and above, image is 300px wide.
+    const imageSizes = "(max-width: 899px) 53vw, 300px"; // <-- VERIFY & ADJUST THIS!
+
   return (
     <div className="heroSection">
       <div className="boxHero1">
         <div className="boxPhoto">
           <div className="photo">
-            <ImageOp
-              width={480}
-              height={719}
-              src={headShot}
-              alt="HeadShot pro Antoine Chartier"
-              priority={true}
-            />
+          <ImageOp
+                            srcData={headShotData}
+                            alt="HeadShot pro Antoine Chartier"
+                            sizes={imageSizes} // Pass the calculated sizes
+                            loading="eager"     // Important for LCP
+                            fetchpriority="high" // Important for LCP
+                        />
           </div>
           <div className="nom">
             Antoine

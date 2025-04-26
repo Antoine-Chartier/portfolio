@@ -7,6 +7,7 @@ const CarteProjet = ({
   titre,
   coverPhoto,
   alt,
+  priority = false,
   lien,
   technologies,
   description,
@@ -28,6 +29,7 @@ const CarteProjet = ({
           <ImageOp
             src={coverPhoto}
             alt={alt}
+            priority={priority}
           />
         </a>
       </motion.div>
