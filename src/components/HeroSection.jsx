@@ -1,5 +1,5 @@
 import "./HeroSection.scss";
-import headShot from "../assets/headShotPro.webp?optimized";
+// import headShot from "../assets/headShotPro.webp?optimized";
 import ImageOp from "../utils/imageOp";
 
 import { CiLinkedin } from "react-icons/ci";
@@ -15,7 +15,7 @@ const HeroSection = () => {
             <ImageOp
               width={480}
               height={719}
-              src={headShot}
+              src="/headShotPro.webp"
               alt="HeadShot pro Antoine Chartier"
             />
           </div>
