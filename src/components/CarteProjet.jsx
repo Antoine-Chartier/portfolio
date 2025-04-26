@@ -12,8 +12,9 @@ const CarteProjet = ({
   description,
   bgColor = { background: "#8eaec7" },
 }) => {
+
   return (
-    <motion.div initial={{ x:-50 }} whileInView={{ x:0 }} viewport={{ margin: "-20px" }} className="carteProjet">
+    <motion.div initial={{ x:"-10%", opacity:0.8 }} whileInView={{ x:0, opacity:1 }} viewport={{ margin: "-10%", once: true }} className="carteProjet">
       <div className="coteTxt">
         <div className="margeIn">
           <div className="accentRectangle"></div>
