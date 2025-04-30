@@ -13,8 +13,6 @@ const HeroSection = () => {
         <div className="boxPhoto">
           <div className="photo">
             <ImageOp
-              // width={140}
-              // height={719}
               src={headShot}
               alt="HeadShot pro Antoine Chartier"
               priority={true}

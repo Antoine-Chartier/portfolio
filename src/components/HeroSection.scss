@@ -39,7 +39,7 @@
   .ligne {
     height: 3px;
     width: 90px;
-    background-color: white;
+    background-color: var(--color-rouge);
   }
   .boxCTA {
     display: flex;
@@ -48,7 +48,7 @@
     width: 100%;
     div:first-child {
       button {
-        background-color: var(--black);
+        background-color: var(--color-rouge);
         color: var(--white);
         &:hover {
           background-color: var(--white);
@@ -62,7 +62,7 @@
       width: 40%;
       max-width: 282px;
       button {
-        border: 2px var(--black) solid;
+        border: 2px var(--color-rouge) solid;
         border-radius: 8px;
         text-transform: uppercase;
         font-weight: bold;
@@ -141,7 +141,7 @@
     position: relative;
     display: flex;
     justify-content: center;
-    padding: 180px 0;
+    padding: var(--space-3xl) 0;
     .boxHero1 {
       margin: 0;
       padding: var(--clampRacine) 0 0 0;
@@ -150,7 +150,8 @@
       }
       .ligneDeveloppeurWeb {
         display: flex;
-        font-size: 1.35em;
+        // font-size: 1.35em;
+        font-size: var(--step--2);
         margin: 10px 0 25px 0;
       }
     }
@@ -166,7 +167,8 @@
         margin: 35px 0;
         div:first-child {
           button {
-            background-color: var(--black);
+            background-color: var(--color-rouge);
+            border: 2px var(--color-rouge) solid;
             color: var(--white);
             &:hover {
               background-color: var(--white);
@@ -190,7 +192,8 @@
             padding: 10px;
             font-size: larger;
             &:hover {
-              background-color: var(--black);
+              background-color: var(--color-rouge);
+              border: 2px var(--color-rouge) solid;
               color: var(--white);
               transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
               transition-duration: 0.35s;
