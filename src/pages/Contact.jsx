@@ -1,10 +1,11 @@
+import { Outlet, useLocation } from "react-router";
 import "./Contact.scss";
 
-const Accueil = () => {
+const Contact = () => {
   return (
     <div className="clamp">
       Je suis un form
-      <form name="contact" method="post">
+      <form name="contact" action="/contact/succes" method="post">
       <input type="hidden" name="form-name" value="contact" />
           <p>
             <label>Your Name: <input type="text" name="name"/></label>
@@ -19,8 +20,9 @@ const Accueil = () => {
             <button type="submit">Send</button>
           </p>
         </form>
+        <Outlet />
     </div>
   );
 }
 
-export default Accueil;
+export default Contact;

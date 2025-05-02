@@ -10,6 +10,7 @@ import UnePage from "./pages/UnePage";
 import CurriculumVitae from "./pages/CurriculumVitae";
 import Contact from "./pages/Contact";
 import Projets from "./pages/Projets";
+import Succes from "./components/Succes";
 
 const routes = createBrowserRouter([
   {
@@ -20,7 +21,7 @@ const routes = createBrowserRouter([
       { path: "unepage", element: <UnePage /> },
       { path: "Projets", element: <Projets /> },
       { path: "CV", element: <CurriculumVitae /> },
-      { path: "Contact", element: <Contact/> },
+      { path: "Contact", element: <Contact/>,  children: [{path: "succes", element: <Succes />}] },
     ],
   },
   {
