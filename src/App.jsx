@@ -21,7 +21,8 @@ const routes = createBrowserRouter([
       { path: "unepage", element: <UnePage /> },
       { path: "Projets", element: <Projets /> },
       { path: "CV", element: <CurriculumVitae /> },
-      { path: "Contact", element: <Contact/>,  children: [{path: "succes", element: <Succes />}] },
+      { path: "Contact", element: <Contact/> },
+      { path: "succes", element: <Succes /> }, // Moved Succes route here
     ],
   },
   {
