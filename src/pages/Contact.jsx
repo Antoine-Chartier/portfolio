@@ -5,7 +5,7 @@ const Contact = () => {
   return (
     <div className="clamp">
       Je suis un form
-      <form name="contact" action="/contact/succes" method="post">
+      <form name="contact" action="/contact/succes">
       <input type="hidden" name="form-name" value="contact" />
           <p>
             <label>Your Name: <input type="text" name="name"/></label>
