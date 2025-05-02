@@ -198,11 +198,11 @@ const AnimatedBigMenu = ({ active, setActive, firstMount }) => {
           )}
         </AnimatePresence>
         <motion.div variants={rejoindre} className="MeRejoindre">
-          <a href="mailto:antoinechartier.ca@gmail.com?subject=Opportunité&body=Bonjour%20Antoine,">
+          <Link to={"/contact"} onClick={() => setActive(false)}>
             <motion.p>
               <GoArrowRight className="fleche" />
             </motion.p>
-          </a>
+          </Link>
         </motion.div>
       </motion.div>
     </div>
