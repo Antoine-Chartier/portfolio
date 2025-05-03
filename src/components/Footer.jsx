@@ -1,6 +1,8 @@
 import "./Footer.scss";
 import { CiLinkedin } from "react-icons/ci";
 import { FiGithub } from "react-icons/fi";
+import { Link } from "react-router";
+
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -9,12 +11,8 @@ const Footer = () => {
     <footer>
       <div className="coordonnees">
         <div>
-          <h3>E-mail</h3>
-          <p className="contact">
-            <a href="mailto:antoinechartier.ca@gmail.com?subject=Offre%20d'emploi&body=Bonjour%20Antoine,">
-              antoinechartier.ca@gmail.com
-            </a>
-          </p>
+          <h3>Email</h3>
+          <p className="contact"><Link to={"/contact"}>M'écrire</Link></p>
         </div>
         <div>
           <h3>Réseaux</h3>

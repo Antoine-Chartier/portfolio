@@ -1,27 +1,20 @@
-// Define some variables (optional, adjust to your theme)
-:root {
-  --form-text-color: var(--text-color, #333);
-  --form-label-color: var(--text-color-secondary, #555);
-  --form-input-bg: var(--background-color, #fff);
+.contact-page {
+  --form-text-color: var(--black, #333);
+  --form-label-color: var(--black, #555);
+  --form-input-bg: var(--color-bg-light, #fff);
   --form-input-border: var(--border-color, #ccc);
   --form-input-focus-border: var(--accent-color, #007bff);
   --form-button-bg: var(--accent-color, #007bff);
-  --form-button-text: var(--background-color, #fff);
-  --form-button-hover-bg: var(--accent-color-dark, #0056b3);
+  --form-button-text: var(--white, #fff);
+  --form-button-hover-bg: var(--white, #0056b3);
   --success-color: #28a745;
   --error-color: #dc3545;
-}
+  padding-top: var(--space-l-xl);
 
-.contact-page {
-  padding-top: 2rem;
-  padding-bottom: 4rem;
-  min-height: 60vh; // Ensure page takes some height
-
-  h2 {
-    margin-bottom: 2rem;
-    text-align: center;
-    font-size: clamp(1.8rem, 4vw, 2.5rem); // Responsive font size
-    color: var(--form-text-color);
+  .centered{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
 }
 
@@ -30,7 +23,7 @@
   flex-direction: column;
   gap: 1.5rem; // Spacing between form groups
   max-width: 600px; // Limit form width
-  margin: 0 auto; // Center the form
+  margin: var(--space-l-xl) auto 0; // Center the form
 
   .form-group {
     display: flex;
@@ -64,17 +57,17 @@
   }
 
   textarea {
-    min-height: 150px;
+    min-height: 100px;
     resize: vertical;
   }
 
   button[type="submit"] {
     padding: 0.9rem 1.8rem;
-    background-color: var(--form-button-bg);
+    background-color: var(--color-rouge);
     color: var(--form-button-text);
-    border: none;
-    border-radius: 5px;
-    font-size: 1rem;
+    border: 2px var(--color-rouge) solid;
+    border-radius: 8px;
+    font-size: larger;
     font-weight: bold;
     cursor: pointer;
     transition: background-color 0.3s ease, opacity 0.3s ease;
@@ -82,6 +75,9 @@
 
     &:hover:not(:disabled) {
       background-color: var(--form-button-hover-bg);
+      color: var(--black);
+      transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+      transition-duration: 0.35s;
     }
 
     &:disabled {
@@ -100,8 +96,14 @@
   max-width: 600px;
   margin: 2rem auto;
 
-  h2 { color: var(--success-color); margin-bottom: 1rem; }
-  p { color: var(--form-text-color); font-size: 1.1rem; }
+  h2 {
+    color: var(--success-color);
+    margin-bottom: 1rem;
+  }
+  p {
+    color: var(--form-text-color);
+    font-size: 1.1rem;
+  }
 }
 
 .error-message {
@@ -117,7 +119,8 @@
 // Visually hide honeypot but keep accessible
 .hidden {
   position: absolute !important;
-  height: 1px; width: 1px;
+  height: 1px;
+  width: 1px;
   overflow: hidden;
   clip: rect(1px 1px 1px 1px); /* IE6, IE7 */
   clip: rect(1px, 1px, 1px, 1px);
