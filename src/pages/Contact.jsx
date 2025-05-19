@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "motion/react"; // Or framer-motion
 import "./Contact.scss";
 import Logo from "../components/Logo";
@@ -6,6 +6,12 @@ import Logo from "../components/Logo";
 const Contact = () => {
   // State to track form submission status
   const [submissionStatus, setSubmissionStatus] = useState(null); // null | 'submitting' | 'success' | 'error'
+
+  // Scroll to top on component mount
+  useEffect(() => {
+    window.scrollTo(0, 0);
+    console.log("scroling to top");
+  }, []);
 
   const handleSubmit = (event) => {
     event.preventDefault(); // Prevent default browser submission
