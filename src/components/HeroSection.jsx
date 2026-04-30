@@ -1,5 +1,5 @@
 import "./HeroSection.scss";
-import headShot from "../assets/headShotPro.webp?optimized";
+import headShot from "../assets/headShotProAI.png?optimized";
 import ImageOp from "../utils/imageOp";
 
 import { CiLinkedin } from "react-icons/ci";
